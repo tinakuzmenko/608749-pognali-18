@@ -17,7 +17,9 @@
               alt="Логотип приложения Погнали"
             />
           </a>
-          <button class="page-nav__control-button"></button>
+          <button class="page-nav__control-button">
+            Открыть / закрыть меню
+          </button>
           <ul class="page-nav__menu-list">
             <li class="page-nav__menu-item">
               <a>О сервисе</a>
@@ -196,116 +198,130 @@
         <a class="button button--squared" href="form.html">Показать все</a>
       </section>
       <section class="teammates">
-        <h2 class="section-title">Попутчики</h2>
-        <p class="section-paragraph section-paragraph--white">
-          Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
-          Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
-        </p>
-        <p class="section-paragraph section-paragraph--white">
-          <b>Теперь можно легко найти единомышленников!</b>
-        </p>
-        <article class="teammates-card teammates__item">
-          <a class="teammates-card__link-wrapper">
-            <img
-              class="teammates-card__image"
-              src="http://placekitten.com/270/270"
-              alt="Таня Фирсова"
-              width="270"
-              height="270"
-            />
-            <span class="teammates-card__level">99 level</span>
-            <div class="teammates-card__flags-wrapper">
-              <span class="country-flag country-flag--lk teammates-card__flag"
-                >Флаг Шри-Ланки</span
-              >
-              <span class="country-flag country-flag--th teammates-card__flag"
-                >Флаг Таиланда</span
-              >
-              <span class="country-flag country-flag--sc teammates-card__flag"
-                >Флаг Сейшел</span
-              >
-            </div>
-            <h1 class="teammates-card__name">Таня Фирсова</h1>
-            <p class="teammates-card__hashtags">
-              #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
-            </p>
-            <div class="teammates-card__transport-wrapper">
-              <button
-                class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
-                type="button"
-              >
-                Самолет
-              </button>
-              <button
-                class="teammates-card__transport teammates-card__transport--bus"
-                type="button"
-              >
-                Автобус
-              </button>
-              <button
-                class="teammates-card__transport teammates-card__transport--bicycle"
-                type="button"
-              >
-                Велосипед
-              </button>
-              <button
-                class="teammates-card__transport teammates-card__transport--fit"
-                type="button"
-              >
-                Пешком
-              </button>
-            </div>
+        <div class="teammates__content-wrapper">
+          <h2 class="section-title">Попутчики</h2>
+          <p class="section-paragraph section-paragraph--white">
+            Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
+            Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+          </p>
+          <p class="section-paragraph section-paragraph--white">
+            <b>Теперь можно легко найти единомышленников!</b>
+          </p>
+        </div>
+        <article class="teammates-preview teammates__item">
+          <img
+            class="teammates-preview__image"
+            src="http://placekitten.com/270/270"
+            alt="Таня Фирсова"
+            width="270"
+            height="270"
+          />
+          <span class="teammates-preview__level">99 level</span>
+          <div class="teammates-preview__flags-wrapper">
+            <span class="country-flag country-flag--lk teammates-preview__flag"
+              >Флаг Шри-Ланки</span
+            >
+            <span class="country-flag country-flag--th teammates-preview__flag"
+              >Флаг Таиланда</span
+            >
+            <span class="country-flag country-flag--sc teammates-preview__flag"
+              >Флаг Сейшел</span
+            >
+          </div>
+          <a
+            class="teammates-preview__link-wrapper"
+            href="/user001/profile.html"
+          >
+            <h1 class="teammates-preview__name">Таня Фирсова</h1>
           </a>
+          <span
+            class="teammates-preview__status teammates-preview__status--offline"
+          ></span>
+          <p class="teammates-preview__hashtags">
+            #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
+          </p>
+          <div class="teammates-preview__transport-wrapper">
+            <button
+              class="teammates-preview__transport teammates-preview__transport--plane teammates-preview__transport--active"
+              type="button"
+            >
+              Самолет
+            </button>
+            <button
+              class="teammates-preview__transport teammates-preview__transport--bus"
+              type="button"
+            >
+              Автобус
+            </button>
+            <button
+              class="teammates-preview__transport teammates-preview__transport--bicycle"
+              type="button"
+            >
+              Велосипед
+            </button>
+            <button
+              class="teammates-preview__transport teammates-preview__transport--fit"
+              type="button"
+            >
+              Пешком
+            </button>
+          </div>
         </article>
-        <article class="teammates-card teammates__item">
-          <a class="teammates-card__link-wrapper">
-            <img
-              class="teammates-card__image"
-              src="http://placekitten.com/270/270"
-              alt="Петя Демин"
-              width="270"
-              height="270"
-            />
-            <span class="teammates-card__level">80 level</span>
-            <div class="teammates-card__flags-wrapper">
-              <span class="country-flag country-flag--be teammates-card__flag"
-                >Флаг Бельгии</span
-              >
-              <span class="country-flag country-flag--cz teammates-card__flag"
-                >Флаг Чехии</span
-              >
-            </div>
-            <h1 class="teammates-card__name">Петя Демин</h1>
-            <p class="teammates-card__hashtags">
-              #бургер #бар #футбол #концерт #крафт
-            </p>
-            <div class="teammates-card__transport-wrapper">
-              <button
-                class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
-                type="button"
-              >
-                Самолет
-              </button>
-              <button
-                class="teammates-card__transport teammates-card__transport--bus teammates-card__transport--active"
-                type="button"
-              >
-                Автобус
-              </button>
-              <button
-                class="teammates-card__transport teammates-card__transport--bicycle"
-                type="button"
-              >
-                Велосипед
-              </button>
-              <button
-                class="teammates-card__transport teammates-card__transport--fit teammates-card__transport--active"
-                type="button"
-              >
-                Пешком
-              </button>
-            </div>
+        <article class="teammates-preview teammates__item">
+          <img
+            class="teammates-preview__image"
+            src="http://placekitten.com/270/270"
+            alt="Петя Демин"
+            width="270"
+            height="270"
+          />
+          <span class="teammates-preview__level">80 level</span>
+          <div class="teammates-preview__flags-wrapper">
+            <span class="country-flag country-flag--be teammates-preview__flag"
+              >Флаг Бельгии</span
+            >
+            <span class="country-flag country-flag--cz teammates-preview__flag"
+              >Флаг Чехии</span
+            >
+          </div>
+          <a
+            class="teammates-preview__link-wrapper"
+            href="/user002/profile.html"
+          >
+            <h1 class="teammates-preview__name">Петя Демин</h1>
           </a>
+          <span
+            class="teammates-preview__status teammates-preview__status--online"
+          ></span>
+          <p class="teammates-preview__hashtags">
+            #бургер #бар #футбол #концерт #крафт
+          </p>
+          <div class="teammates-preview__transport-wrapper">
+            <button
+              class="teammates-preview__transport teammates-preview__transport--plane teammates-preview__transport--active"
+              type="button"
+            >
+              Самолет
+            </button>
+            <button
+              class="teammates-preview__transport teammates-preview__transport--bus teammates-preview__transport--active"
+              type="button"
+            >
+              Автобус
+            </button>
+            <button
+              class="teammates-preview__transport teammates-preview__transport--bicycle"
+              type="button"
+            >
+              Велосипед
+            </button>
+            <button
+              class="teammates-preview__transport teammates-preview__transport--fit teammates-preview__transport--active"
+              type="button"
+            >
+              Пешком
+            </button>
+          </div>
         </article>
         <a class="button button--squared teammates__button" href=""
           >Показать всех</a

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML Academy: Погнали -- Попутчики</title>
+  </head>
+  <body class="page">
+    <header class="page-header">
+      <nav class="page-nav">
+        <div class="page-nav__wrapper">
+          <a class="logotype page-nav__logo" href="index.html">
+            <img
+              class="page-nav__picture"
+              src="http://placekitten.com/100/19"
+              width="100"
+              heigth="19"
+              alt="Логотип приложения Погнали"
+            />
+          </a>
+          <button class="page-nav__control-button">Открыть / закрыть меню</button>
+          <ul class="page-nav__menu-list">
+            <li class="page-nav__menu-item">
+              <a href="index.html">О сервисе</a>
+            </li>
+            <li class="page-nav__menu-item">
+              <a href="form.html">Направления</a>
+            </li>
+            <li class="page-nav__menu-item">
+              <a>Попутчики</a>
+            </li>
+          </ul>
+          <a
+            class="button button--rounded page-nav__button"
+            href="authorization.html"
+            >Авторизация</a
+          >
+          <ul class="page-nav__contacts-list">
+            <li class="page-nav__contacts-item">
+              <a
+                class="contact-url contact-url__telephone page-nav__contacts-button"
+                href="tel:88005558628"
+                >8 800 555-86-28</a
+              >
+            </li>
+            <li class="page-nav__contacts-item">
+              <a
+                class="contact-url contact-url__email page-nav__contacts-button"
+                href="mailto:mail@htmlacademy.ru"
+                >mail@htmlacademy.ru</a
+              >
+            </li>
+          </ul>
+          <ul class="page-nav__social-list">
+            <li class="page-nav__social-item">
+              <a
+                class="social-button social-button--yellow social-button--fb page-nav__social-button"
+                href=""
+                >Facebook</a
+              >
+            </li>
+            <li class="page-nav__social-item">
+              <a
+                class="social-button social-button--yellow social-button--vk page-nav__social-button"
+                href=""
+                >VKontakte</a
+              >
+            </li>
+            <li class="page-nav__social-item">
+              <a
+                class="social-button social-button--yellow social-button--instagram page-nav__social-button"
+                href=""
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="page-header__title page-header__title--underline">
+        Попутчики
+      </h1>
+    </header>
+
+    <main>
+      <!-- Здесь будет секция с фильтром поиска -->
+
+      <section class="teammates-catalog">
+        <article class="teammates-card teammates-catalog__item">
+          <a
+            class="teammates-card__profile-wrapper"
+            href="/user001/profile.html"
+          >
+            <img
+              class="teammates-card__image"
+              src="http://placekitten.com/70/70"
+              alt="Таня Фирсова"
+              width="70"
+              height="70"
+            />
+            <button class="teammates-card__like teammates-card__like--active">
+              Убрать лайк
+            </button>
+            <h1 class="teammates-card__name">Таня Фирсова</h1>
+          </a>
+          <span
+            class="teammates-preview__status teammates-preview__status--offline"
+          ></span>
+          <p class="teammates-card__followers">
+            1,5 m
+          </p>
+          <p class="teammates-card__hashtags">
+            #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
+          </p>
+          <div class="teammates-card__wishlist">
+            <h2 class="teammates-card__title">Хочет посетить:</h2>
+            <div class="teammates-card__wishlist-wrapper">
+              <span class="country-flag country-flag--lk teammates-card__flag"
+                >Флаг Шри-Ланки</span
+              >
+              <p class="teammates-card__wishlist-description">Шри-ланка</p>
+            </div>
+            <div class="teammates-card__wishlist-wrapper">
+              <span class="country-flag country-flag--th teammates-card__flag"
+                >Флаг Таиланда</span
+              >
+              <p class="teammates-card__wishlist-description">Таиланд</p>
+            </div>
+            <div class="teammates-card__wishlist-wrapper">
+              <span class="country-flag country-flag--sc teammates-card__flag"
+                >Флаг Сейшел</span
+              >
+              <p class="teammates-card__wishlist-description">Сейшелы</p>
+            </div>
+          </div>
+
+          <div class="teammates-card__transport-wrapper">
+            <h2 class="teammates-card__title">Транспорт:</h2>
+            <button
+              class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
+              type="button"
+            >
+              Самолет
+            </button>
+            <button
+              class="teammates-card__transport teammates-card__transport--bus"
+              type="button"
+            >
+              Автобус
+            </button>
+            <button
+              class="teammates-card__transport teammates-card__transport--bicycle"
+              type="button"
+            >
+              Велосипед
+            </button>
+            <button
+              class="teammates-card__transport teammates-card__transport--fit"
+              type="button"
+            >
+              Пешком
+            </button>
+          </div>
+          <div class="teammates-card__level-wrapper">
+            <h2 class="teammates-card__title">Левел:</h2>
+            <span class="teammates-card__level">99</span>
+          </div>
+          <a class="button button--rounded teammates-card__button" href=""
+            >Позвать!</a
+          >
+        </article>
+
+        <article class="teammates-card teammates-catalog__item">
+          <a
+            class="teammates-card__profile-wrapper"
+            href="/user002/profile.html"
+          >
+            <img
+              class="teammates-card__image"
+              src="http://placekitten.com/70/70"
+              alt="Петя Демин"
+              width="70"
+              height="70"
+            />
+            <button class="teammates-card__like">
+              Поставить лайк
+            </button>
+            <h1 class="teammates-card__name">Петя Демин</h1>
+          </a>
+          <span
+            class="teammates-preview__status teammates-preview__status--offline"
+          ></span>
+          <p class="teammates-card__followers">
+            150
+          </p>
+          <p class="teammates-card__hashtags">
+            #бургер #бар #футбол #концерт #крафт
+          </p>
+          <div class="teammates-card__wishlist">
+            <h2 class="teammates-card__title">Хочет посетить:</h2>
+            <div class="teammates-card__wishlist-wrapper">
+              <span class="country-flag country-flag--be teammates-card__flag"
+                >Флаг Бельгии</span
+              >
+              <p class="teammates-card__wishlist-description">Бельгия</p>
+            </div>
+            <div class="teammates-card__wishlist-wrapper">
+              <span class="country-flag country-flag--cz teammates-card__flag"
+                >Флаг Чехии</span
+              >
+              <p class="teammates-card__wishlist-description">Чехия</p>
+            </div>
+          </div>
+
+          <div class="teammates-card__transport-wrapper">
+            <h2 class="teammates-card__title">Транспорт:</h2>
+            <button
+              class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
+              type="button"
+            >
+              Самолет
+            </button>
+            <button
+              class="teammates-card__transport teammates-card__transport--bus teammates-card__transport--active"
+              type="button"
+            >
+              Автобус
+            </button>
+            <button
+              class="teammates-card__transport teammates-card__transport--bicycle"
+              type="button"
+            >
+              Велосипед
+            </button>
+            <button
+              class="teammates-card__transport teammates-card__transport--fit teammates-card__transport--active"
+              type="button"
+            >
+              Пешком
+            </button>
+          </div>
+          <div class="teammates-card__level-wrapper">
+            <h2 class="teammates-card__title">Левел:</h2>
+            <span class="teammates-card__level">80</span>
+          </div>
+          <a class="button button--rounded teammates-card__button" href=""
+            >Позвать!</a
+          >
+        </article>
+
+        <article class="teammates-card teammates-catalog__item">
+          <a
+            class="teammates-card__profile-wrapper"
+            href="/user003/profile.html"
+          >
+            <img
+              class="teammates-card__image"
+              src="http://placekitten.com/70/70"
+              alt="Марк Смолов"
+              width="70"
+              height="70"
+            />
+            <button class="teammates-card__like">
+              Поставить лайк
+            </button>
+            <h1 class="teammates-card__name">Марк Смолов</h1>
+          </a>
+          <span
+            class="teammates-preview__status teammates-preview__status--offline"
+          ></span>
+          <p class="teammates-card__followers">
+            1700
+          </p>
+          <p class="teammates-card__hashtags">
+            #рэп #тату #хайпбист #кроссовки #суприм
+          </p>
+          <div class="teammates-card__wishlist">
+            <h2 class="teammates-card__title">Хочет посетить:</h2>
+            <div class="teammates-card__wishlist-wrapper">
+              <span class="country-flag country-flag--us teammates-card__flag"
+                >Флаг США</span
+              >
+              <p class="teammates-card__wishlist-description">США</p>
+            </div>
+            <div class="teammates-card__wishlist-wrapper">
+              <span class="country-flag country-flag--au teammates-card__flag"
+                >Флаг Австралии</span
+              >
+              <p class="teammates-card__wishlist-description">Австралия</p>
+            </div>
+            <div class="teammates-card__wishlist-wrapper">
+              <span class="country-flag country-flag--do teammates-card__flag"
+                >Флаг Доминики</span
+              >
+              <p class="teammates-card__wishlist-description">Доминикана</p>
+            </div>
+          </div>
+
+          <div class="teammates-card__transport-wrapper">
+            <h2 class="teammates-card__title">Транспорт:</h2>
+            <button
+              class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
+              type="button"
+            >
+              Самолет
+            </button>
+            <button
+              class="teammates-card__transport teammates-card__transport--bus"
+              type="button"
+            >
+              Автобус
+            </button>
+            <button
+              class="teammates-card__transport teammates-card__transport--bicycle teammates-card__transport--active"
+              type="button"
+            >
+              Велосипед
+            </button>
+            <button
+              class="teammates-card__transport teammates-card__transport--fit"
+              type="button"
+            >
+              Пешком
+            </button>
+          </div>
+          <div class="teammates-card__level-wrapper">
+            <h2 class="teammates-card__title">Левел:</h2>
+            <span class="teammates-card__level">25</span>
+          </div>
+          <a class="button button--rounded teammates-card__button" href=""
+            >Позвать!</a
+          >
+        </article>
+
+        <article class="teammates-card teammates-catalog__item">
+          <a
+            class="teammates-card__profile-wrapper"
+            href="/user001/profile.html"
+          >
+            <img
+              class="teammates-card__image"
+              src="http://placekitten.com/70/70"
+              alt="Лариса Роговая"
+              width="70"
+              height="70"
+            />
+            <button class="teammates-card__like">
+              Поставить лайк
+            </button>
+            <h1 class="teammates-card__name">Лариса Роговая</h1>
+          </a>
+          <span
+            class="teammates-preview__status teammates-preview__status--online"
+          ></span>
+          <p class="teammates-card__followers">
+            23
+          </p>
+          <p class="teammates-card__hashtags">
+            #образование #карьера #учеба #линкедин
+          </p>
+          <div class="teammates-card__wishlist">
+            <h2 class="teammates-card__title">Хочет посетить:</h2>
+            <div class="teammates-card__wishlist-wrapper">
+              <span class="country-flag country-flag--uk teammates-card__flag"
+                >Флаг Великобритании</span
+              >
+              <p class="teammates-card__wishlist-description">
+                Великобритания
+              </p>
+            </div>
+            <div class="teammates-card__wishlist-wrapper">
+              <span class="country-flag country-flag--de teammates-card__flag"
+                >Флаг Германии</span
+              >
+              <p class="teammates-card__wishlist-description">Германия</p>
+            </div>
+          </div>
+
+          <div class="teammates-card__transport-wrapper">
+            <h2 class="teammates-card__title">Транспорт:</h2>
+            <button
+              class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
+              type="button"
+            >
+              Самолет
+            </button>
+            <button
+              class="teammates-card__transport teammates-card__transport--bus teammates-card__transport--active"
+              type="button"
+            >
+              Автобус
+            </button>
+            <button
+              class="teammates-card__transport teammates-card__transport--bicycle"
+              type="button"
+            >
+              Велосипед
+            </button>
+            <button
+              class="teammates-card__transport teammates-card__transport--fit"
+              type="button"
+            >
+              Пешком
+            </button>
+          </div>
+          <div class="teammates-card__level-wrapper">
+            <h2 class="teammates-card__title">Левел:</h2>
+            <span class="teammates-card__level">50</span>
+          </div>
+          <a class="button button--rounded teammates-card__button" href=""
+            >Позвать!</a
+          >
+        </article>
+
+        <a class="teammates-catalog__button-show-all" href="all-teammates.html"
+          >Показать еще</a
+        >
+        <div class="teammates-catalog__controls-wrapper">
+          <a
+            class="teammates-catalog__control-button teammates-catalog__control-button--prev"
+            href=""
+            >Показать предыдущую страницу</a
+          >
+          <a
+            class="teammates-catalog__control-button teammates-catalog__control-button--next"
+            href=""
+            >Показать следующую страницу</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <a class="logotype page-footer__logo">
+        <img
+          class="page-footer__picture"
+          src="http://placekitten.com/100/19"
+          width="100"
+          heigth="19"
+          alt="Логотип приложения Погнали"
+        />
+      </a>
+      <ul class="page-footer__social-list">
+        <li class="page-footer__social-item">
+          <a
+            class="social-button social-button--yellow social-button--vk page-footer__social-button"
+            href=""
+            >Facebook</a
+          >
+        </li>
+        <li class="page-footer__social-item">
+          <a
+            class="social-button social-button--yellow social-button--vk page-footer__social-button"
+            href=""
+            >VKontakte</a
+          >
+        </li>
+        <li class="page-footer__social-item">
+          <a
+            class="social-button social-button--yellow social-button--instagram page-footer__social-button"
+            href=""
+            >Instagram</a
+          >
+        </li>
+      </ul>
+      <div class="page-footer__bottom-wrapper">
+        <p class="page-footer__paragraph">Разработано</p>
+        <a
+          class="academy-logo page-footer__academy-logo"
+          href="https://htmlacademy.ru/intensive/adaptive"
+          >HTML Academy</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
