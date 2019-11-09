@@ -1,12 +1,383 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>HTML Academy: Погнали</title>
   </head>
-  <body>
+  <body class="page">
+    <header class="page-header page-header--main">
+      <nav class="page-nav">
+        <div class="page-nav__wrapper">
+          <a class="logotype page-nav__logo">
+            <img
+              class="page-nav__picture"
+              src="http://placekitten.com/100/19"
+              width="100"
+              heigth="19"
+              alt="Логотип приложения Погнали"
+            />
+          </a>
+          <button class="page-nav__control-button"></button>
+          <ul class="page-nav__menu-list">
+            <li class="page-nav__menu-item">
+              <a>О сервисе</a>
+            </li>
+            <li class="page-nav__menu-item">
+              <a href="form.html">Направления</a>
+            </li>
+            <li class="page-nav__menu-item">
+              <a href="catalog.html">Попутчики</a>
+            </li>
+          </ul>
+          <a
+            class="button button--rounded page-nav__button"
+            href="authorization.html"
+            >Авторизация</a
+          >
+          <ul class="page-nav__contacts-list">
+            <li class="page-nav__contacts-item">
+              <a
+                class="contact-url contact-url__telephone page-nav__contacts-button"
+                href="tel:88005558628"
+                >8 800 555-86-28</a
+              >
+            </li>
+            <li class="page-nav__contacts-item">
+              <a
+                class="contact-url contact-url__email page-nav__contacts-button"
+                href="mailto:mail@htmlacademy.ru"
+                >mail@htmlacademy.ru</a
+              >
+            </li>
+          </ul>
+          <ul class="page-nav__social-list">
+            <li class="page-nav__social-item">
+              <a
+                class="social-button social-button--yellow social-button--fb page-nav__social-button"
+                href=""
+                >Facebook</a
+              >
+            </li>
+            <li class="page-nav__social-item">
+              <a
+                class="social-button social-button--yellow social-button--vk page-nav__social-button"
+                href=""
+                >VKontakte</a
+              >
+            </li>
+            <li class="page-nav__social-item">
+              <a
+                class="social-button social-button--yellow social-button--instagram page-nav__social-button"
+                href=""
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="page-header__title">В путешествие с крутыми попутчиками!</h1>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+    <main>
+      <section class="page-promo">
+        <h2 class="visually-hidden">С "Погнали?" путешествовать не скучно!</h2>
+        <ul class="page-promo__contacts-list">
+          <li class="page-promo__contacts-item">
+            <a
+              class="contact-url contact-url__telephone page-promo__contacts-button"
+              href="tel:88005558628"
+              >8 800 555-86-28</a
+            >
+          </li>
+          <li class="page-promo__contacts-item">
+            <a
+              class="contact-url contact-url__email page-promo__contacts-button"
+              href="mailto:mail@htmlacademy.ru"
+              >mail@htmlacademy.ru</a
+            >
+          </li>
+          <li class="page-promo__contacts-item">
+            <a
+              class="button button--rounded page-promo__button"
+              href="authorization.html"
+              >Авторизация</a
+            >
+          </li>
+        </ul>
+        <div class="page-promo__quote-wrapper">
+          <blockquote class="page-promo__quote">
+            «Лучшее приложение, что я видел в жизни!»
+          </blockquote>
+          <cite class="page-promo__quote-author"
+            >Мурат Эльтазин<br />
+            главный редактор газеты «гаджетлайф»</cite
+          >
+        </div>
+        <div class="page-promo__instruction-wrapper">
+          <ol class="instruction__list">
+            <li class="instruction__item">Выберите направление</li>
+            <li class="instruction__item">Изучите идеи путешественников</li>
+            <li class="instruction__item">Находите тех, кто похож на вас</li>
+            <li class="instruction__item">Путешествуйте вместе!</li>
+          </ol>
+        </div>
+      </section>
+      <section class="page-about-us">
+        <h2 class="section-title">О сервисе</h2>
+        <p class="section-paragraph section-paragraph--white">
+          Любое путешествие веселее с попутчиками, которые на одной волне с
+          тобой! Делитесь своими идеями путешествий и черпайте вдохновение в
+          чужих.
+        </p>
+        <p class="section-paragraph section-paragraph--white">
+          <b
+            >А если найдете кого-то близкого по духу — скорее зовите в
+            совместный трип!</b
+          >
+        </p>
+      </section>
+      <section class="directions">
+        <h2 class="section-title">Направления</h2>
+        <p class="section-paragraph">
+          Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах,
+          куда хотели бы отправиться и чем можно там заняться.
+        </p>
+        <article class="directions-card directions__item">
+          <a class="directions-card__link-wrapper">
+            <img
+              class="directions-card__image"
+              src="http://placekitten.com/270/110"
+              alt="Путешествие в Таиланд"
+              width="270"
+              height="110"
+            />
+            <span class="country-flag country-flag--th directions-card__flag"
+              >Флаг Таиланда</span
+            >
+            <h1 class="directions-card__title">Таиланд</h1>
+            <p class="directions-card__description">Джунгли зовут!</p>
+            <p class="directions-card__users">18321</p>
+          </a>
+        </article>
+        <article class="directions-card directions__item">
+          <a class="directions-card__link-wrapper">
+            <img
+              class="directions-card__image"
+              src="http://placekitten.com/270/110"
+              alt="Путешествие в Таиланд"
+              width="270"
+              height="110"
+            />
+            <span class="country-flag country-flag--fr directions-card__flag"
+              >Флаг Франции</span
+            >
+            <h1 class="directions-card__title">Франция</h1>
+            <p class="directions-card__description">Трэ бьен, манифик!</p>
+            <p class="directions-card__users">12518</p>
+          </a>
+        </article>
+        <article class="directions-card directions__item">
+          <a class="directions-card__link-wrapper">
+            <img
+              class="directions-card__image"
+              src="http://placekitten.com/270/110"
+              alt="Путешествие в Таиланд"
+              width="270"
+              height="110"
+            />
+            <span class="country-flag country-flag--cz directions-card__flag"
+              >Флаг Чехии</span
+            >
+            <h1 class="directions-card__title">Чехия</h1>
+            <p class="directions-card__description">Закоулки старой Европы</p>
+            <p class="directions-card__users">5326</p>
+          </a>
+        </article>
+        <a class="button button--squared" href="form.html">Показать все</a>
+      </section>
+      <section class="teammates">
+        <h2 class="section-title">Попутчики</h2>
+        <p class="section-paragraph section-paragraph--white">
+          Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
+          Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+        </p>
+        <p class="section-paragraph section-paragraph--white">
+          <b>Теперь можно легко найти единомышленников!</b>
+        </p>
+        <article class="teammates-card teammates__item">
+          <a class="teammates-card__link-wrapper">
+            <img
+              class="teammates-card__image"
+              src="http://placekitten.com/270/270"
+              alt="Таня Фирсова"
+              width="270"
+              height="270"
+            />
+            <span class="teammates-card__level">99 level</span>
+            <div class="teammates-card__flags-wrapper">
+              <span class="country-flag country-flag--lk teammates-card__flag"
+                >Флаг Шри-Ланки</span
+              >
+              <span class="country-flag country-flag--th teammates-card__flag"
+                >Флаг Таиланда</span
+              >
+              <span class="country-flag country-flag--sc teammates-card__flag"
+                >Флаг Сейшел</span
+              >
+            </div>
+            <h1 class="teammates-card__name">Таня Фирсова</h1>
+            <p class="teammates-card__hashtags">
+              #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
+            </p>
+            <div class="teammates-card__transport-wrapper">
+              <button
+                class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
+                type="button"
+              >
+                Самолет
+              </button>
+              <button
+                class="teammates-card__transport teammates-card__transport--bus"
+                type="button"
+              >
+                Автобус
+              </button>
+              <button
+                class="teammates-card__transport teammates-card__transport--bicycle"
+                type="button"
+              >
+                Велосипед
+              </button>
+              <button
+                class="teammates-card__transport teammates-card__transport--fit"
+                type="button"
+              >
+                Пешком
+              </button>
+            </div>
+          </a>
+        </article>
+        <article class="teammates-card teammates__item">
+          <a class="teammates-card__link-wrapper">
+            <img
+              class="teammates-card__image"
+              src="http://placekitten.com/270/270"
+              alt="Петя Демин"
+              width="270"
+              height="270"
+            />
+            <span class="teammates-card__level">80 level</span>
+            <div class="teammates-card__flags-wrapper">
+              <span class="country-flag country-flag--be teammates-card__flag"
+                >Флаг Бельгии</span
+              >
+              <span class="country-flag country-flag--cz teammates-card__flag"
+                >Флаг Чехии</span
+              >
+            </div>
+            <h1 class="teammates-card__name">Петя Демин</h1>
+            <p class="teammates-card__hashtags">
+              #бургер #бар #футбол #концерт #крафт
+            </p>
+            <div class="teammates-card__transport-wrapper">
+              <button
+                class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
+                type="button"
+              >
+                Самолет
+              </button>
+              <button
+                class="teammates-card__transport teammates-card__transport--bus teammates-card__transport--active"
+                type="button"
+              >
+                Автобус
+              </button>
+              <button
+                class="teammates-card__transport teammates-card__transport--bicycle"
+                type="button"
+              >
+                Велосипед
+              </button>
+              <button
+                class="teammates-card__transport teammates-card__transport--fit teammates-card__transport--active"
+                type="button"
+              >
+                Пешком
+              </button>
+            </div>
+          </a>
+        </article>
+        <a class="button button--squared teammates__button" href=""
+          >Показать всех</a
+        >
+      </section>
+      <section class="create-profile">
+        <div class="create-profile__title-wrapper">
+          <h2 class="section-title">Добавьте свой профиль</h2>
+          <div class="create-profile__image-block"></div>
+        </div>
+        <div class="create-profile__options-wrapper">
+          <ol class="create-profile__options-list">
+            <li class="create-profile__options-item">
+              Базовое размещение Бесплатно
+            </li>
+            <li class="create-profile__options-item">
+              Вывод на первых позициях 99 руб./мес
+            </li>
+            <li class="create-profile__options-item">
+              Кастомный цвет карточки 59 руб./мес
+            </li>
+          </ol>
+          <a class="create-profile__business-link" href=""
+            >Показать тарифы для бизнеса</a
+          >
+        </div>
+      </section>
+      <!-- Здесь будет секция с регистрацией и авторизацией -->
+      <!-- Здесь будет секция с контактами и картой -->
+    </main>
 
+    <footer class="page-footer">
+      <a class="logotype page-footer__logo">
+        <img
+          class="page-footer__picture"
+          src="http://placekitten.com/100/19"
+          width="100"
+          heigth="19"
+          alt="Логотип приложения Погнали"
+        />
+      </a>
+      <ul class="page-footer__social-list">
+        <li class="page-footer__social-item">
+          <a
+            class="social-button social-button--yellow social-button--vk page-footer__social-button"
+            href=""
+            >Facebook</a
+          >
+        </li>
+        <li class="page-footer__social-item">
+          <a
+            class="social-button social-button--yellow social-button--vk page-footer__social-button"
+            href=""
+            >VKontakte</a
+          >
+        </li>
+        <li class="page-footer__social-item">
+          <a
+            class="social-button social-button--yellow social-button--instagram page-footer__social-button"
+            href=""
+            >Instagram</a
+          >
+        </li>
+      </ul>
+      <div class="page-footer__bottom-wrapper">
+        <p class="page-footer__paragraph">Разработано</p>
+        <a
+          class="academy-logo page-footer__academy-logo"
+          href="https://htmlacademy.ru/intensive/adaptive"
+          >HTML Academy</a
+        >
+      </div>
+    </footer>
   </body>
 </html>
