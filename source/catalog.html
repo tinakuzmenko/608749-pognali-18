@@ -17,60 +17,63 @@
               alt="Логотип приложения Погнали"
             />
           </a>
-          <button class="page-nav__control-button">
+          <button class="page-nav__toggler" type="button">
             Открыть / закрыть меню
           </button>
-          <ul class="page-nav__menu-list">
-            <li class="page-nav__menu-item">
+          <ul class="nav-list page-nav__menu-list">
+            <li class="nav-list__item">
               <a href="index.html">О сервисе</a>
             </li>
-            <li class="page-nav__menu-item">
+            <li class="nav-list__item">
               <a href="form.html">Направления</a>
             </li>
-            <li class="page-nav__menu-item">
+            <li class="nav-list__item">
               <a>Попутчики</a>
             </li>
           </ul>
           <a
-            class="button button--rounded page-nav__button"
+            class="button button--rounded page-nav__auth-button"
             href="authorization.html"
             >Авторизация</a
           >
-          <ul class="page-nav__contacts-list">
-            <li class="page-nav__contacts-item">
+          <ul class="contacts page-nav__contacts">
+            <li class="contacts__item">
               <a
-                class="contact-url contact-url__telephone page-nav__contacts-button"
-                href="tel:88005558628"
+                class="contact-url contact-url__telephone"
+                href="tel:+88005558628"
                 >8 800 555-86-28</a
               >
             </li>
-            <li class="page-nav__contacts-item">
+            <li class="contacts__item">
               <a
-                class="contact-url contact-url__email page-nav__contacts-button"
+                class="contact-url contact-url__email"
                 href="mailto:mail@htmlacademy.ru"
                 >mail@htmlacademy.ru</a
               >
             </li>
           </ul>
-          <ul class="page-nav__social-list">
-            <li class="page-nav__social-item">
+          <ul class="social page-nav__social">
+            <li class="social__item">
               <a
-                class="social-button social-button--yellow social-button--fb page-nav__social-button"
+                class="social-link social-link--yellow social-link--fb"
                 href=""
+                target="_blank"
                 >Facebook</a
               >
             </li>
-            <li class="page-nav__social-item">
+            <li class="social__item">
               <a
-                class="social-button social-button--yellow social-button--vk page-nav__social-button"
+                class="social-link social-link--yellow social-link--vk"
                 href=""
+                target="_blank"
                 >VKontakte</a
               >
             </li>
-            <li class="page-nav__social-item">
+            <li class="social__item">
               <a
-                class="social-button social-button--yellow social-button--instagram page-nav__social-button"
+                class="social-link social-link--yellow social-link--instagram"
                 href=""
+                target="_blank"
                 >Instagram</a
               >
             </li>
@@ -86,21 +89,27 @@
       <!-- Здесь будет секция с фильтром поиска -->
 
       <section class="teammates-catalog">
-        <article class="teammates-card teammates-catalog__item">
-          <img
-            class="teammates-card__image"
-            src="http://placekitten.com/70/70"
-            alt="Таня Фирсова"
-            width="70"
-            height="70"
-          />
-          <button class="teammates-card__like teammates-card__like--active">
-            Убрать лайк
+        <h2 class="visually-hidden">Список попутчиков</h2>
+
+        <section class="teammates-card teammates-catalog__item">
+          <div class="teammates-card__image-wrapper">
+            <img
+              class="teammates-card__picture"
+              src="http://placekitten.com/70/70"
+              alt="Таня Фирсова"
+              width="70"
+              height="70"
+            />
+          </div>
+          <button
+            class="teammates-card__like teammates-card__like--active"
+            type="button"
+          >
+            Добавить / Убрать лайк
           </button>
-          <h1 class="teammates-card__name">Таня Фирсова</h1>
-          <span
-            class="teammates-card__status teammates-card__status--offline"
-          ></span>
+          <h3 class="teammates-card__name teammates-card__name--offline">
+            Таня Фирсова
+          </h3>
           <p class="teammates-card__followers">
             1,5 m
           </p>
@@ -108,7 +117,7 @@
             #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
           </p>
           <div class="teammates-card__wishlist">
-            <h2 class="teammates-card__title">Хочет посетить:</h2>
+            <p class="teammates-card__title">Хочет посетить:</p>
             <div class="teammates-card__wishlist-wrapper">
               <span class="country-flag country-flag--lk teammates-card__flag"
                 >Флаг Шри-Ланки</span
@@ -129,57 +138,56 @@
             </div>
           </div>
 
-          <div class="teammates-card__transport-wrapper">
-            <h2 class="teammates-card__title">Транспорт:</h2>
-            <button
-              class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
-              type="button"
-            >
-              Самолет
-            </button>
-            <button
-              class="teammates-card__transport teammates-card__transport--bus"
-              type="button"
-            >
-              Автобус
-            </button>
-            <button
-              class="teammates-card__transport teammates-card__transport--bicycle"
-              type="button"
-            >
-              Велосипед
-            </button>
-            <button
-              class="teammates-card__transport teammates-card__transport--fit"
-              type="button"
-            >
-              Пешком
-            </button>
+          <div class="teammates-card__inner">
+            <p class="teammates-card__title">Транспорт:</p>
+            <ul class="teammates-card__transport-wrapper">
+              <li
+                class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
+              >
+                Самолет
+              </li>
+              <li
+                class="teammates-card__transport teammates-card__transport--bus"
+              >
+                Автобус
+              </li>
+              <li
+                class="teammates-card__transport teammates-card__transport--bicycle"
+              >
+                Велосипед
+              </li>
+              <li
+                class="teammates-card__transport teammates-card__transport--fit"
+              >
+                Пешком
+              </li>
+            </ul>
           </div>
           <div class="teammates-card__level-wrapper">
-            <h2 class="teammates-card__title">Левел:</h2>
+            <p class="teammates-card__title">Левел:</p>
             <span class="teammates-card__level">99</span>
           </div>
           <a class="button button--rounded teammates-card__button" href=""
             >Позвать!</a
           >
-        </article>
+        </section>
 
-        <article class="teammates-card teammates-catalog__item">
-          <img
-            class="teammates-card__image"
-            src="http://placekitten.com/70/70"
-            alt="Петя Демин"
-            width="70"
-            height="70"
-          />
-          <button class="teammates-card__like">
-            Поставить лайк
+        <section class="teammates-card teammates-catalog__item">
+          <div class="teammates-card__image-wrapper">
+            <img
+              class="teammates-card__picture"
+              src="http://placekitten.com/70/70"
+              alt="Петя Демин"
+              width="70"
+              height="70"
+            />
+          </div>
+          <button class="teammates-card__like" type="button">
+            Добавить / Убрать лайк
           </button>
-          <h1 class="teammates-card__name">Петя Демин</h1>
-          <span
-            class="teammates-card__status teammates-card__status--offline"
-          ></span>
+          <h3 class="teammates-card__name teammates-card__name--offline">
+            Петя Демин
+          </h3>
           <p class="teammates-card__followers">
             150
           </p>
@@ -187,7 +195,7 @@
             #бургер #бар #футбол #концерт #крафт
           </p>
           <div class="teammates-card__wishlist">
-            <h2 class="teammates-card__title">Хочет посетить:</h2>
+            <p class="teammates-card__title">Хочет посетить:</p>
             <div class="teammates-card__wishlist-wrapper">
               <span class="country-flag country-flag--be teammates-card__flag"
                 >Флаг Бельгии</span
@@ -202,57 +210,56 @@
             </div>
           </div>
 
-          <div class="teammates-card__transport-wrapper">
-            <h2 class="teammates-card__title">Транспорт:</h2>
-            <button
-              class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
-              type="button"
-            >
-              Самолет
-            </button>
-            <button
-              class="teammates-card__transport teammates-card__transport--bus teammates-card__transport--active"
-              type="button"
-            >
-              Автобус
-            </button>
-            <button
-              class="teammates-card__transport teammates-card__transport--bicycle"
-              type="button"
-            >
-              Велосипед
-            </button>
-            <button
-              class="teammates-card__transport teammates-card__transport--fit teammates-card__transport--active"
-              type="button"
-            >
-              Пешком
-            </button>
+          <div class="teammates-card__inner">
+            <p class="teammates-card__title">Транспорт:</p>
+            <ul class="teammates-card__transport-wrapper">
+              <li
+                class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
+              >
+                Самолет
+              </li>
+              <li
+                class="teammates-card__transport teammates-card__transport--bus teammates-card__transport--active"
+              >
+                Автобус
+              </li>
+              <li
+                class="teammates-card__transport teammates-card__transport--bicycle"
+              >
+                Велосипед
+              </li>
+              <li
+                class="teammates-card__transport teammates-card__transport--fit teammates-card__transport--active"
+              >
+                Пешком
+              </li>
+            </ul>
           </div>
           <div class="teammates-card__level-wrapper">
-            <h2 class="teammates-card__title">Левел:</h2>
+            <p class="teammates-card__title">Левел:</p>
             <span class="teammates-card__level">80</span>
           </div>
           <a class="button button--rounded teammates-card__button" href=""
             >Позвать!</a
           >
-        </article>
+        </section>
 
-        <article class="teammates-card teammates-catalog__item">
-          <img
-            class="teammates-card__image"
-            src="http://placekitten.com/70/70"
-            alt="Марк Смолов"
-            width="70"
-            height="70"
-          />
-          <button class="teammates-card__like">
-            Поставить лайк
+        <section class="teammates-card teammates-catalog__item">
+          <div class="teammates-card__image-wrapper">
+            <img
+              class="teammates-card__picture"
+              src="http://placekitten.com/70/70"
+              alt="Марк Смолов"
+              width="70"
+              height="70"
+            />
+          </div>
+          <button class="teammates-card__like" type="button">
+            Добавить / Убрать лайк
           </button>
-          <h1 class="teammates-card__name">Марк Смолов</h1>
-          <span
-            class="teammates-card__status teammates-card__status--offline"
-          ></span>
+          <h3 class="teammates-card__name teammates-card__name--offline">
+            Марк Смолов
+          </h3>
           <p class="teammates-card__followers">
             1700
           </p>
@@ -260,7 +267,7 @@
             #рэп #тату #хайпбист #кроссовки #суприм
           </p>
           <div class="teammates-card__wishlist">
-            <h2 class="teammates-card__title">Хочет посетить:</h2>
+            <p class="teammates-card__title">Хочет посетить:</p>
             <div class="teammates-card__wishlist-wrapper">
               <span class="country-flag country-flag--us teammates-card__flag"
                 >Флаг США</span
@@ -281,57 +288,56 @@
             </div>
           </div>
 
-          <div class="teammates-card__transport-wrapper">
-            <h2 class="teammates-card__title">Транспорт:</h2>
-            <button
-              class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
-              type="button"
-            >
-              Самолет
-            </button>
-            <button
-              class="teammates-card__transport teammates-card__transport--bus"
-              type="button"
-            >
-              Автобус
-            </button>
-            <button
-              class="teammates-card__transport teammates-card__transport--bicycle teammates-card__transport--active"
-              type="button"
-            >
-              Велосипед
-            </button>
-            <button
-              class="teammates-card__transport teammates-card__transport--fit"
-              type="button"
-            >
-              Пешком
-            </button>
+          <div class="teammates-card__inner">
+            <p class="teammates-card__title">Транспорт:</p>
+            <ul class="teammates-card__transport-wrapper">
+              <li
+                class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
+              >
+                Самолет
+              </li>
+              <li
+                class="teammates-card__transport teammates-card__transport--bus"
+              >
+                Автобус
+              </li>
+              <li
+                class="teammates-card__transport teammates-card__transport--bicycle teammates-card__transport--active"
+              >
+                Велосипед
+              </li>
+              <li
+                class="teammates-card__transport teammates-card__transport--fit"
+              >
+                Пешком
+              </li>
+            </ul>
           </div>
           <div class="teammates-card__level-wrapper">
-            <h2 class="teammates-card__title">Левел:</h2>
+            <p class="teammates-card__title">Левел:</p>
             <span class="teammates-card__level">25</span>
           </div>
           <a class="button button--rounded teammates-card__button" href=""
             >Позвать!</a
           >
-        </article>
+        </section>
 
-        <article class="teammates-card teammates-catalog__item">
-          <img
-            class="teammates-card__image"
-            src="http://placekitten.com/70/70"
-            alt="Лариса Роговая"
-            width="70"
-            height="70"
-          />
-          <button class="teammates-card__like">
-            Поставить лайк
+        <section class="teammates-card teammates-catalog__item">
+          <div class="teammates-card__image-wrapper">
+            <img
+              class="teammates-card__picture"
+              src="http://placekitten.com/70/70"
+              alt="Лариса Роговая"
+              width="70"
+              height="70"
+            />
+          </div>
+          <button class="teammates-card__like" type="button">
+            Добавить / Убрать лайк
           </button>
-          <h1 class="teammates-card__name">Лариса Роговая</h1>
-          <span
-            class="teammates-card__status teammates-card__status--online"
-          ></span>
+          <h3 class="teammates-card__name teammates-card__name--online">
+            Лариса Роговая
+          </h3>
           <p class="teammates-card__followers">
             23
           </p>
@@ -339,7 +345,7 @@
             #образование #карьера #учеба #линкедин
           </p>
           <div class="teammates-card__wishlist">
-            <h2 class="teammates-card__title">Хочет посетить:</h2>
+            <p class="teammates-card__title">Хочет посетить:</p>
             <div class="teammates-card__wishlist-wrapper">
               <span class="country-flag country-flag--uk teammates-card__flag"
                 >Флаг Великобритании</span
@@ -357,7 +363,7 @@
           </div>
 
           <div class="teammates-card__transport-wrapper">
-            <h2 class="teammates-card__title">Транспорт:</h2>
+            <p class="teammates-card__title">Транспорт:</p>
             <button
               class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
               type="button"
@@ -384,13 +390,13 @@
             </button>
           </div>
           <div class="teammates-card__level-wrapper">
-            <h2 class="teammates-card__title">Левел:</h2>
+            <p class="teammates-card__title">Левел:</p>
             <span class="teammates-card__level">50</span>
           </div>
           <a class="button button--rounded teammates-card__button" href=""
             >Позвать!</a
           >
-        </article>
+        </section>
 
         <a class="teammates-catalog__button-show-all" href="all-teammates.html"
           >Показать еще</a
@@ -411,34 +417,37 @@
     </main>
 
     <footer class="page-footer">
-      <a class="logotype page-footer__logo">
+      <a class="logo page-footer__logo">
         <img
-          class="page-footer__picture"
+          class="logo__picture"
           src="http://placekitten.com/100/19"
           width="100"
           height="19"
           alt="Логотип приложения Погнали"
         />
       </a>
-      <ul class="page-footer__social-list">
-        <li class="page-footer__social-item">
+      <ul class="social page-footer__social-list">
+        <li class="social__item">
           <a
-            class="social-button social-button--yellow social-button--vk page-footer__social-button"
+            class="social-button social-button--yellow social-button--vk"
             href=""
+            target="_blank"
             >Facebook</a
           >
         </li>
-        <li class="page-footer__social-item">
+        <li class="social__item">
           <a
-            class="social-button social-button--yellow social-button--vk page-footer__social-button"
+            class="social-button social-button--yellow social-button--vk"
             href=""
+            target="_blank"
             >VKontakte</a
           >
         </li>
-        <li class="page-footer__social-item">
+        <li class="social__item">
           <a
-            class="social-button social-button--yellow social-button--instagram page-footer__social-button"
+            class="social-button social-button--yellow social-button--instagram"
             href=""
+            target="_blank"
             >Instagram</a
           >
         </li>
@@ -448,6 +457,7 @@
         <a
           class="academy-logo page-footer__academy-logo"
           href="https://htmlacademy.ru/intensive/adaptive"
+          target="_blank"
           >HTML Academy</a
         >
       </div>
