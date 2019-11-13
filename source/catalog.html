@@ -86,7 +86,144 @@
     </header>
 
     <main>
-      <!-- Здесь будет секция с фильтром поиска -->
+      <section class="filter">
+        <h2 class="filter__title">Фильтрация по странам</h2>
+        <button class="filter__toggler">Открыть / закрыть фильтр</button>
+        <!-- Здесь будет поп-ап с фильтром по странам -->
+      </section>
+
+      <section class="find-teammate">
+        <form
+          class="teammate-search-form find-teammate__form"
+          action="https://echo.htmlacademy.ru"
+          method="GET"
+        >
+          <h2 class="heading heading--h2 teammate-search-form__title">
+            Подберите идеального попутчика
+          </h2>
+          <fieldset class="accordion teammate-search-form__fieldset">
+            <legend class="accordion__title">Хобби</legend>
+            <button
+              class="accordion__control accordion__control--collapse"
+              type="button"
+            >
+              Развернуть / свернуть
+            </button>
+          </fieldset>
+          <fieldset class="accordion teammate-search-form__fieldset">
+            <legend class="accordion__title">Музыка</legend>
+            <button
+              class="accordion__control accordion__control--collapse"
+              type="button"
+            >
+              Развернуть / свернуть
+            </button>
+            <ul class="accordion__music-list">
+              <li class="accordion__music-item">
+                <input type="checkbox" name="music" id="hard-rock" checked />
+                <label class="accordion__checkbox" for="hard-rock"
+                  >Тяжелый рок</label
+                >
+              </li>
+              <li class="accordion__music-item">
+                <input type="checkbox" name="music" id="russian-rap" />
+                <label class="accordion__checkbox" for="russian-rap"
+                  >Русский рэп</label
+                >
+              </li>
+              <li class="accordion__music-item">
+                <input type="checkbox" name="music" id="eurodance" />
+                <label class="accordion__checkbox" for="eurodance"
+                  >Евроденс</label
+                >
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="accordion teammate-search-form__fieldset">
+              <legend class="accordion__title">Еда</legend>
+              <button
+                class="accordion__control accordion__control--collapse"
+                type="button"
+              >
+                Развернуть / свернуть
+              </button>
+          </fieldset>
+          <fieldset class="accordion teammate-search-form__fieldset">
+              <legend class="accordion__title">Транспорт</legend>
+              <button
+                class="accordion__control accordion__control--collapse"
+                type="button"
+              >
+                Развернуть / свернуть
+              </button>
+            <ul class="accordion__transport-wrapper">
+              <li class="accordion__transport-item">
+                <input
+                  type="checkbox"
+                  name="transport-type"
+                  id="plane"
+                  checked
+                />
+                <label
+                  class="transport-type transport-type--plane transport-type--active"
+                  for="plane"
+                  >Самолет</label
+                >
+              </li>
+              <li class="accordion__transport-item">
+                <input type="checkbox" name="transport-type" id="bus" checked />
+                <label
+                  class="transport-type transport-type--bus transport-type--active"
+                  for="bus"
+                  >Автобус</label
+                >
+              </li>
+              <li class="accordion__transport-item">
+                <input type="checkbox" name="transport-type" id="bike" />
+                <label class="transport-type transport-type--bike" for="bike"
+                  >Велосипед</label
+                >
+              </li>
+              <li class="accordion__transport-item">
+                <input
+                  type="checkbox"
+                  name="transport-type"
+                  id="feet"
+                  checked
+                />
+                <label class="transport-type transport-type--feet" for="feet"
+                  >Пешком</label
+                >
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="accordion teammate-search-form__fieldset">
+            <legend class="accordion__title">Левел</legend>
+            <button
+              class="accordion__control accordion__control--collapse"
+              type="button"
+            >
+              Развернуть / свернуть
+            </button>
+            <input
+              type="text"
+              value="30"
+              name="level"
+              aria-label="Минимальный уровень"
+            />
+            <input
+              type="text"
+              value="100"
+              name="level"
+              aria-label="Максимальный уровень"
+            />
+            <!-- Здесь будет кастомный range -->
+          </fieldset>
+          <button class="button button--rounded button--white" type="submit">
+            Показать
+          </button>
+        </form>
+      </section>
 
       <section class="teammates-catalog">
         <h2 class="visually-hidden">Список попутчиков</h2>
