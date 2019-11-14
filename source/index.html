@@ -273,7 +273,7 @@
               Велосипед
             </li>
             <li
-              class="teammates-preview__transport teammates-preview__transport--fit"
+              class="teammates-preview__transport teammates-preview__transport--feet"
             >
               Пешком
             </li>
@@ -327,7 +327,7 @@
               Велосипед
             </li>
             <li
-              class="teammates-preview__transport teammates-preview__transport--fit teammates-preview__transport--active"
+              class="teammates-preview__transport teammates-preview__transport--feet teammates-preview__transport--active"
             >
               Пешком
             </li>
@@ -359,8 +359,56 @@
           >
         </div>
       </section>
-      <!-- Здесь будет секция с регистрацией и авторизацией -->
-      <!-- Здесь будет секция с контактами и картой -->
+      <section class="feedback">
+        <h2 class="heading heading--h2">Заинтересовались?</h2>
+        <p class="text text--white feedback__text">
+          Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда
+          скорее <a href="">авторизуйтесь</a>.
+        </p>
+        <form
+          class="feedback__form"
+          method="POST"
+          action="https://echo.htmlacademy.ru"
+        >
+          <input
+            class="feedback__email"
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            aria-label="Введите ваш E-mail"
+          />
+          <button class="feedback__submit" type="submit">
+            Отправить форму
+          </button>
+        </form>
+        <p class="text text--white feedback__text">
+          Остались вопросы? Мы с радостью на них ответим!
+        </p>
+        <ul class="contacts feedback__contacts">
+          <li class="contacts__item">
+            <a
+              class="contact-url contact-url--telephone"
+              href="tel:+88005558628"
+              >8 800 555-86-28</a
+            >
+          </li>
+          <li class="contacts__item">
+            <a
+              class="contact-url contact-url--email"
+              href="mailto:mail@htmlacademy.ru"
+              >mail@htmlacademy.ru</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="location">
+        <h2 class="visually-hidden">Наш адрес</h2>
+        <address class="our-address">ул. Большая Конюшенная, 19/8</address>
+        <a class="button button--squared button--bordered location__button" href="">Проложить маршрут</a>
+        <div class="map location__map">
+          <!-- Здесь будет карта -->
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">
