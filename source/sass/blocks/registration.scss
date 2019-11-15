@@ -1,0 +1,11 @@
+.registration {
+  background-color: $night-dark-blue;
+  color: $white;
+  padding: 45px 0;
+}
+
+.registration__email::placeholder {
+  color: rgba($greyish-brown, 0.3);
+  font-size: 18px;
+  font-weight: bold;
+}
