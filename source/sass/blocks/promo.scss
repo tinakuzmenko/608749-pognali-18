@@ -5,8 +5,73 @@
 
 .promo__contacts-list {
   @include list-style-reset();
+
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: -30px;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.promo__contacts-item {
+  max-width: 189px;
+  max-height: 40px;
+}
+
+.promo__quote {
+  margin: 0;
+  line-height: 1.38;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.promo__quote-author {
+  display: block;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.38;
+  margin-bottom: 33px;
 }
 
 .promo__instruction-list {
   @include list-style-reset();
+}
+
+.promo__instruction-list {
+  @include list-style-reset();
+
+  color: $deep-dark-blue;
+  border-radius: 10px;
+}
+
+.promo__instruction-item {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 25px 25px 35px 25px;
+  padding-bottom: 35px;
+  margin-top: -10px;
+
+  &:first-child {
+    background-color: $orange;
+    margin-top: 0;
+  }
+
+  &:nth-child(2) {
+    background-color: $orange-lighter;
+  }
+
+  &:nth-child(3) {
+    background-color: $orange-yellow;
+  }
+
+  &:last-child {
+    background-color: $accent-yellow;
+    border-radius: 10px;
+    padding-bottom: 25px;
+  }
 }

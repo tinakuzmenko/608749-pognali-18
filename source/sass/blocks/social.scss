@@ -1,0 +1,5 @@
+.social {
+  @include list-style-reset();
+  display: flex;
+  justify-content: center;
+}

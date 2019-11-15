@@ -1,0 +1,9 @@
+.contacts {
+  @include list-style-reset();
+  margin-top: 0;
+}
+
+.contacts__item {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}

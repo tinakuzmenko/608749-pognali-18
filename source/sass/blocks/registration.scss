@@ -1,5 +1,5 @@
 .registration {
-  background-color: $night-dark-blue;
+  background-color: $dark-blue;
   color: $white;
   padding: 45px 0;
 }
@@ -8,4 +8,9 @@
   color: rgba($greyish-brown, 0.3);
   font-size: 18px;
   font-weight: bold;
+}
+
+.registration__text-url {
+  color: $accent-yellow;
+  text-decoration: underline;
 }
