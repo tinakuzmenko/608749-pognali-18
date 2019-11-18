@@ -15,4 +15,22 @@
   &--centered {
     text-align: center;
   }
+
+  &--underline {
+    padding-bottom: 10px;
+    position: relative;
+    display: inline-flex;
+    margin-bottom: 0;
+  }
+
+  &--underline::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 2.4px;
+    background-color: $orange;
+  }
 }

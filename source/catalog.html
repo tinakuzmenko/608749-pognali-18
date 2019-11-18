@@ -3,87 +3,101 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Погнали -- Попутчики</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="page">
     <header class="page-header">
       <nav class="page-nav">
-        <div class="page-nav__wrapper">
-          <a class="logotype page-nav__logo" href="index.html">
-            <img
-              class="page-nav__picture"
-              src="http://placekitten.com/100/19"
-              width="100"
-              height="19"
-              alt="Логотип приложения Погнали"
-            />
-          </a>
-          <button class="page-nav__toggler" type="button">
-            Открыть / закрыть меню
-          </button>
-          <ul class="nav-list page-nav__menu-list">
-            <li class="nav-list__item">
-              <a href="index.html">О сервисе</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="form.html">Направления</a>
-            </li>
-            <li class="nav-list__item">
-              <a>Попутчики</a>
-            </li>
-          </ul>
-          <a
-            class="button button--rounded page-nav__auth-button"
-            href="authorization.html"
-            >Авторизация</a
-          >
-          <ul class="contacts page-nav__contacts">
-            <li class="contacts__item">
-              <a
-                class="contact-url contact-url__telephone"
-                href="tel:+88005558628"
-                >8 800 555-86-28</a
+        <div class="container">
+          <div class="page-nav__wrapper">
+            <div class="page-nav__logo-wrapper">
+              <a class="logo page-nav__logo" href="index.html">
+                <img
+                  class="logo__picture"
+                  src="http://placekitten.com/100/19"
+                  width="100"
+                  height="19"
+                  alt="Логотип приложения Погнали"
+                />
+              </a>
+              <button
+                class="page-nav__toggler"
+                type="button"
+                aria-haspopup="true"
+                aria-label="Переключатель навигации"
               >
-            </li>
-            <li class="contacts__item">
-              <a
-                class="contact-url contact-url__email"
-                href="mailto:mail@htmlacademy.ru"
-                >mail@htmlacademy.ru</a
-              >
-            </li>
-          </ul>
-          <ul class="social page-nav__social">
-            <li class="social__item">
-              <a
-                class="social-link social-link--yellow social-link--fb"
-                href=""
-                target="_blank"
-                >Facebook</a
-              >
-            </li>
-            <li class="social__item">
-              <a
-                class="social-link social-link--yellow social-link--vk"
-                href=""
-                target="_blank"
-                >VKontakte</a
-              >
-            </li>
-            <li class="social__item">
-              <a
-                class="social-link social-link--yellow social-link--instagram"
-                href=""
-                target="_blank"
-                >Instagram</a
-              >
-            </li>
-          </ul>
+                Открыть / закрыть меню
+              </button>
+            </div>
+            <ul class="nav-list page-nav__menu-list">
+              <li class="nav-list__item">
+                <a href="index.html">О сервисе</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="form.html">Направления</a>
+              </li>
+              <li class="nav-list__item">
+                <a>Попутчики</a>
+              </li>
+            </ul>
+            <a
+              class="button button--rounded page-nav__auth-button"
+              href="authorization.html"
+              >Авторизация</a
+            >
+            <ul class="contacts page-nav__contacts">
+              <li class="contacts__item">
+                <a
+                  class="contact-url contact-url--telephone"
+                  href="tel:+88005558628"
+                  >8 800 555-86-28</a
+                >
+              </li>
+              <li class="contacts__item">
+                <a
+                  class="contact-url contact-url--email"
+                  href="mailto:mail@htmlacademy.ru"
+                  >mail@htmlacademy.ru</a
+                >
+              </li>
+            </ul>
+            <ul class="social page-nav__social">
+              <li class="social__item">
+                <a
+                  class="social-link social-link--fb"
+                  href=""
+                  target="_blank"
+                  aria-label="Facebook"
+                  >Facebook</a
+                >
+              </li>
+              <li class="social__item">
+                <a
+                  class="social-link social-link--vk"
+                  href=""
+                  target="_blank"
+                  aria-label="Vkontakte"
+                  >VKontakte</a
+                >
+              </li>
+              <li class="social__item">
+                <a
+                  class="social-link social-link--instagram"
+                  href=""
+                  target="_blank"
+                  aria-label="Instagram"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
-      <h1 class="heading heading--h1 heading--underline page-header__title">
-        Попутчики
-      </h1>
+      <div class="container">
+        <h1 class="heading heading--h1 heading--underline page-header__title">
+          Попутчики
+        </h1>
+      </div>
     </header>
 
     <main>
@@ -141,30 +155,25 @@
             </ul>
           </fieldset>
           <fieldset class="accordion teammate-search-form__fieldset">
-              <legend class="accordion__title">Еда</legend>
-              <button
-                class="accordion__control accordion__control--collapse"
-                type="button"
-              >
-                Развернуть / свернуть
-              </button>
+            <legend class="accordion__title">Еда</legend>
+            <button
+              class="accordion__control accordion__control--collapse"
+              type="button"
+            >
+              Развернуть / свернуть
+            </button>
           </fieldset>
           <fieldset class="accordion teammate-search-form__fieldset">
-              <legend class="accordion__title">Транспорт</legend>
-              <button
-                class="accordion__control accordion__control--collapse"
-                type="button"
-              >
-                Развернуть / свернуть
-              </button>
+            <legend class="accordion__title">Транспорт</legend>
+            <button
+              class="accordion__control accordion__control--collapse"
+              type="button"
+            >
+              Развернуть / свернуть
+            </button>
             <ul class="accordion__transport-wrapper">
               <li class="accordion__transport-item">
-                <input
-                  type="checkbox"
-                  name="plane"
-                  id="plane"
-                  checked
-                />
+                <input type="checkbox" name="plane" id="plane" checked />
                 <label
                   class="transport-type transport-type--plane transport-type--active"
                   for="plane"
@@ -186,12 +195,7 @@
                 >
               </li>
               <li class="accordion__transport-item">
-                <input
-                  type="checkbox"
-                  name="feet"
-                  id="feet"
-                  checked
-                />
+                <input type="checkbox" name="feet" id="feet" checked />
                 <label class="transport-type transport-type--feet" for="feet"
                   >Пешком</label
                 >
@@ -555,49 +559,51 @@
     </main>
 
     <footer class="page-footer">
-      <a class="logo page-footer__logo">
-        <img
-          class="logo__picture"
-          src="http://placekitten.com/100/19"
-          width="100"
-          height="19"
-          alt="Логотип приложения Погнали"
-        />
-      </a>
-      <ul class="social page-footer__social-list">
-        <li class="social__item">
+      <div class="container">
+        <a class="logo page-footer__logo">
+          <img
+            class="logo__picture"
+            src="http://placekitten.com/100/19"
+            width="100"
+            height="19"
+            alt="Логотип приложения Погнали"
+          />
+        </a>
+        <ul class="social page-footer__social-list">
+          <li class="page-footer__social-item">
+            <a
+              class="social-button social-button--yellow social-button--vk"
+              href=""
+              target="_blank"
+              >Facebook</a
+            >
+          </li>
+          <li class="page-footer__social-item">
+            <a
+              class="social-button social-button--yellow social-button--vk"
+              href=""
+              target="_blank"
+              >VKontakte</a
+            >
+          </li>
+          <li class="page-footer__social-item">
+            <a
+              class="social-button social-button--yellow social-button--instagram"
+              href=""
+              target="_blank"
+              >Instagram</a
+            >
+          </li>
+        </ul>
+        <div class="page-footer__bottom-wrapper">
+          <p class="page-footer__paragraph">Разработано</p>
           <a
-            class="social-button social-button--yellow social-button--vk"
-            href=""
+            class="academy-logo page-footer__academy-logo"
+            href="https://htmlacademy.ru/intensive/adaptive"
             target="_blank"
-            >Facebook</a
+            >HTML Academy</a
           >
-        </li>
-        <li class="social__item">
-          <a
-            class="social-button social-button--yellow social-button--vk"
-            href=""
-            target="_blank"
-            >VKontakte</a
-          >
-        </li>
-        <li class="social__item">
-          <a
-            class="social-button social-button--yellow social-button--instagram"
-            href=""
-            target="_blank"
-            >Instagram</a
-          >
-        </li>
-      </ul>
-      <div class="page-footer__bottom-wrapper">
-        <p class="page-footer__paragraph">Разработано</p>
-        <a
-          class="academy-logo page-footer__academy-logo"
-          href="https://htmlacademy.ru/intensive/adaptive"
-          target="_blank"
-          >HTML Academy</a
-        >
+        </div>
       </div>
     </footer>
   </body>
