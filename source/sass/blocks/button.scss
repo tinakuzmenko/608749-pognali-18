@@ -1,0 +1,32 @@
+.button {
+  display: flex;
+  padding: 20px;
+  color: $deep-dark-blue;
+  background-color: $accent-yellow;
+  font-size: 18px;
+  line-height: 1;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: bold;
+
+  &--rounded {
+    border-radius: 25px;
+    text-transform: uppercase;
+    justify-content: center;
+    padding: 10px 80px 7px;
+    font-size: 17px;
+    line-height: 1.76;
+  }
+
+  &--bordered {
+    border: 3px solid $dark-blue;
+  }
+
+  &--promo {
+    padding: 7px 37px 3px 37px;
+  }
+
+  &--white {
+    background-color: $white;
+  }
+}

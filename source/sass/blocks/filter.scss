@@ -1,0 +1,40 @@
+.filter {
+  background-color: $intense-violet;
+  padding: 15px 0;
+}
+
+.filter__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter__title {
+  margin: 0;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.38;
+  color: $dark-blue;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding-left: 27px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 15px;
+    height: 10px;
+    background-color: $dark-blue;
+  }
+}
+
+.filter__toggler {
+  display: block;
+  background: $dark-blue;
+  width: 17px;
+  height: 3px;
+  border: none;
+}

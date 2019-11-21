@@ -1,0 +1,13 @@
+.social {
+  @include list-style-reset();
+  display: flex;
+  justify-content: center;
+}
+
+.social__item {
+  margin-right: 25px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

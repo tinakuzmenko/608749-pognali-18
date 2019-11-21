@@ -1,0 +1,36 @@
+.registration {
+  background-color: $dark-blue;
+  color: $white;
+  padding: 45px 0;
+}
+
+.registration__title {
+  text-align: center;
+}
+
+.registration__text {
+  text-align: center;
+}
+
+.registration__text-url {
+  color: $accent-yellow;
+  text-decoration: underline;
+}
+
+.registration__email {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: $white;
+  padding: 20px;
+}
+
+.registration__email::placeholder {
+  color: rgba($greyish-brown, 0.3);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.registration__submit {
+  border: none;
+}
