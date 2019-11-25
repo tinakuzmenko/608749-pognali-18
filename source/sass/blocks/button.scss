@@ -45,4 +45,8 @@
     background-color: $violet;
     padding: 10px 0;
   }
+
+  &--no-bg {
+    background: transparent;
+  }
 }
