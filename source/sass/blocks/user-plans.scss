@@ -1,0 +1,16 @@
+.user-plans {
+  background-color: $violet;
+  padding: 29px 0;
+}
+
+.user-plans__list {
+  @include list-style-reset();
+}
+
+.user-plans__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

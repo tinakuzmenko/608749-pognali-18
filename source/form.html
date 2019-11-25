@@ -28,7 +28,7 @@
                 aria-haspopup="true"
                 aria-label="Переключатель навигации"
               >
-              <span class="visually-hidden">Открыть / закрыть меню</span>
+                <span class="visually-hidden">Открыть / закрыть меню</span>
               </button>
             </div>
             <ul class="nav-list page-nav__menu-list">
@@ -109,102 +109,123 @@
         action="https://echo.htmlacademy.ru"
       >
         <section class="user-information">
-          <h2 class="visually-hidden">Информация обо мне</h2>
-          <div class="user-level">
-            <span class="user-level__number">80</span>
-            <span class="user-level__description">level</span>
-          </div>
-          <div class="user-photo">
-            <img
-              class="user-photo__picture"
-              src="http://placekitten.com/100/100"
-              alt="Моя фотография"
+          <div class="container">
+            <h2 class="visually-hidden">Информация обо мне</h2>
+            <div class="user-information__wrapper">
+              <div class="user-level">
+                <span class="user-level__number">80</span>
+                <span class="user-level__description">level</span>
+              </div>
+              <div class="user-information__image">
+                <img
+                  class="user-information__picture"
+                  src="http://placekitten.com/100/100"
+                  alt="Моя фотография"
+                />
+              </div>
+            </div>
+            <input
+              class="visually-hidden"
+              type="file"
+              accept="image/*"
+              name="user-photo"
+              id="upload-photo"
             />
-          </div>
-          <input
-            class="visually-hidden"
-            type="file"
-            accept="image/*"
-            name="user-photo"
-            id="upload-photo"
-          />
-          <label class="button button--rounded button-violet" for="upload-photo"
-            >Сменить фото</label
-          >
-          <fieldset class="user-information__fieldset">
-            <legend class="user-information__legend">Тэги</legend>
-            <textarea class="user-information__textfield">
-#бургер #бар #футбол #концерт #крафт</textarea
+            <label
+              class="button button--rounded button--violet user-information__button"
+              for="upload-photo"
+              >Сменить фото</label
             >
-          </fieldset>
-          <fieldset class="user-information__fieldset">
-            <legend class="user-information__legend">Транспорт</legend>
-            <ul class="user-information__transport-wrapper">
-              <li class="user-information__transport-item">
-                <input
-                  type="checkbox"
-                  name="transport-type"
-                  id="plane"
-                  checked
-                />
-                <label
-                  class="transport-type transport-type--plane transport-type--active"
-                  for="plane"
-                  >Самолет</label
-                >
-              </li>
-              <li class="user-information__transport-item">
-                <input type="checkbox" name="transport-type" id="bus" checked />
-                <label
-                  class="transport-type transport-type--bus transport-type--active"
-                  for="bus"
-                  >Автобус</label
-                >
-              </li>
-              <li class="user-information__transport-item">
-                <input type="checkbox" name="transport-type" id="bike" />
-                <label class="transport-type transport-type--bike" for="bike"
-                  >Велосипед</label
-                >
-              </li>
-              <li class="user-information__transport-item">
-                <input
-                  type="checkbox"
-                  name="transport-type"
-                  id="feet"
-                  checked
-                />
-                <label class="transport-type transport-type--feet" for="feet"
-                  >Пешком</label
-                >
-              </li>
-            </ul>
-          </fieldset>
+            <fieldset class="user-information__fieldset">
+              <legend class="user-information__legend">Тэги</legend>
+              <textarea class="user-information__textfield">
+#бургер #бар #футбол #концерт #крафт</textarea
+              >
+            </fieldset>
+            <fieldset class="user-information__fieldset">
+              <legend class="user-information__legend">Транспорт</legend>
+              <ul class="user-information__transport-wrapper">
+                <li class="user-information__transport-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="transport-type"
+                    id="plane"
+                    checked
+                  />
+                  <label
+                    class="transport-type transport-type--plane transport-type--active"
+                    for="plane"
+                    >Самолет</label
+                  >
+                </li>
+                <li class="user-information__transport-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="transport-type"
+                    id="bus"
+                    checked
+                  />
+                  <label
+                    class="transport-type transport-type--bus transport-type--active"
+                    for="bus"
+                    >Автобус</label
+                  >
+                </li>
+                <li class="user-information__transport-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="transport-type"
+                    id="bike"
+                  />
+                  <label class="transport-type transport-type--bike" for="bike"
+                    >Велосипед</label
+                  >
+                </li>
+                <li class="user-information__transport-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="transport-type"
+                    id="feet"
+                    checked
+                  />
+                  <label class="transport-type transport-type--feet" for="feet"
+                    >Пешком</label
+                  >
+                </li>
+              </ul>
+            </fieldset>
+          </div>
         </section>
         <section class="user-plans">
-          <h2 class="heading heading--h2 heading--blue">Мои планы:</h2>
-          <ol class="user-plans__list">
-            <li class="plan-card user-plans__item">
-              <p class="plan-card__title">Франция, Италия</p>
-              <p class="plan-card__details plan-card__details--teammates">
-                3 попутчика
-              </p>
-              <p class="plan-card__details plan-card__details--dates">
-                26 мар — 29 мар
-              </p>
-              <button class="plan-card__edit" type="button">Изменить</button>
-            </li>
-            <li class="plan-card user-plans__item">
-              <p class="plan-card__title">Таиланд, Индонезия</p>
-              <p class="plan-card__details plan-card__details--teammates">
-                1 попутчик
-              </p>
-              <p class="plan-card__details plan-card__details--dates">
-                1 июл — 15 июл
-              </p>
-              <button class="plan-card__edit" type="button">Изменить</button>
-            </li>
-          </ol>
+          <div class="container">
+            <h2 class="heading heading--h2 heading--blue">Мои планы:</h2>
+            <ol class="user-plans__list">
+              <li class="plan-card user-plans__item">
+                <p class="plan-card__title"><span class="plan-card__number">1.</span> Франция, Италия</p>
+                <p class="plan-card__details plan-card__details--teammates">
+                  3 попутчика
+                </p>
+                <p class="plan-card__details plan-card__details--dates">
+                  26 мар — 29 мар
+                </p>
+                <button class="plan-card__edit" type="button">Изменить</button>
+              </li>
+              <li class="plan-card user-plans__item">
+                <p class="plan-card__title"><span class="plan-card__number">2.</span> Таиланд, Индонезия</p>
+                <p class="plan-card__details plan-card__details--teammates">
+                  1 попутчик
+                </p>
+                <p class="plan-card__details plan-card__details--dates">
+                  1 июл — 15 июл
+                </p>
+                <button class="plan-card__edit" type="button">Изменить</button>
+              </li>
+            </ol>
+          </div>
         </section>
         <section class="add-plan">
           <h2 class="heading heading--h2 heading--blue">Добавить план:</h2>
