@@ -43,6 +43,11 @@
 
   color: $deep-dark-blue;
   border-radius: 10px;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .promo__instruction-item {
@@ -69,5 +74,23 @@
     background-color: $accent-yellow;
     border-radius: 10px;
     padding-bottom: 25px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 50%;
+    border-radius: 0;
+
+    &:last-child {
+      border-radius: 0;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 25%;
+    border-radius: 0;
+
+    &:last-child {
+      border-radius: 0;
+    }
   }
 }

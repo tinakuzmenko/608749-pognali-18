@@ -1,0 +1,63 @@
+.business-popup {
+  display: none;
+  padding-top: 33px;
+  background-color: white;
+  width: 270px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0px 20px 50px 0 rgba(29, 46, 91, 0.1);
+  overflow: hidden;
+
+  &--active {
+    display: block;
+  }
+}
+
+.business-popup__heading {
+  text-align: center;
+}
+
+.business-popup__list {
+  @include list-style-reset();
+  padding: 0 25px;
+  margin-bottom: 33px;
+}
+
+.business-popup__item {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba($black, 0.05);
+
+  &:first-child {
+    border-top: 1px solid rgba($black, 0.05);
+  }
+}
+
+.business-popup__service {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.38;
+  margin: 0;
+  color: $greyish-brown;
+}
+
+.business-popup__price {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.38;
+  margin: 0;
+  color: $greyish-brown;
+}
+
+.business-popup__close-button {
+  display: block;
+  padding: 0;
+  width: 100%;
+  height: 59px;
+  border: none;
+  background-color: $tender-violet;
+  color: $twilight-blue;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+}

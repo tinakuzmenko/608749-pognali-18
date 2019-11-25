@@ -17,6 +17,10 @@
   text-decoration: underline;
 }
 
+.registration__form {
+  position: relative;
+}
+
 .registration__email {
   width: 100%;
   border: none;
@@ -33,4 +37,7 @@
 
 .registration__submit {
   border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
 }

@@ -70,7 +70,7 @@
                   href=""
                   target="_blank"
                   aria-label="Facebook"
-                  >Facebook</a
+                  ><span class="visually-hidden">Facebook</span></a
                 >
               </li>
               <li class="social__item">
@@ -79,7 +79,7 @@
                   href=""
                   target="_blank"
                   aria-label="Vkontakte"
-                  >VKontakte</a
+                  ><span class="visually-hidden">VKontakte</span></a
                 >
               </li>
               <li class="social__item">
@@ -88,7 +88,7 @@
                   href=""
                   target="_blank"
                   aria-label="Instagram"
-                  >Instagram</a
+                  ><span class="visually-hidden">Instagram</span></a
                 >
               </li>
             </ul>
@@ -427,7 +427,10 @@
               placeholder="E-mail"
               aria-label="Введите ваш E-mail"
             />
-            <button class="button registration__submit" type="submit">
+            <button
+              class="button button--registration registration__submit"
+              type="submit"
+            >
               Регистрация
             </button>
           </form>
@@ -484,10 +487,10 @@
         <ul class="social page-footer__social-list">
           <li class="page-footer__social-item">
             <a
-              class="social-button social-button--yellow social-button--vk"
+              class="social-button social-button--yellow social-button--fb"
               href=""
               target="_blank"
-              >Facebook</a
+              ><span class="visually-hidden">Facebook</span></a
             >
           </li>
           <li class="page-footer__social-item">
@@ -495,7 +498,7 @@
               class="social-button social-button--yellow social-button--vk"
               href=""
               target="_blank"
-              >VKontakte</a
+              ><span class="visually-hidden">VKontakte</span></a
             >
           </li>
           <li class="page-footer__social-item">
@@ -503,7 +506,7 @@
               class="social-button social-button--yellow social-button--instagram"
               href=""
               target="_blank"
-              >Instagram</a
+              ><span class="visually-hidden">Instagram</span></a
             >
           </li>
         </ul>
@@ -513,10 +516,32 @@
             class="academy-logo page-footer__academy-logo"
             href="https://htmlacademy.ru/intensive/adaptive"
             target="_blank"
-            >HTML Academy</a
+            ><span class="visually-hidden">HTML Academy</span></a
           >
         </div>
       </div>
     </footer>
+    <div class="business-popup">
+      <h2 class="heading heading--h2 business-popup__heading">Бизнес-тарифы</h2>
+      <ul class="business-popup__list">
+        <li class="business-popup__item">
+          <p class="business-popup__service">Реклама у блоггера</p>
+          <p class="business-popup__price">300 000 руб./пост</p>
+        </li>
+        <li class="business-popup__item">
+          <p class="business-popup__service">Накрутка подписчиков</p>
+          <p class="business-popup__price">от 1 руб./шт.</p>
+        </li>
+        <li class="business-popup__item">
+          <p class="business-popup__service">Лайки от ботов</p>
+          <p class="business-popup__price">от 20 коп./лайк</p>
+        </li>
+        <li class="business-popup__item">
+          <p class="business-popup__service">Ваш продакт-плейсмент</p>
+          <p class="business-popup__price">Индивидуально</p>
+        </li>
+      </ul>
+      <button class="business-popup__close-button" type="button">Закрыть окно</button>
+    </div>
   </body>
 </html>
