@@ -1,0 +1,63 @@
+.calendar {
+  display: block;
+}
+
+.calendar__title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid $light-grey;
+  border-bottom: 1px solid $light-grey;
+  margin-bottom: 20px;
+}
+
+.calendar__control {
+  border: none;
+  padding: 0;
+  width: 9px;
+  height: 17px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &--prev {
+    background-image: url("../../img/month-arrow-left.svg");
+  }
+
+  &--next {
+    background-image: url("../../img/month-arrow-right.svg");
+  }
+}
+
+.calendar__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  color: $twilight-blue;
+}
+
+.calendar__table {
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+
+  td {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid $light-grey;
+  }
+}
+
+.calendar__day-of-week {
+  padding: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  color: $greyish-brown;
+
+  &--weekend {
+    color: $coral-red;
+  }
+}

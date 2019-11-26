@@ -1,0 +1,22 @@
+.country-select {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.29;
+  letter-spacing: 1.4px;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  color: $twilight-blue;
+  border: 1px solid $light-grey;
+  border-radius: 4px;
+  padding: 12px 14px;
+  background-color: transparent;
+
+  &--add {
+    background-color: $light-violet;
+    border: none;
+  }
+}

@@ -1,0 +1,49 @@
+.plan-card {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.plan-card__title {
+  font-weight: bold;
+  line-height: 1;
+  color: $twilight-blue;
+  margin-bottom: 22px;
+}
+
+.plan-card__number {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1.6px;
+}
+
+.plan-card__details {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1.4px;
+  color: $twilight-blue;
+  text-transform: uppercase;
+  margin: 0;
+
+  &--teammates {
+    margin-bottom: 8px;
+  }
+
+  &--dates {
+    margin-bottom: 27px;
+  }
+}
+
+.plan-card__edit {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: rgba($black, 0.3);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}

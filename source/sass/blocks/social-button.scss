@@ -1,0 +1,24 @@
+.social-button {
+  display: block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: $accent-yellow;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--fb {
+    background-size: 11px 21px;
+    background-image: url("../../img/facebook.svg");
+  }
+
+  &--vk {
+    background-size: 23px 12px;
+    background-image: url("../../img/vk.svg");
+  }
+
+  &--instagram {
+    background-size: 18px 18px;
+    background-image: url("../../img/instagram.svg");
+  }
+}

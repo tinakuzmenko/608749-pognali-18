@@ -13,11 +13,20 @@
       min-height: 750px;
     }
   }
+
+  &--rounded {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 }
 
 .page-header__content-wrapper {
   padding-top: 97px;
   padding-bottom: 40px;
+}
+
+.page-header__content {
+  padding-top: 60px;
 }
 
 .page-header__title {

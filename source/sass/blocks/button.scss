@@ -29,4 +29,24 @@
   &--white {
     background-color: $white;
   }
+
+  &--registration {
+    font-size: 0;
+    width: 60px;
+    height: 58px;
+    padding: 24px 23px 24px 27px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px 14px;
+    background-image: url("../../img/triangle-arrow-right.svg");
+  }
+
+  &--violet {
+    background-color: $violet;
+    padding: 10px 0;
+  }
+
+  &--no-bg {
+    background: transparent;
+  }
 }

@@ -1,0 +1,160 @@
+.plan-step {
+  background-color: $white;
+  padding: 24px;
+  border-radius: 10px;
+}
+
+.plan-step__fiedset {
+  display: block;
+  border: none;
+  width: 100%;
+  padding: 0;
+}
+
+.plan-step__title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  color: $twilight-blue;
+  margin-bottom: 18px;
+}
+
+.plan-step__description {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-weight: normal;
+  line-height: 1.38;
+}
+
+.plan-step__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 21px;
+}
+
+.plan-step__label-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.plan-step__button-next {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 10px 0 7px;
+  margin-bottom: 10px;
+}
+
+.plan-step__button-prev {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 10px 0 7px;
+}
+
+.plan-step__label {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  line-height: 1;
+  color: $twilight-blue;
+}
+
+.plan-step__label-tip {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  line-height: 1;
+  color: rgba($twilight-blue, 0.3);
+}
+
+.plan-step__number-input {
+  display: flex;
+  width: 100%;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: $twilight-blue;
+  border: 1px solid $light-grey;
+  border-radius: 4px;
+  padding: 12px 14px;
+}
+
+.plan-step__custom-checkbox {
+  padding-left: 40px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid $light-grey;
+    border-radius: 4px;
+  }
+}
+
+.plan-step__calendar {
+  margin-bottom: 23px;
+}
+
+.plan-step__select-wrapper {
+  display: flex;
+}
+
+.plan-step__country-select {
+  margin-bottom: 22px;
+}
+
+.plan-step__delete-country {
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  background-color: $light-violet;
+  border-radius: 50%;
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+  background-image: url("../../img/menu-close.svg");
+}
+
+.plan-step__description-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-step__country-description {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.plan-step__description-label {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  color: $twilight-blue;
+  margin-bottom: 16px;
+}
+
+.plan-step__plan-description {
+  min-height: 220px;
+  resize: none;
+  border-radius: 4px;
+  border: 1px solid $light-grey;
+  background-color: transparent;
+  padding: 13px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.38;
+  color: $greyish-brown;
+}

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="page">
-    <header class="page-header">
+    <header class="page-header page-header--rounded">
       <nav class="page-nav">
         <div class="container">
           <div class="page-nav__wrapper">
@@ -70,7 +70,7 @@
                   href=""
                   target="_blank"
                   aria-label="Facebook"
-                  >Facebook</a
+                  ><span class="visually-hidden">Facebook</span></a
                 >
               </li>
               <li class="social__item">
@@ -79,7 +79,7 @@
                   href=""
                   target="_blank"
                   aria-label="Vkontakte"
-                  >VKontakte</a
+                  ><span class="visually-hidden">VKontakte</span></a
                 >
               </li>
               <li class="social__item">
@@ -88,17 +88,19 @@
                   href=""
                   target="_blank"
                   aria-label="Instagram"
-                  >Instagram</a
+                  ><span class="visually-hidden">Instagram</span></a
                 >
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <div class="container">
-        <h1 class="heading heading--h1 heading--underline page-header__title">
-          Попутчики
-        </h1>
+      <div class="page-header__content">
+        <div class="container">
+          <h1 class="heading heading--h1 heading--underline page-header__title">
+            Попутчики
+          </h1>
+        </div>
       </div>
     </header>
 
@@ -153,8 +155,8 @@
                   >
                 </li>
                 <li class="accordion__item">
-                  <input type="checkbox" name="eurodance" id="eurodance" />
-                  <label class="accordion__checkbox" for="eurodance"
+                  <input type="checkbox" name="sofa" id="sofa" />
+                  <label class="accordion__checkbox" for="sofa"
                     >Диван</label
                   >
                 </li>
@@ -622,12 +624,16 @@
             <a
               class="teammates-catalog__control-button teammates-catalog__control-button--prev"
               href=""
-              ><span class="visually-hidden">Показать предыдущую страницу</span></a
+              ><span class="visually-hidden"
+                >Показать предыдущую страницу</span
+              ></a
             >
             <a
               class="teammates-catalog__control-button teammates-catalog__control-button--next"
               href=""
-              ><span class="visually-hidden">Показать следующую страницу</span></a
+              ><span class="visually-hidden"
+                >Показать следующую страницу</span
+              ></a
             >
           </div>
         </div>
@@ -648,10 +654,10 @@
         <ul class="social page-footer__social-list">
           <li class="page-footer__social-item">
             <a
-              class="social-button social-button--yellow social-button--vk"
+              class="social-button social-button--yellow social-button--fb"
               href=""
               target="_blank"
-              >Facebook</a
+              ><span class="visually-hidden">Facebook</span></a
             >
           </li>
           <li class="page-footer__social-item">
@@ -659,7 +665,7 @@
               class="social-button social-button--yellow social-button--vk"
               href=""
               target="_blank"
-              >VKontakte</a
+              ><span class="visually-hidden">VKontakte</span></a
             >
           </li>
           <li class="page-footer__social-item">
@@ -667,7 +673,7 @@
               class="social-button social-button--yellow social-button--instagram"
               href=""
               target="_blank"
-              >Instagram</a
+              ><span class="visually-hidden">Instagram</span></a
             >
           </li>
         </ul>
@@ -677,7 +683,7 @@
             class="academy-logo page-footer__academy-logo"
             href="https://htmlacademy.ru/intensive/adaptive"
             target="_blank"
-            >HTML Academy</a
+            ><span class="visually-hidden">HTML Academy</span></a
           >
         </div>
       </div>
