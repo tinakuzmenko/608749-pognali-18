@@ -65,20 +65,18 @@
 
 .page-nav--active .page-nav__menu-wrapper,
 .page-nav--active .page-nav__button-wrapper,
-.page-nav--active .page-nav__menu-wrapper,
 .page-nav--active .page-nav__contacts-wrapper {
   display: block;
 }
 
 .page-nav--inactive .page-nav__menu-wrapper,
 .page-nav--inactive .page-nav__button-wrapper,
-.page-nav--inactive .page-nav__menu-wrapper,
 .page-nav--inactive .page-nav__contacts-wrapper {
   display: none;
 }
 
 .page-nav--inactive .page-nav__button-wrapper {
-  @media (min-width: $tablet){
+  @media (min-width: $tablet) {
     display: block;
   }
 }
