@@ -1,9 +1,17 @@
 .contacts {
   @include list-style-reset();
   margin-top: 0;
+
+  @media (min-width: $desktop) {
+    display: flex;
+  }
 }
 
 .contacts__item {
   padding-top: 11px;
   padding-bottom: 11px;
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
 }
