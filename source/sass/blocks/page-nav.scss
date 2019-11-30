@@ -7,6 +7,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
 
   @media (min-width: $tablet) {
     padding-top: 47px;
@@ -88,6 +89,10 @@
       background-color: $white;
     }
   }
+}
+
+.page-nav--white .page-nav__menu-wrapper::before {
+  background-color: $dark-blue;
 }
 
 .page-nav__button-wrapper {
