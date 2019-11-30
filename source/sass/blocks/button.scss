@@ -13,9 +13,13 @@
     border-radius: 25px;
     text-transform: uppercase;
     justify-content: center;
-    padding: 10px 80px 7px;
+    padding: 10px 10px 7px;
     font-size: 17px;
     line-height: 1.76;
+
+    @media (min-width: $tablet) {
+      font-size: 20px;
+    }
   }
 
   &--bordered {

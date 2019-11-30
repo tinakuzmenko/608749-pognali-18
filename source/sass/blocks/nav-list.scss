@@ -6,22 +6,31 @@
   font-weight: 500;
   text-align: center;
   margin: 0;
+  flex-wrap: wrap;
 
   @media (min-width: $desktop) {
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
     display: flex;
   }
 }
 
 .nav-list__item {
-  a {
-    color: $dark-blue;
-  }
-
   @media (min-width: $desktop) {
     margin-right: 37px;
 
     &:last-child {
       margin-right: 0;
     }
+  }
+}
+
+.nav-list__link {
+  color: $dark-blue;
+
+  @media (min-width: $desktop) {
+    color: $white;
   }
 }
