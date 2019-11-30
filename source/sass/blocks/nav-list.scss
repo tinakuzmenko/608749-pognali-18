@@ -8,6 +8,12 @@
   margin: 0;
   flex-wrap: wrap;
 
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 1.18;
+    text-align: left;
+  }
+
   @media (min-width: $desktop) {
     padding-top: 5px;
     font-size: 20px;

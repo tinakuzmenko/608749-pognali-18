@@ -1,8 +1,9 @@
 .page-nav {
+  width: 100%;
   background-color: $deep-dark-blue;
   color: $white;
   padding-top: 27px;
-  padding-bottom: 27px;
+  padding-bottom: 10px;
   position: fixed;
   top: 0;
   left: 0;
@@ -42,7 +43,7 @@
 .page-nav__logo-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   order: 0;
   flex-shrink: 0;
 
@@ -60,11 +61,14 @@
 }
 
 .page-nav__menu-wrapper {
-  padding-top: 75px;
+  padding-top: 51px;
+  padding-bottom: 51px;
   order: 1;
 
   @media (min-width: $tablet) {
     order: 2;
+    padding-top: 90px;
+    padding-left: 55px;
   }
 
   @media (min-width: $desktop) {
@@ -109,13 +113,26 @@
 }
 
 .page-nav__contacts-wrapper {
-  padding-top: 60px;
+  padding-top: 54px;
   order: 3;
+
+  @media (min-width: $tablet) {
+    padding-top: 80px;
+    padding-left: 55px;
+  }
 
   @media (min-width: $desktop) {
     padding: 0;
     flex-direction: row-reverse;
     margin-left: auto;
+  }
+}
+
+.page-nav__social {
+  padding-bottom: 27px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 50px;
   }
 }
 
@@ -186,11 +203,12 @@
 
   &::before {
     transform: rotate(45deg);
+    top: 9px;
   }
 
   &::after {
     transform: rotate(-45deg);
-    top: 4px;
+    top: 9px;
   }
 
   @media (min-width: $tablet) {
@@ -206,6 +224,10 @@
 
 .page-nav__contacts {
   margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 132px;
+  }
 
   @media (min-width: $desktop) {
     margin-bottom: 0;
@@ -249,6 +271,11 @@
 
 .page-nav--active .page-nav__social,
 .page-nav--inactive .page-nav__social {
+  @media (min-width: $tablet) {
+    justify-content: flex-start;
+    padding-left: 30px;
+  }
+
   @media (min-width: $desktop) {
     display: none;
   }

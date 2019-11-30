@@ -9,13 +9,4 @@
 
 .contacts__item {
   padding: 0;
-
-  @media (min-width: $tablet) {
-    padding-top: 11px;
-    padding-bottom: 11px;
-  }
-
-  @media (min-width: $desktop) {
-    padding: 0;
-  }
 }

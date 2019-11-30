@@ -22,8 +22,28 @@
 }
 
 .page-header__content-wrapper {
-  padding-top: 97px;
+  padding-top: 93px;
   padding-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    padding-top: 170px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 217px;
+  }
+
+  &--no-js {
+    padding-top: 50px;
+
+    @media (min-width: $tablet) {
+      padding-top: 39px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-top: 86px;
+    }
+  }
 }
 
 .page-header__content {
@@ -32,6 +52,7 @@
 
 .page-header__title {
   &--main {
+    padding: 0 10px;
     margin-bottom: 265px;
   }
 }
