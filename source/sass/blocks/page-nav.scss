@@ -17,6 +17,7 @@
   &--white {
     background-color: $white;
     color: $dark-blue;
+    box-shadow: 0px 1px 0 0 rgba(0, 0, 0, 0.15);
   }
 
   &--no-js {
@@ -27,6 +28,13 @@
     @media (min-width: $desktop) {
       background-color: $deep-dark-blue;
       color: $white;
+    }
+  }
+
+  &--scrolled {
+    @media (min-width: $desktop) {
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
 }

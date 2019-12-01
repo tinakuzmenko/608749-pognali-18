@@ -23,7 +23,6 @@
 
 .page-header__content-wrapper {
   padding-top: 93px;
-  padding-bottom: 40px;
 
   @media (min-width: $tablet) {
     padding-top: 170px;
@@ -43,6 +42,10 @@
     @media (min-width: $desktop) {
       padding-top: 86px;
     }
+  }
+
+  &--main {
+    padding-bottom: 40px;
   }
 }
 
