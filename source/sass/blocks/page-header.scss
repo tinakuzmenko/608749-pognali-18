@@ -7,6 +7,7 @@
     min-height: 225px;
 
     @media (min-width: $tablet) {
+      background-color: $space-blue;
       min-height: 994px;
     }
 
@@ -25,7 +26,7 @@
   padding-top: 93px;
 
   @media (min-width: $tablet) {
-    padding-top: 170px;
+    padding-top: 162px;
   }
 
   @media (min-width: $desktop) {
@@ -36,7 +37,7 @@
     padding-top: 50px;
 
     @media (min-width: $tablet) {
-      padding-top: 39px;
+      padding-top: 31px;
     }
 
     @media (min-width: $desktop) {
@@ -45,7 +46,7 @@
   }
 
   &--main {
-    padding-bottom: 40px;
+    padding-bottom: 23px;
   }
 }
 
@@ -53,9 +54,25 @@
   padding-top: 60px;
 }
 
+.page-header__title-wrapper {
+  background: url("../../img/traveller-illustration-mobile@1x.png") no-repeat 79px bottom,
+  url("../../img/globe-back-mobile@1x.jpg") no-repeat center -90px;
+  background-size: auto, cover;
+  padding-bottom: 241px;
+
+  @media (min-width: $tablet) {
+    background: none;
+    padding-bottom: 31px;
+  }
+}
+
 .page-header__title {
   &--main {
     padding: 0 10px;
-    margin-bottom: 265px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet) {
+      width: 416px;
+    }
   }
 }

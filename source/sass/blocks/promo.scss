@@ -1,17 +1,27 @@
 .promo {
   background-color: $deep-dark-blue;
   color: $white;
+  position: relative;
+  padding-top: 47px;
+
+  @media (min-width: $tablet) {
+    background: url("../../img/traveller-illustration-tablet@1x.png") no-repeat
+        285px top,
+      url("../../img/globe-back-tablet@1x.jpg") no-repeat center -25px;
+    background-size: auto, auto;
+    padding-top: 53px;
+  }
 }
 
 .promo__contacts-list {
   @include list-style-reset();
-
+  position: absolute;
+  top: -20px;
   list-style: none;
   padding: 0;
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
-  margin-top: -30px;
+  margin: 0;
 
   @media (min-width: $tablet) {
     display: none;
@@ -24,10 +34,20 @@
 }
 
 .promo__quote {
+  display: block;
   margin: 0;
   line-height: 1.38;
   font-weight: 300;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
+  padding-left: 25px;
+  width: 175px;
+
+  @media (min-width: $tablet) {
+    padding-left: 35px;
+    width: 295px;
+    line-height: 1.18;
+    margin-bottom: 45px;
+  }
 }
 
 .promo__quote-author {
@@ -35,7 +55,18 @@
   font-weight: bold;
   font-style: normal;
   line-height: 1.38;
-  margin-bottom: 33px;
+  margin-bottom: 30px;
+  padding-left: 25px;
+  width: 180px;
+
+  @media (min-width: $tablet) {
+    padding-left: 35px;
+    width: 290px;
+    font-size: 21px;
+    font-style: normal;
+    line-height: 1.19;
+    margin-bottom: 211px;
+  }
 }
 
 .promo__instruction-list {
@@ -47,15 +78,20 @@
   @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
   }
 }
 
 .promo__instruction-item {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  padding: 25px 25px 35px 25px;
-  padding-bottom: 35px;
+  padding: 23px 25px 5px 25px;
+  padding-bottom: 31px;
   margin-top: -10px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  position: relative;
 
   &:first-child {
     background-color: $orange;
@@ -73,15 +109,75 @@
   &:last-child {
     background-color: $accent-yellow;
     border-radius: 10px;
-    padding-bottom: 25px;
+    padding-bottom: 21px;
+  }
+
+  &::before {
+    content: attr(data-number);
+    position: absolute;
+    right: 23px;
+    top: 23px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    color: $white;
   }
 
   @media (min-width: $tablet) {
     width: 50%;
     border-radius: 0;
+    padding: 31px 31px 62px 31px;
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+
+    &:first-child {
+      border-top-left-radius: 20px;
+      position: relative;
+    }
+
+    &:first-child::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -20px;
+      width: 20px;
+      height: 100%;
+      background-color: $orange;
+    }
+
+    &:nth-child(2) {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    &:nth-child(3) {
+      border-bottom-left-radius: 20px;
+    }
+
+    &:nth-child(3)::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -20px;
+      width: 20px;
+      height: 100%;
+      background-color: $orange-yellow;
+    }
 
     &:last-child {
-      border-radius: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    &::before {
+      left: 30px;
+      top: 44px;
+      font-size: 30px;
+      line-height: 4;
     }
   }
 
@@ -92,5 +188,14 @@
     &:last-child {
       border-radius: 0;
     }
+  }
+}
+
+.promo__instruction-text {
+  margin: 0;
+  max-width: 143px;
+
+  @media (min-width: $tablet) {
+    max-width: 185px;
   }
 }
