@@ -22,6 +22,28 @@
     }
   }
 
+  &--squared {
+    border-radius: 20px;
+    text-align: left;
+    font-weight: bold;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 33px;
+      right: 29px;
+      border: 8px solid transparent;
+      border-left: 10px solid $twilight-blue;
+    }
+
+    @media (min-width: $tablet) {
+      font-size: 24px;
+      line-height: 1;
+      padding: 30px 30px 27px 35px;
+    }
+  }
+
   &--bordered {
     border: 3px solid $dark-blue;
   }

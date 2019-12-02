@@ -4,8 +4,28 @@
   margin-bottom: 20px;
   color: inherit;
 
+  @media (min-width: $tablet) {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 37px;
+  }
+
   &--bold {
     font-weight: bold;
+
+    @media (min-width: $tablet) {
+      font-size: 21px;
+      line-height: 1.19;
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 85px;
+    }
   }
 
   &--white {

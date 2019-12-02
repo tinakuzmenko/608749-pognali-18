@@ -17,6 +17,17 @@
     color: $orange;
     font-size: 24px;
     font-weight: bold;
+    margin-bottom: 15px;
+
+    @media (min-width: $tablet) {
+      font-size: 45px;
+      line-height: 1;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 60px;
+    }
   }
 
   &--centered {
