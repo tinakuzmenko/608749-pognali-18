@@ -23,24 +23,31 @@
   }
 
   &--squared {
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: left;
     font-weight: bold;
     position: relative;
+    padding: 24px 24px 21px 24px;
 
     &::after {
       content: "";
       position: absolute;
-      top: 33px;
-      right: 29px;
+      top: 23px;
+      right: 15px;
       border: 8px solid transparent;
       border-left: 10px solid $twilight-blue;
     }
 
     @media (min-width: $tablet) {
+      border-radius: 20px;
       font-size: 24px;
       line-height: 1;
       padding: 30px 30px 27px 35px;
+
+      &::after {
+        top: 33px;
+        right: 29px;
+      }
     }
   }
 

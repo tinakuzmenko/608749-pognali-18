@@ -1,0 +1,14 @@
+.country-flag {
+  width: 35px;
+  height: 24px;
+  border-radius: 6.4px;
+  background-color: $coral-red;
+  font-size: 0;
+
+  &--big {
+    @media (min-width: $tablet) {
+      width: 70px;
+      height: 47px;
+    }
+  }
+}
