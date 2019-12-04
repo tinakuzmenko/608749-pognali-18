@@ -73,30 +73,19 @@
 
 .about-us__content-wrapper {
   padding: 0 25px;
+  padding-right: 25px;
   max-width: 260px;
   position: relative;
   z-index: 100;
 
-  br {
-    display: none;
-  }
-
   @media (min-width: $tablet) {
     padding-left: 35px;
     max-width: 360px;
-
-    br {
-      display: inline;
-    }
   }
 
   @media (min-width: $desktop) {
     padding-left: 70px;
     max-width: 710px;
-
-    br {
-      display: none;
-    }
   }
 }
 
