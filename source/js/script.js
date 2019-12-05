@@ -1,6 +1,9 @@
 var nav = document.querySelector(".page-nav");
 var navToggle = document.querySelector(".page-nav__toggler");
 var headerContent = document.querySelector(".page-header__content-wrapper");
+var businessPopupOpen = document.querySelector(".add-profile__business-link");
+var businessPopup = document.querySelector(".business-popup");
+var businessPopupClose = document.querySelector(".business-popup__close-button");
 
 nav.classList.remove("page-nav--no-js");
 headerContent.classList.remove("page-header__content-wrapper--no-js");
@@ -21,4 +24,13 @@ window.addEventListener("scroll", function(){
     nav.classList.remove("page-nav--white");
     nav.classList.remove("page-nav--scrolled");
   }
+});
+
+businessPopupOpen.addEventListener("click", function(event){
+  event.preventDefault();
+  businessPopup.classList.add("business-popup--active");
+});
+
+businessPopupClose.addEventListener("click", function(){
+  businessPopup.classList.remove("business-popup--active");
 });

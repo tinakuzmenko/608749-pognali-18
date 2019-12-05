@@ -524,29 +524,61 @@
       </section>
       <section class="add-profile">
         <div class="container">
-          <a class="add-profile__title-wrapper" href="add-profile.html">
-            <h2 class="heading heading--h2">Добавьте свой профиль</h2>
+          <div class="add-profile__common-wrapper">
+            <div class="add-profile__heading-wrapper">
+              <h2 class="heading heading--h2 add-profile__heading">
+                Добавьте свой профиль
+              </h2>
+            </div>
             <div class="add-profile__image-block"></div>
-          </a>
-          <div class="add-profile__options-wrapper">
-            <ol class="add-profile__options-list">
-              <li class="add-profile__options-item">
-                Базовое размещение Бесплатно
-              </li>
-              <li class="add-profile__options-item">
-                Вывод на первых позициях 99 руб./мес
-              </li>
-              <li class="add-profile__options-item">
-                Кастомный цвет карточки 59 руб./мес
-              </li>
-            </ol>
-            <a class="add-profile__business-link" href=""
-              >Показать тарифы для бизнеса</a
-            >
+            <div class="add-profile__options-wrapper">
+              <ol class="add-profile__options-list">
+                <li class="add-profile__options-item" data-number="1">
+                  <span class="add-profile__option-name">Базовое размещение</span><span class="add-profile__option-price">Бесплатно</span>
+                </li>
+                <li class="add-profile__options-item" data-number="2">
+                    <span class="add-profile__option-name">Вывод на первых позициях</span><span class="add-profile__option-price">99 руб./мес</span>
+                </li>
+                <li class="add-profile__options-item" data-number="3">
+                    <span class="add-profile__option-name">Кастомный цвет карточки</span><span class="add-profile__option-price">59 руб./мес</span>
+                </li>
+              </ol>
+            </div>
+            <div class="add-profile__button-wrapper">
+              <a class="add-profile__business-link" href=""
+                >Показать тарифы для бизнеса</a
+              >
+            </div>
           </div>
         </div>
+        <div class="business-popup add-profile__business-popup">
+          <h2 class="heading heading--h2 business-popup__heading">
+            Бизнес-тарифы
+          </h2>
+          <ul class="business-popup__list">
+            <li class="business-popup__item">
+              <p class="business-popup__service">Реклама у блоггера</p>
+              <p class="business-popup__price">300 000 руб./пост</p>
+            </li>
+            <li class="business-popup__item">
+              <p class="business-popup__service">Накрутка подписчиков</p>
+              <p class="business-popup__price">от 1 руб./шт.</p>
+            </li>
+            <li class="business-popup__item">
+              <p class="business-popup__service">Лайки от ботов</p>
+              <p class="business-popup__price">от 20 коп./лайк</p>
+            </li>
+            <li class="business-popup__item">
+              <p class="business-popup__service">Ваш продакт-плейсмент</p>
+              <p class="business-popup__price">Индивидуально</p>
+            </li>
+          </ul>
+          <button class="business-popup__close-button" type="button">
+            Закрыть окно
+          </button>
+        </div>
       </section>
-      <section class="registration">
+      <section class="registration registration--upped">
         <div class="container">
           <h2 class="heading heading--h2 registration__title">
             Заинтересовались?
@@ -664,31 +696,6 @@
         </div>
       </div>
     </footer>
-    <div class="business-popup">
-      <h2 class="heading heading--h2 business-popup__heading">Бизнес-тарифы</h2>
-      <ul class="business-popup__list">
-        <li class="business-popup__item">
-          <p class="business-popup__service">Реклама у блоггера</p>
-          <p class="business-popup__price">300 000 руб./пост</p>
-        </li>
-        <li class="business-popup__item">
-          <p class="business-popup__service">Накрутка подписчиков</p>
-          <p class="business-popup__price">от 1 руб./шт.</p>
-        </li>
-        <li class="business-popup__item">
-          <p class="business-popup__service">Лайки от ботов</p>
-          <p class="business-popup__price">от 20 коп./лайк</p>
-        </li>
-        <li class="business-popup__item">
-          <p class="business-popup__service">Ваш продакт-плейсмент</p>
-          <p class="business-popup__price">Индивидуально</p>
-        </li>
-      </ul>
-      <button class="business-popup__close-button" type="button">
-        Закрыть окно
-      </button>
-    </div>
-
     <script src="js/script.js"></script>
   </body>
 </html>

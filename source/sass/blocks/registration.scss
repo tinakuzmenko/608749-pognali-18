@@ -1,9 +1,18 @@
 .registration {
   background-color: $dark-blue;
   color: $white;
-  padding: 45px 0;
+  padding: 70px 0;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  &--upped {
+    margin-top: -30px;
+    padding-top: 100px;
+
+    @media (min-width: $tablet) {
+      margin-top: -60px;
+    }
+  }
 }
 
 .registration__title {
