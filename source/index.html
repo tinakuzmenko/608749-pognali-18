@@ -534,13 +534,19 @@
             <div class="add-profile__options-wrapper">
               <ol class="add-profile__options-list">
                 <li class="add-profile__options-item" data-number="1">
-                  <span class="add-profile__option-name">Базовое размещение</span><span class="add-profile__option-price">Бесплатно</span>
+                  <span class="add-profile__option-name"
+                    >Базовое размещение</span
+                  ><span class="add-profile__option-price">Бесплатно</span>
                 </li>
                 <li class="add-profile__options-item" data-number="2">
-                    <span class="add-profile__option-name">Вывод на первых позициях</span><span class="add-profile__option-price">99 руб./мес</span>
+                  <span class="add-profile__option-name"
+                    >Вывод на первых позициях</span
+                  ><span class="add-profile__option-price">99 руб./мес</span>
                 </li>
                 <li class="add-profile__options-item" data-number="3">
-                    <span class="add-profile__option-name">Кастомный цвет карточки</span><span class="add-profile__option-price">59 руб./мес</span>
+                  <span class="add-profile__option-name"
+                    >Кастомный цвет карточки</span
+                  ><span class="add-profile__option-price">59 руб./мес</span>
                 </li>
               </ol>
             </div>
@@ -584,8 +590,8 @@
             Заинтересовались?
           </h2>
           <p class="text text--white registration__text">
-            Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы?
-            Тогда скорее
+            Зарегистрируйтесь, это быстро и бесплатно! <br />
+            Уже зарегистрированы? Тогда скорее
             <a class="registration__text-url" href="authorization.html"
               >авторизуйтесь</a
             >.
@@ -609,32 +615,33 @@
               Регистрация
             </button>
           </form>
-          <p class="text text--white registration__text">
-            Остались вопросы? Мы с радостью на них ответим!
+          <p class="text text--white registration__text registration__text--bottom">
+            Остались вопросы? <br class="registration__text-br" />Мы с радостью на них ответим!
           </p>
           <ul class="contacts registration__contacts">
-            <li class="contacts__item">
+            <li class="contacts__item contacts__item--bottom">
               <a
                 class="contact-url contact-url--telephone contact-url--yellow-text"
                 href="tel:+88005558628"
-                >8 800 555-86-28</a
+                ><span class="contact-url__text">8 800 555-86-28</span></a
               >
             </li>
-            <li class="contacts__item">
+            <li class="contacts__item contacts__item--bottom">
               <a
                 class="contact-url contact-url--email contact-url--yellow-text"
                 href="mailto:mail@htmlacademy.ru"
-                >mail@htmlacademy.ru</a
+                ><span class="contact-url__text"></span>mail@htmlacademy.ru</a></a
               >
             </li>
           </ul>
         </div>
       </section>
-      <section class="location">
+      <section class="location location--upped">
         <div class="container">
           <h2 class="visually-hidden">Наш адрес</h2>
+          <div class="location__content-wrapper">
           <address class="our-address location__address">
-            ул. Большая Конюшенная, 19/8
+            ул. Большая<br> Конюшенная, 19/8
           </address>
           <a
             class="button button--squared button--bordered location__button"
@@ -642,8 +649,9 @@
             >Проложить маршрут</a
           >
         </div>
+        </div>
       </section>
-      <section class="map">
+      <section class="map map--upped">
         <!-- Здесь будет карта -->
       </section>
     </main>
@@ -651,13 +659,21 @@
     <footer class="page-footer">
       <div class="container">
         <a class="logo page-footer__logo">
-          <img
-            class="logo__picture"
-            src="http://placekitten.com/100/19"
-            width="100"
-            height="19"
-            alt="Логотип приложения Погнали"
-          />
+            <picture>
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="img/logo-desktop-blue@1x.png 1x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/logo-tablet-blue@1x.png 1x"
+                />
+                <img
+                  class="logo__picture"
+                  src="img/logo-mobile-blue@1x.png"
+                  alt="Логотип приложения Погнали"
+                />
+              </picture>
         </a>
         <ul class="social page-footer__social-list">
           <li class="page-footer__social-item">

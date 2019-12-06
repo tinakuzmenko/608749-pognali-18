@@ -1,0 +1,13 @@
+.map {
+  background-color: $dark-blue;
+  padding: 35px 0;
+
+  /* temporary */
+
+  height: 332px;
+
+  &--upped {
+    margin-top: -30px;
+    padding-top: 65px;
+  }
+}

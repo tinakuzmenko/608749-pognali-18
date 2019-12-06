@@ -56,6 +56,18 @@
   }
 }
 
+.contact-url__text {
+  padding-left: 17px;
+
+  @media (min-width: $tablet) {
+    padding-left: 23px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 35px;
+  }
+}
+
 .contact-url--header.contact-url--telephone::before {
   @media (min-width: $desktop) {
     background-color: $orange;
