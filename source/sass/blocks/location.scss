@@ -41,11 +41,26 @@
       border-bottom-right-radius: 60px;
     }
   }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 59px;
+
+    &--upped {
+      padding-top: 119px;
+    }
+  }
 }
 
 .location__content-wrapper {
   @media (min-width: $tablet) {
     padding: 0 35px;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 73px 0 223px;
   }
 }
 
@@ -54,6 +69,10 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
   }
 }
 
@@ -72,5 +91,9 @@
       top: 31px;
       right: 25px;
     }
+  }
+
+  @media (min-width: $desktop) {
+    width: 324px;
   }
 }

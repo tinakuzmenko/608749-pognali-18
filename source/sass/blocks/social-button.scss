@@ -21,4 +21,21 @@
     background-size: 18px 18px;
     background-image: url("../../img/instagram.svg");
   }
+
+  @media (min-width: $tablet) {
+    width: 60px;
+    height: 60px;
+
+    &--fb {
+      background-size: 14px 28px;
+    }
+
+    &--vk {
+      background-size: 31px 16px;
+    }
+
+    &--instagram {
+      background-size: 24px 24px;
+    }
+  }
 }

@@ -31,4 +31,14 @@
       display: none;
     }
   }
+
+  @media (min-width: $desktop) {
+    padding-left: 123px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      top: -27px;
+    }
+  }
 }
