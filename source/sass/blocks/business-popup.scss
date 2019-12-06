@@ -11,11 +11,31 @@
   &--active {
     display: block;
   }
+
+  @media (min-width: $tablet) {
+    width: 688px;
+    padding-top: 52px;
+    border-radius: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 750px;
+    padding-top: 52px;
+    border-radius: 30px;
+  }
 }
 
 .business-popup__heading {
   text-align: center;
   margin-bottom: 26px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 49px;
+  }
 }
 
 .business-popup__list {
@@ -23,6 +43,15 @@
   padding: 0 25px;
   margin-top: 0;
   margin-bottom: 33px;
+
+  @media (min-width: $tablet) {
+    padding: 0 92px;
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 60px;
+  }
 }
 
 .business-popup__item {
@@ -32,6 +61,18 @@
   &:first-child {
     border-top: 1px solid rgba($black, 0.05);
   }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0 13px 0;
+    border-top: 1px solid rgba($black, 0.05);
+    border-bottom: none;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid rgba($black, 0.05);
+  }
 }
 
 .business-popup__service {
@@ -40,6 +81,12 @@
   line-height: 1.38;
   margin: 0;
   color: $greyish-brown;
+
+  @media (min-width: $tablet) {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.27;
+  }
 }
 
 .business-popup__price {
@@ -48,6 +95,12 @@
   line-height: 1.38;
   margin: 0;
   color: $greyish-brown;
+
+  @media (min-width: $tablet) {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.27;
+  }
 }
 
 .business-popup__close-button {
@@ -63,4 +116,15 @@
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    text-transform: none;
+    line-height: 1;
+    height: 108px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 0;
+  }
 }

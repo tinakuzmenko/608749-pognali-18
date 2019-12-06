@@ -30,7 +30,7 @@
 
   @media (min-width: $desktop) {
     padding-top: 107px;
-    padding-bottom: 47px;
+    padding-bottom: 182px;
   }
 }
 
@@ -83,6 +83,10 @@
 
   @media (min-width: $desktop) {
     margin-right: 0;
+    width: 198px;
+    height: 198px;
+    margin-top: -247px;
+    margin-right: 75px;
   }
 }
 
@@ -92,6 +96,10 @@
 
   @media (min-width: $tablet) {
     margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 185px;
   }
 }
 
@@ -117,6 +125,17 @@
       border-radius: 20px;
       background-color: $intense-violet;
       z-index: -1;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-top: 52px;
+    padding-bottom: 48px;
+
+    &::after {
+      width: 444px;
     }
   }
 }
@@ -186,6 +205,11 @@
     padding-left: 0;
     padding-top: 5px;
   }
+
+  @media (min-width: $desktop) {
+    padding-left: 70px;
+    padding-top: 2px;
+  }
 }
 
 .add-profile__business-link {
@@ -220,4 +244,14 @@
   left: 0;
   right: 0;
   z-index: 1000;
+
+  @media (min-width: $tablet) {
+    top: 0;
+  }
+
+  @media (min-width: $desktop) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
 }
