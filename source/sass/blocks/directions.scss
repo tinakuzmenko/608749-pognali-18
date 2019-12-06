@@ -14,7 +14,6 @@
     border-bottom-right-radius: 30px;
     bottom: 0;
     left: 0;
-    z-index: 100;
   }
 
   @media (min-width: $tablet) {
@@ -64,7 +63,6 @@
   @media (min-width: $tablet) {
     margin-bottom: 57px;
   }
-
 }
 
 .directions__item-wrapper {
