@@ -34,3 +34,9 @@ businessPopupOpen.addEventListener("click", function(event){
 businessPopupClose.addEventListener("click", function(){
   businessPopup.classList.remove("business-popup--active");
 });
+
+window.addEventListener("keydown", function(event) {
+  if (event.keyCode === 27) {
+    businessPopup.classList.remove("business-popup--active");
+  }
+});

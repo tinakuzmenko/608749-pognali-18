@@ -12,6 +12,8 @@
 
     @media (min-width: $desktop) {
       background-color: $deep-dark-blue;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
     }
   }
 
