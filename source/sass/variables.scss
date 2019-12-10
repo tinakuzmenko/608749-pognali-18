@@ -1,11 +1,13 @@
 /* Размеры экрана */
 $mobile: 320px;
 $tablet: 768px;
+$desktop-small: 960px;
 $desktop: 1440px;
 
 /* Цвета */
 $white: #ffffff;
 $black: #000000;
+$grey: #cccccc;
 $light-grey: #cbced9;
 $tender-violet: #f3f4f8;
 $light-violet: #edeff6;
@@ -15,10 +17,15 @@ $dark-violet: #d4d9eb;
 $black-blue: #121936;
 $deep-dark-blue: #161c36;
 $dark-blue: #192144;
+$space-blue: #182044;
+$rectangle-blue: #141b3b;
 $twilight-blue: #1d2e5b;
+$business-blue: #132576;
 $orange: #ff8d30;
 $orange-lighter: #ffa530;
 $orange-yellow: #ffbd30;
 $accent-yellow: #ffd74b;
 $greyish-brown: #444444;
 $coral-red: #ff5c23;
+$offline-red: #f97676;
+$online-green: #81e31e;
