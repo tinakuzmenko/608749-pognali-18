@@ -20,9 +20,11 @@ navToggle.addEventListener("click", function(){
 window.addEventListener("scroll", function(){
   nav.classList.add("page-nav--white");
   nav.classList.add("page-nav--scrolled");
+  nav.classList.remove("page-nav--inner");
   if(pageYOffset === 0 && nav.classList.contains("page-nav--inactive")) {
     nav.classList.remove("page-nav--white");
     nav.classList.remove("page-nav--scrolled");
+    nav.classList.add("page-nav--inner");
   }
 });
 

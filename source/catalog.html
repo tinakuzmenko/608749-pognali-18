@@ -7,13 +7,13 @@
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" href="css/style.css" />
     <script>
-      document.createElement( "picture" );
+      document.createElement("picture");
     </script>
     <script src="js/picturefill.js" async></script>
   </head>
   <body class="page">
     <header class="page-header page-header--rounded">
-      <nav class="page-nav page-nav--inactive page-nav--no-js">
+      <nav class="page-nav page-nav--inner page-nav--inactive page-nav--no-js">
         <div class="container">
           <div class="page-nav__wrapper">
             <div class="page-nav__logo-wrapper">
@@ -152,179 +152,248 @@
             action="https://echo.htmlacademy.ru"
             method="GET"
           >
-            <h2 class="heading heading--h2 teammate-search-form__title">
-              Подберите идеального попутчика
-            </h2>
-            <div class="accordion">
-              <div class="accordion__title-wrapper">
-                <p class="accordion__title">Хобби</p>
-                <button
-                  class="accordion__control accordion__control--collapse"
-                  type="button"
-                >
-                  <span class="visually-hidden">Развернуть / свернуть</span>
-                </button>
+            <div class="teammate-search-form__accordion-wrapper">
+              <h2 class="heading heading--h2 teammate-search-form__title">
+                Подберите идеального попутчика
+              </h2>
+              <div class="accordion">
+                <div class="accordion__title-wrapper">
+                  <p class="accordion__title">Хобби</p>
+                  <button
+                    class="accordion__control accordion__control--collapse"
+                    type="button"
+                  >
+                    <span class="visually-hidden">Развернуть / свернуть</span>
+                  </button>
+                </div>
+                <ul class="accordion__list accordion__list--hidden">
+                  <li class="accordion__item">
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="gym"
+                      id="gym-fan"
+                      checked
+                    />
+                    <label class="accordion__checkbox" for="gym-fan"
+                      >Спортзал</label
+                    >
+                  </li>
+                  <li class="accordion__item">
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="hookah"
+                      id="hookah-fan"
+                    />
+                    <label class="accordion__checkbox" for="hookah-fan"
+                      >Кальян</label
+                    >
+                  </li>
+                  <li class="accordion__item">
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="sofa"
+                      id="sofa"
+                    />
+                    <label class="accordion__checkbox" for="sofa">Диван</label>
+                  </li>
+                </ul>
               </div>
-              <ul class="accordion__list">
-                <li class="accordion__item">
-                  <input type="checkbox" name="gym" id="gym-fan" checked />
-                  <label class="accordion__checkbox" for="gym-fan"
-                    >Спортзал</label
-                  >
-                </li>
-                <li class="accordion__item">
-                  <input type="checkbox" name="hookah" id="hookah-fan" />
-                  <label class="accordion__checkbox" for="hookah-fan"
-                    >Кальян</label
-                  >
-                </li>
-                <li class="accordion__item">
-                  <input type="checkbox" name="sofa" id="sofa" />
-                  <label class="accordion__checkbox" for="sofa">Диван</label>
-                </li>
-              </ul>
-            </div>
-            <div class="accordion">
-              <div class="accordion__title-wrapper">
-                <p class="accordion__title">Музыка</p>
-                <button
-                  class="accordion__control accordion__control--collapse"
-                  type="button"
-                >
-                  <span class="visually-hidden">Развернуть / свернуть</span>
-                </button>
+              <div class="accordion">
+                <div class="accordion__title-wrapper">
+                  <p class="accordion__title">Музыка</p>
+                  <button class="accordion__control" type="button">
+                    <span class="visually-hidden">Развернуть / свернуть</span>
+                  </button>
+                </div>
+                <ul class="accordion__list">
+                  <li class="accordion__item">
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="rock"
+                      id="hard-rock"
+                      checked
+                    />
+                    <label class="accordion__checkbox" for="hard-rock"
+                      >Тяжелый рок</label
+                    >
+                  </li>
+                  <li class="accordion__item">
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="rap"
+                      id="russian-rap"
+                    />
+                    <label class="accordion__checkbox" for="russian-rap"
+                      >Русский рэп</label
+                    >
+                  </li>
+                  <li class="accordion__item">
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="eurodance"
+                      id="eurodance"
+                    />
+                    <label class="accordion__checkbox" for="eurodance"
+                      >Евроденс</label
+                    >
+                  </li>
+                </ul>
               </div>
-              <ul class="accordion__list">
-                <li class="accordion__item">
-                  <input type="checkbox" name="rock" id="hard-rock" checked />
-                  <label class="accordion__checkbox" for="hard-rock"
-                    >Тяжелый рок</label
+              <div class="accordion">
+                <div class="accordion__title-wrapper">
+                  <p class="accordion__title">Еда</p>
+                  <button
+                    class="accordion__control accordion__control--collapse"
+                    type="button"
                   >
-                </li>
-                <li class="accordion__item">
-                  <input type="checkbox" name="rap" id="russian-rap" />
-                  <label class="accordion__checkbox" for="russian-rap"
-                    >Русский рэп</label
-                  >
-                </li>
-                <li class="accordion__item">
-                  <input type="checkbox" name="eurodance" id="eurodance" />
-                  <label class="accordion__checkbox" for="eurodance"
-                    >Евроденс</label
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="accordion">
-              <div class="accordion__title-wrapper">
-                <p class="accordion__title">Еда</p>
-                <button
-                  class="accordion__control accordion__control--collapse"
-                  type="button"
-                >
-                  <span class="visually-hidden">Развернуть / свернуть</span>
-                </button>
+                    <span class="visually-hidden">Развернуть / свернуть</span>
+                  </button>
+                </div>
+                <ul class="accordion__list accordion__list--hidden">
+                  <li class="accordion__item">
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="meat"
+                      id="meat-fan"
+                      checked
+                    />
+                    <label class="accordion__checkbox" for="meat-fan"
+                      >Мясоед</label
+                    >
+                  </li>
+                  <li class="accordion__item">
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="healthy-food"
+                      id="healthy-food-fan"
+                    />
+                    <label class="accordion__checkbox" for="healthy-food-fan"
+                      >Сидит на ПП</label
+                    >
+                  </li>
+                  <li class="accordion__item">
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="vegan"
+                      id="vegan"
+                    />
+                    <label class="accordion__checkbox" for="vegan"
+                      >Веган-сыроед</label
+                    >
+                  </li>
+                </ul>
               </div>
-              <ul class="accordion__list">
-                <li class="accordion__item">
-                  <input type="checkbox" name="meat" id="meat-fan" checked />
-                  <label class="accordion__checkbox" for="meat-fan"
-                    >Мясоед</label
+              <div class="accordion">
+                <div class="accordion__title-wrapper">
+                  <p class="accordion__title">Транспорт</p>
+                  <button class="accordion__control" type="button">
+                    <span class="visually-hidden">Развернуть / свернуть</span>
+                  </button>
+                </div>
+                <ul class="accordion__transport-wrapper">
+                  <li class="accordion__transport-item">
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="plane"
+                      id="plane"
+                      checked
+                    />
+                    <label
+                      class="transport-type transport-type--plane transport-type--active accordion__transport-checkbox"
+                      for="plane"
+                      >Самолет</label
+                    >
+                  </li>
+                  <li class="accordion__transport-item">
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="bus"
+                      id="bus"
+                      checked
+                    />
+                    <label
+                      class="transport-type transport-type--bus transport-type--active accordion__transport-checkbox"
+                      for="bus"
+                      >Автобус</label
+                    >
+                  </li>
+                  <li class="accordion__transport-item">
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="bike"
+                      id="bike"
+                    />
+                    <label
+                      class="transport-type transport-type--bike accordion__transport-checkbox"
+                      for="bike"
+                      >Велосипед</label
+                    >
+                  </li>
+                  <li class="accordion__transport-item">
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="feet"
+                      id="feet"
+                      checked
+                    />
+                    <label
+                      class="transport-type transport-type--feet accordion__transport-checkbox"
+                      for="feet"
+                      >Пешком</label
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="accordion">
+                <div class="accordion__title-wrapper">
+                  <p class="accordion__title">Левел</p>
+                  <button
+                    class="accordion__control accordion__control--collapse"
+                    type="button"
                   >
-                </li>
-                <li class="accordion__item">
+                    <span class="visually-hidden">Развернуть / свернуть</span>
+                  </button>
+                </div>
+                <div class="accordion__level-wrapper">
                   <input
-                    type="checkbox"
-                    name="healthy-food"
-                    id="healthy-food-fan"
+                    class="accordion__level-input"
+                    type="text"
+                    value="30"
+                    name="level"
+                    aria-label="Минимальный уровень"
                   />
-                  <label class="accordion__checkbox" for="healthy-food-fan"
-                    >Сидит на ПП</label
-                  >
-                </li>
-                <li class="accordion__item">
-                  <input type="checkbox" name="vegan" id="vegan" />
-                  <label class="accordion__checkbox" for="vegan"
-                    >Веган-сыроед</label
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="accordion">
-              <div class="accordion__title-wrapper">
-                <p class="accordion__title">Транспорт</p>
-                <button
-                  class="accordion__control accordion__control--collapse"
-                  type="button"
-                >
-                  <span class="visually-hidden">Развернуть / свернуть</span>
-                </button>
+                  <input
+                    class="accordion__level-input"
+                    type="text"
+                    value="100"
+                    name="level"
+                    aria-label="Максимальный уровень"
+                  />
+                </div>
+                <!-- Здесь будет кастомный range -->
               </div>
-              <ul class="accordion__transport-wrapper">
-                <li class="accordion__transport-item">
-                  <input type="checkbox" name="plane" id="plane" checked />
-                  <label
-                    class="transport-type transport-type--plane transport-type--active"
-                    for="plane"
-                    >Самолет</label
-                  >
-                </li>
-                <li class="accordion__transport-item">
-                  <input type="checkbox" name="bus" id="bus" checked />
-                  <label
-                    class="transport-type transport-type--bus transport-type--active"
-                    for="bus"
-                    >Автобус</label
-                  >
-                </li>
-                <li class="accordion__transport-item">
-                  <input type="checkbox" name="bike" id="bike" />
-                  <label class="transport-type transport-type--bike" for="bike"
-                    >Велосипед</label
-                  >
-                </li>
-                <li class="accordion__transport-item">
-                  <input type="checkbox" name="feet" id="feet" checked />
-                  <label class="transport-type transport-type--feet" for="feet"
-                    >Пешком</label
-                  >
-                </li>
-              </ul>
             </div>
-            <div class="accordion">
-              <div class="accordion__title-wrapper">
-                <p class="accordion__title">Левел</p>
-                <button
-                  class="accordion__control accordion__control--collapse"
-                  type="button"
-                >
-                  <span class="visually-hidden">Развернуть / свернуть</span>
-                </button>
-              </div>
-              <div class="accordion__level-wrapper">
-                <input
-                  class="accordion__level-input"
-                  type="text"
-                  value="30"
-                  name="level"
-                  aria-label="Минимальный уровень"
-                />
-                <input
-                  class="accordion__level-input"
-                  type="text"
-                  value="100"
-                  name="level"
-                  aria-label="Максимальный уровень"
-                />
-              </div>
-              <!-- Здесь будет кастомный range -->
+            <div class="teammate-search-form__button-wrapper">
+              <button
+                class="button button--rounded button--white teammate-search-form__button"
+                type="submit"
+              >
+                Показать
+              </button>
             </div>
-            <button
-              class="button button--rounded button--white teammate-search-form__button"
-              type="submit"
-            >
-              Показать
-            </button>
           </form>
         </div>
       </section>
@@ -664,49 +733,59 @@
 
     <footer class="page-footer">
       <div class="container">
-        <a class="logo page-footer__logo">
-          <img
-            class="logo__picture"
-            src="http://placekitten.com/100/19"
-            width="100"
-            height="19"
-            alt="Логотип приложения Погнали"
-          />
-        </a>
-        <ul class="social page-footer__social-list">
-          <li class="page-footer__social-item">
+        <div class="page-footer__content-wrapper">
+          <a class="logo page-footer__logo">
+            <picture>
+              <source
+                media="(min-width: 1440px)"
+                srcset="img/logo-desktop-blue@1x.png 1x"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/logo-tablet-blue@1x.png 1x"
+              />
+              <img
+                class="logo__picture"
+                src="img/logo-mobile-blue@1x.png"
+                alt="Логотип приложения Погнали"
+              />
+            </picture>
+          </a>
+          <ul class="social page-footer__social-list">
+            <li class="page-footer__social-item">
+              <a
+                class="social-button social-button--yellow social-button--fb"
+                href=""
+                target="_blank"
+                ><span class="visually-hidden">Facebook</span></a
+              >
+            </li>
+            <li class="page-footer__social-item">
+              <a
+                class="social-button social-button--yellow social-button--vk"
+                href=""
+                target="_blank"
+                ><span class="visually-hidden">VKontakte</span></a
+              >
+            </li>
+            <li class="page-footer__social-item">
+              <a
+                class="social-button social-button--yellow social-button--instagram"
+                href=""
+                target="_blank"
+                ><span class="visually-hidden">Instagram</span></a
+              >
+            </li>
+          </ul>
+          <div class="page-footer__bottom-wrapper">
+            <p class="page-footer__paragraph">Разработано</p>
             <a
-              class="social-button social-button--yellow social-button--fb"
-              href=""
+              class="academy-logo page-footer__academy-logo"
+              href="https://htmlacademy.ru/intensive/adaptive"
               target="_blank"
-              ><span class="visually-hidden">Facebook</span></a
+              ><span class="visually-hidden">HTML Academy</span></a
             >
-          </li>
-          <li class="page-footer__social-item">
-            <a
-              class="social-button social-button--yellow social-button--vk"
-              href=""
-              target="_blank"
-              ><span class="visually-hidden">VKontakte</span></a
-            >
-          </li>
-          <li class="page-footer__social-item">
-            <a
-              class="social-button social-button--yellow social-button--instagram"
-              href=""
-              target="_blank"
-              ><span class="visually-hidden">Instagram</span></a
-            >
-          </li>
-        </ul>
-        <div class="page-footer__bottom-wrapper">
-          <p class="page-footer__paragraph">Разработано</p>
-          <a
-            class="academy-logo page-footer__academy-logo"
-            href="https://htmlacademy.ru/intensive/adaptive"
-            target="_blank"
-            ><span class="visually-hidden">HTML Academy</span></a
-          >
+          </div>
         </div>
       </div>
     </footer>
