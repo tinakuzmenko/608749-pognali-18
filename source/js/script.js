@@ -12,7 +12,7 @@ navToggle.addEventListener("click", function(){
   nav.classList.toggle("page-nav--active");
   nav.classList.toggle("page-nav--inactive");
   nav.classList.add("page-nav--white");
-  if(nav.classList.contains("page-nav--inactive")){
+  if(pageYOffset === 0 && nav.classList.contains("page-nav--inactive")){
     nav.classList.remove("page-nav--white");
   }
 });
