@@ -1,12 +1,37 @@
 .accordion {
-  border-top: 1px solid #f3c72b;
+  @media (min-width: $tablet) {
+    padding: 37px 0 38px;
+    border-top: 1px solid $accordion-yellow;
+    border-bottom: 1px solid $accordion-yellow;
+  }
+}
+
+.accordion__item {
+  border-top: 1px solid $accordion-yellow;
   padding: 10px 0;
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
 }
 
 .accordion__title-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet) {
+    min-width: 130px;
+  }
 }
 
 .accordion__title {
@@ -18,6 +43,12 @@
   text-align: left;
   color: $twilight-blue;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
 }
 
 .accordion__control {
@@ -44,6 +75,10 @@
     border-top-color: $twilight-blue;
     top: 8px;
   }
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }
 
 .accordion__list {
@@ -54,13 +89,18 @@
   &--hidden {
     display: none;
   }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    width: 100%;
+  }
 }
 
-.accordion__item {
-  margin-bottom: 13px;
-
-  &:last-child {
-    margin-bottom: 0;
+.accordion__list-item {
+  @media (min-width: $tablet) {
+    width: 33.33%;
   }
 }
 
@@ -86,7 +126,7 @@
   }
 }
 
-.accordion__item input:checked + .accordion__checkbox {
+.accordion__list-item input:checked + .accordion__checkbox {
   &::before {
     background-repeat: no-repeat;
     background-size: 9px 9px;
@@ -99,6 +139,10 @@
   @include list-style-reset();
   display: flex;
   margin-bottom: 10px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
 }
 
 .accordion__level-wrapper {

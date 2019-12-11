@@ -3,21 +3,40 @@
   padding: 26px 0 22px 0;
   background-color: $accent-yellow;
   border-radius: 20px;
+
+  @media (min-width: $tablet) {
+    padding: 37px 35px;
+  }
 }
 
 .teammate-search-form__title {
   color: $twilight-blue;
-  font-size: 22.5px;
+  font-size: 23px;
   line-height: 1;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 36px;
+  }
 }
 
-.teammate-search-form__accordion-wrapper {
+.teammate-search-form__content-wrapper {
   padding: 0 26px;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+  }
 }
 
 .teammate-search-form__button-wrapper {
   padding: 0 20px;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+  }
 }
 
 .teammate-search-form__button {

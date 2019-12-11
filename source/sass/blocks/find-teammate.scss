@@ -1,3 +1,7 @@
 .find-teammate {
   padding-top: 24px;
+
+  @media (min-width: $tablet) {
+    padding-top: 45px;
+  }
 }
