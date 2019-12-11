@@ -2,6 +2,12 @@
   background-color: $white;
   border-radius: 20px;
   padding: 15px 20px 22px 20px;
+  overflow: hidden;
+}
+
+.teammates-card__common-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .teammates-card__image-wrapper {
@@ -9,8 +15,205 @@
   height: 70px;
   border-radius: 50%;
   overflow: hidden;
+  margin-right: 16px;
+
+  @media (min-width: $tablet) {
+    width: 190px;
+    height: 190px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 285px;
+    height: 285px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 
 .teammates-card__picture {
   display: block;
+
+  @media (min-width: $tablet) {
+    width: 190px;
+    height: 190px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 285px;
+    height: 285px;
+  }
+}
+
+.teammates-card__name {
+  color: $twilight-blue;
+  line-height: 1.05;
+  margin: 0;
+  padding-bottom: 32px;
+}
+
+.teammates-card__like-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 46px;
+  margin-top: -35px;
+}
+
+.teammates-card__like {
+  display: flex;
+  padding: 0;
+  flex-shrink: 0;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background-color: $light-violet;
+  font-size: 0;
+  border: none;
+  margin-right: 7px;
+}
+
+.teammates-card__likes-number {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: $deep-dark-blue;
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.teammates-card__hashtags {
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.2;
+  text-align: left;
+  color: $greyish-brown;
+  padding-left: 5px;
+  max-width: 175px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.teammates-card__wishlist {
+  width: 100%;
+  padding-left: 5px;
+  position: relative;
+  margin-bottom: 10px;
+  min-height: 90px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    left: -26px;
+    top: 10px;
+    background-color: $light-violet;
+    z-index: 5;
+  }
+}
+
+.teammates-card__title {
+  display: inline-block;
+  padding: 0 2px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.2;
+  color: $greyish-brown;
+  text-transform: lowercase;
+  background-color: $white;
+  position: relative;
+  z-index: 10;
+
+  &--wishlist {
+    margin-bottom: 14px;
+  }
+
+  &--transport {
+    margin-bottom: 14px;
+  }
+
+  &--level {
+    margin-bottom: 24px;
+  }
+}
+
+.teammates-card__wishlist-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.teammates-card__flag {
+  width: 26px;
+  height: 18px;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+.teammates-card__wishlist-description {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: $twilight-blue;
+  text-transform: uppercase;
+}
+
+.teammates-card__inner {
+  padding-left: 5px;
+  position: relative;
+  margin-right: 49px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    left: -26px;
+    top: 10px;
+    background-color: $light-violet;
+    z-index: 5;
+  }
+}
+
+.teammates-card__transport-wrapper {
+  @include list-style-reset();
+  margin: 0;
+  display: flex;
+}
+
+.teammates-card__transport {
+  font-size: 0;
+  width: 33px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $light-violet;
+}
+
+.teammates-card__level-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.teammates-card__level {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 0.75;
+  text-align: center;
+  color: $twilight-blue;
+}
+
+.teammates-card__button-wrapper {
+  margin-top: 21px;
+  width: 100%;
+}
+
+.teammates-card__button {
+  width: 100%;
+  height: 40px;
 }
