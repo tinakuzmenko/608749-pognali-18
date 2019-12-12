@@ -3,11 +3,10 @@
   border-radius: 20px;
   padding: 15px 18px 22px 20px;
   overflow: hidden;
-}
 
-.teammates-card__common-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  @media (min-width: $tablet) {
+    padding: 33px 25px 26px 35px;
+  }
 }
 
 .teammates-card__image-wrapper {
@@ -21,6 +20,9 @@
     width: 190px;
     height: 190px;
     border-radius: 20px;
+    margin-top: 2px;
+    order: 1;
+    margin-right: 35px;
   }
 
   @media (min-width: $desktop) {
@@ -50,6 +52,16 @@
   line-height: 1.05;
   margin: 0;
   padding-bottom: 32px;
+
+  @media (min-width: $tablet) {
+    order: 2;
+    font-size: 30px;
+    max-width: 230px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .teammates-card__like-wrapper {
@@ -57,6 +69,11 @@
   align-items: center;
   margin-left: 46px;
   margin-top: -35px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    order: 6;
+  }
 }
 
 .teammates-card__like {
@@ -92,6 +109,15 @@
   max-width: 175px;
   margin-top: 12px;
   margin-bottom: 12px;
+
+  @media (min-width: $tablet) {
+    order: 4;
+    padding-left: 0;
+    margin-left: 225px;
+    margin-top: -144px;
+    font-size: 20px;
+    max-width: 230px;
+  }
 }
 
 .teammates-card__wishlist {
@@ -100,17 +126,6 @@
   position: relative;
   margin-bottom: 10px;
   min-height: 90px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 1px;
-    left: -26px;
-    top: 10px;
-    background-color: $light-violet;
-    z-index: 5;
-  }
 }
 
 .teammates-card__title {
@@ -132,10 +147,24 @@
 
   &--transport {
     margin-bottom: 14px;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
   }
 
   &--level {
     margin-bottom: 23px;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+.teammates-card__all-countries {
+  @media (min-width: $tablet) {
+    display: flex;
   }
 }
 
@@ -145,6 +174,10 @@
   margin-bottom: 5px;
 
   &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet) {
     margin-bottom: 0;
   }
 }
@@ -165,27 +198,20 @@
   text-transform: uppercase;
 }
 
-.teammates-card__inner {
-  padding-left: 5px;
-  position: relative;
-  margin-right: 39px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 1px;
-    left: -26px;
-    top: 10px;
-    background-color: $light-violet;
-    z-index: 5;
-  }
+.teammates-card__transport-and-level {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .teammates-card__transport-wrapper {
   @include list-style-reset();
   margin: 0;
   display: flex;
+
+  @media (min-width: $tablet) {
+    flex-direction: column;
+  }
 }
 
 .teammates-card__transport {
@@ -194,13 +220,6 @@
   height: 32px;
   border-radius: 50%;
   background-color: $light-violet;
-}
-
-.teammates-card__level-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
 }
 
 .teammates-card__level {
@@ -217,6 +236,13 @@
 .teammates-card__button-wrapper {
   margin-top: 21px;
   width: 100%;
+
+  @media (min-width: $tablet) {
+    order: 5;
+    width: 148px;
+    margin: 0;
+    margin-left: -170px;
+  }
 }
 
 .teammates-card__button {

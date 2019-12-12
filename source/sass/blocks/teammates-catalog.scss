@@ -1,5 +1,9 @@
 .teammates-catalog {
   padding: 28px 0 76px;
+
+  @media (min-width: $tablet) {
+    padding-top: 41px;
+  }
 }
 
 .teammates-catalog__item-wrapper {
@@ -8,6 +12,10 @@
 
 .teammates-catalog__item {
   margin-bottom: 10px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
 }
 
 .teammates-catalog__button-show-all {
