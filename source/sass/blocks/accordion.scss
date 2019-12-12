@@ -1,6 +1,6 @@
 .accordion {
   @media (min-width: $tablet) {
-    padding: 37px 0 38px;
+    padding: 33px 0 35px;
     border-top: 1px solid $accordion-yellow;
     border-bottom: 1px solid $accordion-yellow;
   }
@@ -8,8 +8,7 @@
 
 .accordion__item {
   border-top: 1px solid $accordion-yellow;
-  padding: 10px 0;
-  margin-bottom: 12px;
+  padding: 10px 0 11px 0;
 
   &:last-child {
     margin-bottom: 0;
@@ -20,7 +19,11 @@
     border: none;
     display: flex;
     align-items: center;
-    margin-bottom: 0;
+    margin-bottom: 20px;
+
+    &--transport {
+      margin-bottom: 13px;
+    }
   }
 }
 
@@ -30,7 +33,7 @@
   align-items: center;
 
   @media (min-width: $tablet) {
-    min-width: 130px;
+    min-width: 126px;
   }
 }
 
@@ -48,6 +51,14 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 1.5;
+  }
+}
+
+.accordion__title-dots {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: inline;
   }
 }
 
@@ -99,8 +110,15 @@
 }
 
 .accordion__list-item {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media (min-width: $tablet) {
     width: 33.33%;
+    margin-bottom: 0;
   }
 }
 
@@ -124,6 +142,19 @@
     border-radius: 4px;
     background-color: $white;
   }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    font-size: 20px;
+    padding-left: 35px;
+
+    &::before {
+      top: -4px;
+      left: 0;
+      width: 24px;
+      height: 24px;
+    }
+  }
 }
 
 .accordion__list-item input:checked + .accordion__checkbox {
@@ -133,13 +164,26 @@
     background-position: center;
     background-image: url("../../img/tick.svg");
   }
+
+  @media (min-width: $tablet) {
+    &::before {
+      background-size: 12px 12px;
+    }
+  }
 }
 
 .accordion__transport-wrapper {
   @include list-style-reset();
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 
+  @media (min-width: $tablet) {
+    margin: 0;
+    margin-left: -5px;
+  }
+}
+
+.accordion__transport-checkbox {
   @media (min-width: $tablet) {
     margin: 0;
   }
@@ -153,6 +197,13 @@
 
   /* Временно */
   margin-bottom: 42px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-right: 20px;
+    margin-left: auto;
+  }
 }
 
 .accordion__level-input {
@@ -176,5 +227,12 @@
     margin-left: -1px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 75px;
+    padding: 15px 15px 10px 15px;
+    font-size: 20px;
+    letter-spacing: 2px;
   }
 }
