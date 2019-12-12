@@ -7,6 +7,8 @@
 
   @media (min-width: $tablet) {
     padding: 33px 25px 26px 35px;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -22,7 +24,6 @@
     height: 190px;
     border-radius: 20px;
     margin-top: 2px;
-    order: 1;
     margin-right: 35px;
   }
 
@@ -57,52 +58,11 @@
   max-width: 100px;
 
   @media (min-width: $tablet) {
-    order: 2;
     font-size: 30px;
-    max-width: 230px;
-
-    br {
-      display: none;
-    }
-  }
-}
-
-.teammates-card__like-wrapper {
-  display: flex;
-  align-items: center;
-  margin-left: 46px;
-  margin-top: -35px;
-  position: absolute;
-  top: 90px;
-  left: 21px;
-
-  @media (min-width: $tablet) {
+    max-width: 300px;
     margin: 0;
-    order: 6;
+    margin-bottom: 15px;
   }
-}
-
-.teammates-card__like {
-  display: flex;
-  padding: 0;
-  flex-shrink: 0;
-  width: 31px;
-  height: 31px;
-  border-radius: 50%;
-  background-color: $light-violet;
-  font-size: 0;
-  border: none;
-  margin-right: 7px;
-}
-
-.teammates-card__likes-number {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1.5;
-  color: $deep-dark-blue;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .teammates-card__hashtags {
@@ -117,10 +77,8 @@
   margin-bottom: 12px;
 
   @media (min-width: $tablet) {
-    order: 4;
     padding-left: 0;
-    margin-left: 225px;
-    margin-top: -144px;
+    margin: 0;
     font-size: 20px;
     max-width: 230px;
   }
@@ -132,6 +90,12 @@
   position: relative;
   margin-bottom: 10px;
   min-height: 90px;
+
+  @media (min-width: $tablet) {
+    order: 50;
+    margin-bottom: 0;
+    min-height: auto;
+  }
 }
 
 .teammates-card__titles {
@@ -206,6 +170,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet) {
+    flex-direction: column;
+    margin-left: auto;
+  }
 }
 
 .teammates-card__transport-wrapper {
@@ -239,15 +208,62 @@
   color: $twilight-blue;
 }
 
+.teammates-card__button-and-like {
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: flex-start;
+    order: 10;
+  }
+}
+
+.teammates-card__like-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 46px;
+  margin-top: -35px;
+  position: absolute;
+  top: 90px;
+  left: 21px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    position: static;
+    top: auto;
+    left: auto;
+  }
+}
+
+.teammates-card__like {
+  display: flex;
+  padding: 0;
+  flex-shrink: 0;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background-color: $light-violet;
+  font-size: 0;
+  border: none;
+  margin-right: 7px;
+}
+
+.teammates-card__likes-number {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: $deep-dark-blue;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .teammates-card__button-wrapper {
   margin-top: 21px;
   width: 100%;
 
   @media (min-width: $tablet) {
-    order: 5;
     width: 148px;
     margin: 0;
-    margin-left: -170px;
+    margin-left: 0;
   }
 }
 

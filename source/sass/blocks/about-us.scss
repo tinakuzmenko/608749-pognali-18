@@ -30,7 +30,7 @@
     transform: translate(-50%, -50%);
     z-index: 5;
     background-repeat: no-repeat;
-    background-position: left 10px center;
+    background-position: left 15px center;
     background-size: contain;
     background-image: url("../../img/about-mobile@1x.png");
 
@@ -38,7 +38,7 @@
       width: 768px;
       z-index: 100;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: auto;
       background-image: url("../../img/about-tablet@1x.png");
       background-position: right 10px bottom 88px;
     }

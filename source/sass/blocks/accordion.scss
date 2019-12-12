@@ -9,6 +9,14 @@
 .accordion__item-wrapper {
   @media (min-width: $tablet) {
     display: flex;
+
+    &--transport {
+      margin-bottom: 12px;
+    }
+
+    &--level {
+      align-items: center;
+    }
   }
 }
 
@@ -31,6 +39,15 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    cursor: auto;
+
+    &--transport {
+      margin-bottom: 0;
+    }
+
+    &--level {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -125,6 +142,7 @@
   @media (min-width: $tablet) {
     width: 33.33%;
     margin-bottom: 0;
+    padding-top: 5px;
   }
 }
 
@@ -137,6 +155,7 @@
   font-weight: normal;
   line-height: 1;
   color: $greyish-brown;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -179,8 +198,16 @@
 }
 
 .accordion__transport-checkbox {
+  cursor: pointer;
+
   @media (min-width: $tablet) {
     margin: 0;
+  }
+}
+
+.accordion__level-wrapper {
+  @media (min-width: $tablet) {
+    margin-left: auto;
   }
 }
 
@@ -191,6 +218,7 @@
   margin-top: 1px;
 
   @media (min-width: $tablet) {
+    justify-content: flex-end;
     margin-bottom: 0;
     padding-top: 0;
     padding-right: 20px;
@@ -199,6 +227,7 @@
 }
 
 .accordion__level-input {
+  display: flex;
   max-width: 111px;
   font-size: 15px;
   padding: 10px 5px 8px 5px;
