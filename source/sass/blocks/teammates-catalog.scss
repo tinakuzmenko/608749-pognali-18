@@ -32,13 +32,13 @@
 }
 
 .teammates-catalog__button-text {
-  padding-left: 33px;
+  padding-left: 35px;
   position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    top: 3px;
+    top: 5px;
     left: 0;
     width: 18px;
     height: 18px;

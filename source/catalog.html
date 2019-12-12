@@ -485,7 +485,9 @@
                   </div>
                 </div>
                 <div class="teammates-card__titles">
-                  <p class="teammates-card__title">
+                  <p
+                    class="teammates-card__title teammates-card__title--transport"
+                  >
                     Транспорт:
                   </p>
                   <p class="teammates-card__title teammates-card__title--level">
@@ -540,49 +542,42 @@
               </section>
 
               <section class="teammates-card teammates-catalog__item">
-                <div class="teammates-card__common-wrapper">
-                  <div class="teammates-card__image-wrapper">
-                    <picture>
-                      <source
-                        media="(min-width: 1440px)"
-                        srcset="img/demin-desktop@1x.jpg"
-                      />
-                      <source
-                        media="(min-width: 768px)"
-                        srcset="img/demin-tablet@1x.jpg"
-                      />
-                      <img
-                        class="teammates-card__picture"
-                        src="img/demin-mobile@1x.jpg"
-                        alt="Петя Демин"
-                        width="70"
-                        height="70"
-                      />
-                    </picture>
-                  </div>
+                <div class="teammates-card__image-wrapper">
+                  <picture>
+                    <source
+                      media="(min-width: 1440px)"
+                      srcset="img/demin-desktop@1x.jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="img/demin-tablet@1x.jpg"
+                    />
+                    <img
+                      class="teammates-card__picture"
+                      src="img/demin-mobile@1x.jpg"
+                      alt="Петя Демин"
+                      width="70"
+                      height="70"
+                    />
+                  </picture>
+                </div>
+                <div class="teammates-card__info-wrapper">
                   <h3
                     class="teammates-card__name teammates-card__name--offline"
                   >
-                    Петя<br />
-                    Демин
+                    Петя Демин
                   </h3>
-                  <div class="teammates-card__like-wrapper">
-                    <button class="teammates-card__like" type="button">
-                      Добавить / Убрать лайк
-                    </button>
-                    <p class="teammates-card__likes-number">
-                      150
-                    </p>
-                  </div>
                   <p class="teammates-card__hashtags">
                     #бургер #бар #футбол #концерт #крафт
                   </p>
-                  <div class="teammates-card__wishlist">
-                    <p
-                      class="teammates-card__title teammates-card__title--wishlist"
-                    >
-                      Хочет посетить:
-                    </p>
+                </div>
+                <div class="teammates-card__wishlist">
+                  <p
+                    class="teammates-card__title teammates-card__title--wishlist"
+                  >
+                    Хочет посетить:
+                  </p>
+                  <div class="teammates-card__all-countries">
                     <div class="teammates-card__wishlist-wrapper">
                       <span
                         class="country-flag country-flag--be teammates-card__flag"
@@ -597,46 +592,48 @@
                         class="country-flag country-flag--cz teammates-card__flag"
                         >Флаг Чехии</span
                       >
-                      <p class="teammates-card__wishlist-description">Чехия</p>
+                      <p class="teammates-card__wishlist-description">
+                        Чехия
+                      </p>
                     </div>
                   </div>
-                  <div class="teammates-card__inner">
-                    <p
-                      class="teammates-card__title teammates-card__title--transport"
+                </div>
+                <div class="teammates-card__titles">
+                  <p
+                    class="teammates-card__title teammates-card__title--transport"
+                  >
+                    Транспорт:
+                  </p>
+                  <p class="teammates-card__title teammates-card__title--level">
+                    Левел:
+                  </p>
+                </div>
+                <div class="teammates-card__transport-and-level">
+                  <ul class="teammates-card__transport-wrapper">
+                    <li
+                      class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
                     >
-                      Транспорт:
-                    </p>
-                    <ul class="teammates-card__transport-wrapper">
-                      <li
-                        class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
-                      >
-                        Самолет
-                      </li>
-                      <li
-                        class="teammates-card__transport teammates-card__transport--bus teammates-card__transport--active"
-                      >
-                        Автобус
-                      </li>
-                      <li
-                        class="teammates-card__transport teammates-card__transport--bicycle"
-                      >
-                        Велосипед
-                      </li>
-                      <li
-                        class="teammates-card__transport teammates-card__transport--fit teammates-card__transport--active"
-                      >
-                        Пешком
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="teammates-card__level-wrapper">
-                    <p
-                      class="teammates-card__title teammates-card__title--level"
+                      Самолет
+                    </li>
+                    <li
+                      class="teammates-card__transport teammates-card__transport--bus teammates-card__transport--active"
                     >
-                      Левел:
-                    </p>
-                    <div class="teammates-card__level">80</div>
-                  </div>
+                      Автобус
+                    </li>
+                    <li
+                      class="teammates-card__transport teammates-card__transport--bicycle"
+                    >
+                      Велосипед
+                    </li>
+                    <li
+                      class="teammates-card__transport teammates-card__transport--fit teammates-card__transport--active"
+                    >
+                      Пешком
+                    </li>
+                  </ul>
+                  <div class="teammates-card__level">80</div>
+                </div>
+                <div class="teammates-card__button-and-like">
                   <div class="teammates-card__button-wrapper">
                     <a
                       class="button button--rounded teammates-card__button"
@@ -644,59 +641,65 @@
                       >Позвать!</a
                     >
                   </div>
+                  <div class="teammates-card__like-wrapper">
+                    <button
+                      class="teammates-card__like teammates-card__like--active"
+                      type="button"
+                    >
+                      Добавить / Убрать лайк
+                    </button>
+                    <p class="teammates-card__likes-number">
+                      150
+                    </p>
+                  </div>
                 </div>
               </section>
 
               <section class="teammates-card teammates-catalog__item">
-                <div class="teammates-card__common-wrapper">
-                  <div class="teammates-card__image-wrapper">
-                    <picture>
-                      <source
-                        media="(min-width: 1440px)"
-                        srcset="img/smolov-desktop@1x.jpg"
-                      />
-                      <source
-                        media="(min-width: 768px)"
-                        srcset="img/smolov-tablet@1x.jpg"
-                      />
-                      <img
-                        class="teammates-card__picture"
-                        src="img/smolov-mobile@1x.jpg"
-                        alt="Марк Смолов"
-                        width="70"
-                        height="70"
-                      />
-                    </picture>
-                  </div>
+                <div class="teammates-card__image-wrapper">
+                  <picture>
+                    <source
+                      media="(min-width: 1440px)"
+                      srcset="img/smolov-desktop@1x.jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="img/smolov-tablet@1x.jpg"
+                    />
+                    <img
+                      class="teammates-card__picture"
+                      src="img/smolov-mobile@1x.jpg"
+                      alt="Марк Смолов"
+                      width="70"
+                      height="70"
+                    />
+                  </picture>
+                </div>
+                <div class="teammates-card__info-wrapper">
                   <h3
                     class="teammates-card__name teammates-card__name--offline"
                   >
-                    Марк<br />
-                    Смолов
+                    Марк Смолов
                   </h3>
-                  <div class="teammates-card__like-wrapper">
-                    <button class="teammates-card__like" type="button">
-                      Добавить / Убрать лайк
-                    </button>
-                    <p class="teammates-card__likes-number">
-                      1700
-                    </p>
-                  </div>
                   <p class="teammates-card__hashtags">
                     #рэп #тату #хайпбист #кроссовки #суприм
                   </p>
-                  <div class="teammates-card__wishlist">
-                    <p
-                      class="teammates-card__title teammates-card__title--wishlist"
-                    >
-                      Хочет посетить:
-                    </p>
+                </div>
+                <div class="teammates-card__wishlist">
+                  <p
+                    class="teammates-card__title teammates-card__title--wishlist"
+                  >
+                    Хочет посетить:
+                  </p>
+                  <div class="teammates-card__all-countries">
                     <div class="teammates-card__wishlist-wrapper">
                       <span
-                        class="country-flag country-flag--us teammates-card__flag"
+                        class="country-flag country-flag--usa teammates-card__flag"
                         >Флаг США</span
                       >
-                      <p class="teammates-card__wishlist-description">США</p>
+                      <p class="teammates-card__wishlist-description">
+                        США
+                      </p>
                     </div>
                     <div class="teammates-card__wishlist-wrapper">
                       <span
@@ -710,50 +713,50 @@
                     <div class="teammates-card__wishlist-wrapper">
                       <span
                         class="country-flag country-flag--do teammates-card__flag"
-                        >Флаг Доминики</span
+                        >Флаг Доминиканы</span
                       >
                       <p class="teammates-card__wishlist-description">
                         Доминикана
                       </p>
                     </div>
                   </div>
-                  <div class="teammates-card__inner">
-                    <p
-                      class="teammates-card__title teammates-card__title--transport"
+                </div>
+                <div class="teammates-card__titles">
+                  <p
+                    class="teammates-card__title teammates-card__title--transport"
+                  >
+                    Транспорт:
+                  </p>
+                  <p class="teammates-card__title teammates-card__title--level">
+                    Левел:
+                  </p>
+                </div>
+                <div class="teammates-card__transport-and-level">
+                  <ul class="teammates-card__transport-wrapper">
+                    <li
+                      class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
                     >
-                      Транспорт:
-                    </p>
-                    <ul class="teammates-card__transport-wrapper">
-                      <li
-                        class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
-                      >
-                        Самолет
-                      </li>
-                      <li
-                        class="teammates-card__transport teammates-card__transport--bus"
-                      >
-                        Автобус
-                      </li>
-                      <li
-                        class="teammates-card__transport teammates-card__transport--bicycle teammates-card__transport--active"
-                      >
-                        Велосипед
-                      </li>
-                      <li
-                        class="teammates-card__transport teammates-card__transport--fit"
-                      >
-                        Пешком
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="teammates-card__level-wrapper">
-                    <p
-                      class="teammates-card__title teammates-card__title--level"
+                      Самолет
+                    </li>
+                    <li
+                      class="teammates-card__transport teammates-card__transport--bus"
                     >
-                      Левел:
-                    </p>
-                    <div class="teammates-card__level">25</div>
-                  </div>
+                      Автобус
+                    </li>
+                    <li
+                      class="teammates-card__transport teammates-card__transport--bicycle teammates-card__transport--active"
+                    >
+                      Велосипед
+                    </li>
+                    <li
+                      class="teammates-card__transport teammates-card__transport--fit"
+                    >
+                      Пешком
+                    </li>
+                  </ul>
+                  <div class="teammates-card__level">25</div>
+                </div>
+                <div class="teammates-card__button-and-like">
                   <div class="teammates-card__button-wrapper">
                     <a
                       class="button button--rounded teammates-card__button"
@@ -761,51 +764,57 @@
                       >Позвать!</a
                     >
                   </div>
+                  <div class="teammates-card__like-wrapper">
+                    <button
+                      class="teammates-card__like teammates-card__like--active"
+                      type="button"
+                    >
+                      Добавить / Убрать лайк
+                    </button>
+                    <p class="teammates-card__likes-number">
+                      1700
+                    </p>
+                  </div>
                 </div>
               </section>
 
               <section class="teammates-card teammates-catalog__item">
-                <div class="teammates-card__common-wrapper">
-                  <div class="teammates-card__image-wrapper">
-                    <picture>
-                      <source
-                        media="(min-width: 1440px)"
-                        srcset="img/rogovaya-desktop@1x.jpg"
-                      />
-                      <source
-                        media="(min-width: 768px)"
-                        srcset="img/rogovaya-tablet@1x.jpg"
-                      />
-                      <img
-                        class="teammates-card__picture"
-                        src="img/rogovaya-mobile@1x.jpg"
-                        alt="Лариса Роговая"
-                        width="70"
-                        height="70"
-                      />
-                    </picture>
-                  </div>
-                  <h3 class="teammates-card__name teammates-card__name--online">
-                    Лариса<br />
-                    Роговая
+                <div class="teammates-card__image-wrapper">
+                  <picture>
+                    <source
+                      media="(min-width: 1440px)"
+                      srcset="img/rogovaya-desktop@1x.jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="img/rogovaya-tablet@1x.jpg"
+                    />
+                    <img
+                      class="teammates-card__picture"
+                      src="img/rogovaya-mobile@1x.jpg"
+                      alt="Лариса Роговая"
+                      width="70"
+                      height="70"
+                    />
+                  </picture>
+                </div>
+                <div class="teammates-card__info-wrapper">
+                  <h3
+                    class="teammates-card__name teammates-card__name--offline"
+                  >
+                    Лариса Роговая
                   </h3>
-                  <div class="teammates-card__like-wrapper">
-                    <button class="teammates-card__like" type="button">
-                      Добавить / Убрать лайк
-                    </button>
-                    <p class="teammates-card__likes-number">
-                      23
-                    </p>
-                  </div>
                   <p class="teammates-card__hashtags">
                     #образование #карьера #учеба #линкедин
                   </p>
-                  <div class="teammates-card__wishlist">
-                    <p
-                      class="teammates-card__title teammates-card__title--wishlist"
-                    >
-                      Хочет посетить:
-                    </p>
+                </div>
+                <div class="teammates-card__wishlist">
+                  <p
+                    class="teammates-card__title teammates-card__title--wishlist"
+                  >
+                    Хочет посетить:
+                  </p>
+                  <div class="teammates-card__all-countries">
                     <div class="teammates-card__wishlist-wrapper">
                       <span
                         class="country-flag country-flag--uk teammates-card__flag"
@@ -825,49 +834,60 @@
                       </p>
                     </div>
                   </div>
-                  <div class="teammates-card__inner">
-                    <p
-                      class="teammates-card__title teammates-card__title--transport"
+                </div>
+                <div class="teammates-card__titles">
+                  <p
+                    class="teammates-card__title teammates-card__title--transport"
+                  >
+                    Транспорт:
+                  </p>
+                  <p class="teammates-card__title teammates-card__title--level">
+                    Левел:
+                  </p>
+                </div>
+                <div class="teammates-card__transport-and-level">
+                  <ul class="teammates-card__transport-wrapper">
+                    <li
+                      class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
                     >
-                      Транспорт:
-                    </p>
-                    <ul class="teammates-card__transport-wrapper">
-                      <li
-                        class="teammates-card__transport teammates-card__transport--plane teammates-card__transport--active"
-                      >
-                        Самолет
-                      </li>
-                      <li
-                        class="teammates-card__transport teammates-card__transport--bus"
-                      >
-                        Автобус
-                      </li>
-                      <li
-                        class="teammates-card__transport teammates-card__transport--bicycle teammates-card__transport--active"
-                      >
-                        Велосипед
-                      </li>
-                      <li
-                        class="teammates-card__transport teammates-card__transport--fit"
-                      >
-                        Пешком
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="teammates-card__level-wrapper">
-                    <p
-                      class="teammates-card__title teammates-card__title--level"
+                      Самолет
+                    </li>
+                    <li
+                      class="teammates-card__transport teammates-card__transport--bus teammates-card__transport--active"
                     >
-                      Левел:
-                    </p>
-                    <div class="teammates-card__level">50</div>
-                  </div>
+                      Автобус
+                    </li>
+                    <li
+                      class="teammates-card__transport teammates-card__transport--bicycle"
+                    >
+                      Велосипед
+                    </li>
+                    <li
+                      class="teammates-card__transport teammates-card__transport--fit"
+                    >
+                      Пешком
+                    </li>
+                  </ul>
+                  <div class="teammates-card__level">50</div>
+                </div>
+                <div class="teammates-card__button-and-like">
                   <div class="teammates-card__button-wrapper">
                     <a
                       class="button button--rounded teammates-card__button"
                       href=""
                       >Позвать!</a
                     >
+                  </div>
+                  <div class="teammates-card__like-wrapper">
+                    <button
+                      class="teammates-card__like teammates-card__like--active"
+                      type="button"
+                    >
+                      Добавить / Убрать лайк
+                    </button>
+                    <p class="teammates-card__likes-number">
+                      23
+                    </p>
                   </div>
                 </div>
               </section>
