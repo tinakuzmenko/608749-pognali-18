@@ -4,6 +4,11 @@
     border-top: 1px solid $accordion-yellow;
     border-bottom: 1px solid $accordion-yellow;
   }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    border: none;
+  }
 }
 
 .accordion__item-wrapper {
@@ -17,6 +22,10 @@
     &--level {
       align-items: center;
     }
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
   }
 }
 
@@ -48,6 +57,12 @@
     &--level {
       margin-bottom: 0;
     }
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 100%;
+    margin-bottom: 12px;
+    cursor: pointer;
   }
 }
 
@@ -90,6 +105,20 @@
       display: none;
     }
   }
+
+  @media (min-width: $desktop) {
+    &::after {
+      display: flex;
+      top: 11px;
+      right: 7px;
+    }
+
+    &--collapse::after {
+      border: 4px solid transparent;
+      border-bottom-color: $twilight-blue;
+      top: 7px;
+    }
+  }
 }
 
 .accordion__title-dots {
@@ -97,6 +126,10 @@
 
   @media (min-width: $tablet) {
     display: inline;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
   }
 }
 
@@ -130,19 +163,42 @@
       display: flex;
     }
   }
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
+    margin-top: 11px;
+    margin-bottom: 27px;
+
+    &--transport {
+      flex-direction: row;
+      margin-top: 2px;
+      margin-left: 1px;
+      margin-bottom: 18px;
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
 }
 
 .accordion__list-item {
   margin-bottom: 12px;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   @media (min-width: $tablet) {
     width: 33.33%;
     margin-bottom: 0;
     padding-top: 5px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -209,6 +265,11 @@
   @media (min-width: $tablet) {
     margin-left: auto;
   }
+
+  @media (min-width: $desktop) {
+    /* Временно, пока нет ренджа */
+    margin-bottom: 45px;
+  }
 }
 
 .accordion__inputs-wrapper {
@@ -223,6 +284,10 @@
     padding-top: 0;
     padding-right: 20px;
     margin-left: auto;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 5px;
   }
 }
 
@@ -255,5 +320,9 @@
     padding: 15px 15px 10px 15px;
     font-size: 20px;
     letter-spacing: 2px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 96px;
   }
 }

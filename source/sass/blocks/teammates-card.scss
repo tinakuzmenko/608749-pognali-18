@@ -10,6 +10,11 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  @media (min-width: $desktop) {
+    padding: 0 44px 0 0;
+    align-items: flex-start;
+  }
 }
 
 .teammates-card__image-wrapper {
@@ -32,6 +37,8 @@
     height: 285px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    margin-right: 61px;
+    margin-top: 0;
   }
 }
 
@@ -46,6 +53,13 @@
   @media (min-width: $desktop) {
     width: 285px;
     height: 285px;
+  }
+}
+
+.teammates-card__info-wrapper {
+  @media (min-width: $desktop) {
+    padding-top: 47px;
+    margin-right: 97px;
   }
 }
 
@@ -99,6 +113,12 @@
     margin-top: 22px;
     padding-left: 0;
   }
+
+  @media (min-width: $desktop) {
+    margin-top: 0;
+    width: auto;
+    padding-top: 51px;
+  }
 }
 
 .teammates-card__titles {
@@ -128,6 +148,10 @@
       padding-left: 47px;
       margin-bottom: 16px;
     }
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
   }
 
   &--wishlist::before {
@@ -140,6 +164,10 @@
       top: 8px;
       left: -75px;
     }
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
   }
 
   &--wishlist::after {
@@ -151,6 +179,10 @@
       background-color: $light-violet;
       top: 8px;
       right: -35px;
+    }
+
+    @media (min-width: $desktop) {
+      display: none;
     }
   }
 
@@ -167,6 +199,10 @@
   @media (min-width: $tablet) {
     display: flex;
   }
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
+  }
 }
 
 .teammates-card__wishlist-wrapper {
@@ -177,6 +213,11 @@
   @media (min-width: $tablet) {
     margin-bottom: 0;
     margin-right: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 0;
+    margin-bottom: 13px;
   }
 
   &:last-child {
@@ -201,6 +242,10 @@
     margin-bottom: 0;
     margin-right: 10px;
   }
+
+  @media (min-width: $desktop) {
+    margin-right: 20px;
+  }
 }
 
 .teammates-card__wishlist-description {
@@ -215,6 +260,10 @@
     font-size: 20px;
     margin-top: 3px;
   }
+
+  @media (min-width: $desktop) {
+    margin-top: 0;
+  }
 }
 
 .teammates-card__transport-and-level {
@@ -226,6 +275,16 @@
     flex-direction: column;
     margin-left: auto;
     justify-content: flex-start;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    margin-bottom: 0;
+    order: 100;
+    margin-left: auto;
+    margin-right: 15px;
+    justify-content: space-between;
+    margin-top: -86px;
   }
 }
 
@@ -240,6 +299,12 @@
     margin-left: 0;
     margin-right: 15px;
     margin-bottom: 25px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    margin-bottom: 0;
+    margin-right: 60px;
   }
 }
 
@@ -265,6 +330,11 @@
   @media (min-width: $tablet) {
     margin-top: 0;
   }
+
+  @media (min-width: $desktop) {
+    margin-right: 0;
+    margin-bottom: 9px;
+  }
 }
 
 .teammates-card__button-and-like {
@@ -274,6 +344,12 @@
     order: 10;
     margin-left: 220px;
     margin-top: -50px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 342px;
+    margin-top: -96px;
+    order: 50;
   }
 }
 
