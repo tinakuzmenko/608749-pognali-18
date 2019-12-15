@@ -3,10 +3,27 @@
   padding: 28px 0;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
+
+  @media (min-width: $tablet) {
+    padding: 50px 0 75px;
+  }
+}
+
+.user-plans__content-wrapper {
+  @media (min-width: $tablet) {
+    padding: 0 35px;
+  }
+}
+
+.user-plans__heading-wrapper {
+  margin-bottom: 26px;
 }
 
 .user-plans__heading {
-  margin-bottom: 26px;
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 1.39;
+  }
 }
 
 .user-plans__list {

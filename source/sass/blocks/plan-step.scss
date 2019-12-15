@@ -6,6 +6,11 @@
   &--small-padding {
     padding-bottom: 10px;
   }
+
+  @media (min-width: $tablet) {
+    border-radius: 30px;
+    padding: 50px 43px;
+  }
 }
 
 .plan-step__fiedset {
@@ -14,6 +19,10 @@
   width: 100%;
   margin: 0;
   padding: 0 24px;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+  }
 }
 
 .plan-step__title {
@@ -22,6 +31,10 @@
   line-height: 1;
   color: $twilight-blue;
   margin-bottom: 15px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+  }
 }
 
 .plan-step__description {
@@ -32,6 +45,11 @@
 
   &--final {
     margin-bottom: 19px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 1.2;
   }
 }
 
