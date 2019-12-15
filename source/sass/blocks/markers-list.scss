@@ -1,0 +1,16 @@
+.markers-list {
+  @include list-style-reset();
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+.markers-list__description {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
+}

@@ -1,14 +1,15 @@
 .plan-card {
   background-color: $white;
   border-radius: 10px;
-  padding: 24px;
+  padding: 24px 24px 21px;
 }
 
 .plan-card__title {
   font-weight: bold;
   line-height: 1;
   color: $twilight-blue;
-  margin-bottom: 22px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .plan-card__number {
@@ -28,11 +29,11 @@
   margin: 0;
 
   &--teammates {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   &--dates {
-    margin-bottom: 27px;
+    margin-bottom: 20px;
   }
 }
 

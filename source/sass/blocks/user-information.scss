@@ -1,12 +1,13 @@
 .user-information {
-  padding-top: 20px;
+  padding-top: 23px;
 }
 
-.user-information__wrapper {
+.user-information__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  padding: 0 17px;
 }
 
 .user-information__image {
@@ -20,25 +21,78 @@
   display: block;
 }
 
+.user-information__level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  padding-top: 10px;
+}
+
+.user-information__level-number {
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 1;
+  color: $deep-dark-blue;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: -3px;
+    width: 49px;
+    height: 2px;
+    background-color: $light-grey;
+  }
+}
+
+.user-information__level-description {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.22;
+  color: $greyish-brown;
+}
+
+.user-information__upload-photo {
+  margin-bottom: 34px;
+}
+
 .user-information__button {
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  margin-bottom: 18px;
+  height: 40px;
 }
 
-.user-information__fieldset {
+.user-information__wrapper {
   border-radius: 10px;
-  border: 1px solid #cbced9;
-  padding: 25px;
-  margin-bottom: 19px;
+  border: 1px solid $light-grey;
+  margin-bottom: 24px;
+  position: relative;
+  padding: 22px 24px 20px;
+
+  &--transport {
+    padding: 15px 24px 13px;
+    margin-bottom: 33px;
+  }
 }
 
-.user-information__legend {
-  margin: 0 auto;
+.user-information__title {
+  margin: 0;
   padding: 0 14px;
   font-weight: bold;
   text-transform: uppercase;
   color: $twilight-blue;
   line-height: 1.13;
+  position: absolute;
+  z-index: 10;
+  background-color: $light-violet;
+  top: -8px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .user-information__textfield {
@@ -47,9 +101,16 @@
   height: 100%;
   background-color: transparent;
   resize: none;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.38;
+  text-align: left;
+  color: $greyish-brown;
 }
 
 .user-information__transport-wrapper {
   @include list-style-reset();
   display: flex;
+  justify-content: center;
+  margin: 0;
 }

@@ -1,14 +1,19 @@
 .plan-step {
   background-color: $white;
-  padding: 24px;
+  padding: 24px 0 21px;
   border-radius: 10px;
+
+  &--small-padding {
+    padding-bottom: 10px;
+  }
 }
 
 .plan-step__fiedset {
   display: block;
   border: none;
   width: 100%;
-  padding: 0;
+  margin: 0;
+  padding: 0 24px;
 }
 
 .plan-step__title {
@@ -16,42 +21,57 @@
   font-weight: bold;
   line-height: 1;
   color: $twilight-blue;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 .plan-step__description {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 21px;
   font-weight: normal;
   line-height: 1.38;
+
+  &--final {
+    margin-bottom: 19px;
+  }
 }
 
 .plan-step__input-wrapper {
   display: flex;
   flex-direction: column;
   margin-bottom: 21px;
+
+  &--term {
+    margin-bottom: 25px;
+  }
+
+  &--checkbox {
+    margin-bottom: 24px;
+  }
 }
 
 .plan-step__label-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+
+.plan-step__button-wrapper {
+  padding: 0 22px;
 }
 
 .plan-step__button-next {
-  display: block;
+  display: flex;
   width: 100%;
   border: none;
-  padding: 10px 0 7px;
-  margin-bottom: 10px;
+  padding: 5px 0 5px;
 }
 
 .plan-step__button-prev {
-  display: block;
+  display: flex;
   width: 100%;
   border: none;
-  padding: 10px 0 7px;
+  padding: 12px 0 0 0;
 }
 
 .plan-step__label {
@@ -82,7 +102,7 @@
   color: $twilight-blue;
   border: 1px solid $light-grey;
   border-radius: 4px;
-  padding: 12px 14px;
+  padding: 15px 14px 11px 30px;
 }
 
 .plan-step__custom-checkbox {
@@ -95,11 +115,18 @@
     top: -4px;
     left: 0;
     display: block;
-    width: 25px;
+    width: 26px;
     height: 25px;
     border: 1px solid $light-grey;
     border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 9px 9px;
   }
+}
+
+.plan-step__input-wrapper--checkbox input:checked + .plan-step__custom-checkbox::before {
+  background-image: url("../../img/tick.svg");
 }
 
 .plan-step__calendar {
@@ -108,10 +135,22 @@
 
 .plan-step__select-wrapper {
   display: flex;
+  margin-bottom: 22px;
+  position: relative;
 }
 
-.plan-step__country-select {
-  margin-bottom: 22px;
+.plan-step__flag-wrapper {
+  display: flex;
+  flex-shrink: 0;
+  flex-grow: 0;
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+  border: 1px solid $light-grey;
+  border-radius: 4px;
+  height: auto;
+  background-color: transparent;
+  margin-left: -1px;
 }
 
 .plan-step__delete-country {
@@ -125,6 +164,13 @@
   background-repeat: no-repeat;
   background-size: 9px 9px;
   background-image: url("../../img/menu-close.svg");
+  position: absolute;
+  right: -10px;
+  top: -10px;
+}
+
+.plan-step__country-add {
+  margin-bottom: 26px;
 }
 
 .plan-step__description-wrapper {
@@ -135,15 +181,23 @@
 .plan-step__country-description {
   display: flex;
   flex-direction: column;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
+}
+
+.plan-step__description-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 13px;
+  padding-left: 13px;
 }
 
 .plan-step__description-label {
+  display: flex;
   font-size: 18px;
   font-weight: 500;
   line-height: 1;
   color: $twilight-blue;
-  margin-bottom: 16px;
 }
 
 .plan-step__plan-description {
@@ -152,7 +206,7 @@
   border-radius: 4px;
   border: 1px solid $light-grey;
   background-color: transparent;
-  padding: 13px;
+  padding: 9px 13px 9px 13px;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.38;

@@ -5,10 +5,10 @@
 .calendar__title-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 11px 0;
   border-top: 1px solid $light-grey;
   border-bottom: 1px solid $light-grey;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 
 .calendar__control {
@@ -42,22 +42,78 @@
   width: 100%;
   text-align: center;
   vertical-align: middle;
+  border-collapse: collapse;
+}
 
-  td {
-    padding: 5px;
-    font-size: 14px;
-    border: 1px solid $light-grey;
-  }
+.calendar__table-body {
+  border: 1px solid $light-grey;
 }
 
 .calendar__day-of-week {
-  padding: 5px;
+  padding: 8px 5px 8px 5px;
   font-size: 14px;
   font-weight: normal;
-  line-height: 1.29;
+  line-height: 1;
   color: $greyish-brown;
+  box-sizing: border-box;
 
   &--weekend {
     color: $coral-red;
   }
+}
+
+.calendar__table-cell {
+  width: 30px;
+  height: 31px;
+  box-sizing: border-box;
+  border-right: 1px solid $light-grey;
+
+  &:nth-child(7n) {
+    border-right: none;
+  }
+}
+
+.calendar__table-row {
+  border-bottom: 1px solid $light-grey;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.calendar__day-number {
+  display: flex;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: $light-violet;
+  color: $greyish-brown;
+  position: relative;
+  cursor: pointer;
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 32px;
+    left: -1px;
+    top: -1px;
+    border: 2px solid $coral-red;
+  }
+}
+
+.calendar__table-cell input:disabled + .calendar__day-number {
+  background-color: transparent;
+  color: rgba($greyish-brown, 0.3);
+}
+
+.calendar__table-cell input:disabled + .calendar__day-number:hover::after {
+  display: none;
+}
+
+.calendar__table-cell input:checked + .calendar__day-number {
+  background-color: $twilight-blue;
+  color: $white;
 }
