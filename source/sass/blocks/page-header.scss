@@ -25,6 +25,10 @@
       border-bottom-left-radius: 60px;
       border-bottom-right-radius: 60px;
     }
+
+    @media (min-width: $desktop) {
+      z-index: 900;
+    }
   }
 }
 
