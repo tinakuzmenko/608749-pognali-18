@@ -1,6 +1,6 @@
 .plan-step {
   background-color: $white;
-  padding: 24px 0 21px;
+  padding: 24px 24px 21px;
   border-radius: 10px;
 
   &--small-padding {
@@ -9,53 +9,27 @@
 
   @media (min-width: $tablet) {
     border-radius: 30px;
-    padding: 50px 40px 55px 43px;
+    padding: 49px 43px 55px 43px;
 
     &--small-padding {
       padding-bottom: 53px;
     }
   }
-}
 
-.plan-step__fiedset {
-  display: block;
-  border: none;
-  width: 100%;
-  margin: 0;
-  padding: 0 24px;
-
-  @media (min-width: $tablet) {
-    padding: 0;
+  @media (min-width: $desktop) {
+    border-radius: 60px;
+    padding: 93px 160px 104px;
   }
 }
 
-.plan-step__title {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1;
-  color: $twilight-blue;
-  margin-bottom: 15px;
-
-  @media (min-width: $tablet) {
-    font-size: 36px;
-    margin-bottom: 32px;
-  }
-}
-
-.plan-step__description {
-  margin-top: 0;
+.plan-step__top {
   margin-bottom: 21px;
-  font-weight: normal;
-  line-height: 1.38;
 
   &--final {
     margin-bottom: 19px;
   }
 
   @media (min-width: $tablet) {
-    font-size: 20px;
-    line-height: 1.2;
-    max-width: 500px;
     margin-bottom: 65px;
 
     &--countries {
@@ -64,8 +38,73 @@
     }
 
     &--final {
-      margin-bottom: 33px;
+      margin-bottom: 35px;
     }
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 54px;
+
+    &--countries {
+      max-width: 100%;
+      margin-bottom: 52px;
+    }
+  }
+}
+
+.plan-step__top--countries .plan-step__about {
+  @media (min-width: $desktop) {
+    max-width: 406px;
+  }
+}
+
+.plan-step__top--final .plan-step__about {
+  @media (min-width: $desktop) {
+    max-width: 480px;
+  }
+}
+
+.plan-step__title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  color: $twilight-blue;
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    letter-spacing: normal;
+    line-height: 1.39;
+    margin-bottom: 27px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.plan-step__description {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+  line-height: 1.38;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 1.2;
+    max-width: 500px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 570px;
   }
 }
 
@@ -73,6 +112,14 @@
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: column;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 30px;
+    margin-bottom: 17px;
+    border-top: 1px solid $inputs-grey;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -95,7 +142,7 @@
 
     &--term {
       order: 2;
-      margin-bottom: 60px;
+      margin-bottom: 59px;
     }
 
     &--checkbox {
@@ -117,21 +164,39 @@
       display: none;
     }
   }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 0;
+
+    &--checkbox {
+      justify-content: flex-end;
+      margin-bottom: 14px;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
-.plan-step__label-wrapper {
+.plan-step__label-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
 
-  @media (min-width: $tablet) {
-    margin-bottom: 24px;
+  @media (min-width: $desktop) {
+    min-width: 50%;
+    justify-content: space-between;
+    margin-bottom: 14px;
   }
 }
 
 .plan-step__button-wrapper {
-  padding: 0 22px;
+  padding: 0;
 
   @media (min-width: $tablet) {
     padding: 0;
@@ -203,25 +268,40 @@
   letter-spacing: 1.6px;
   line-height: 1;
   color: $twilight-blue;
+  margin-bottom: 8px;
 
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 0.9;
     letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 220px;
+    margin-bottom: 0;
   }
 }
 
 .plan-step__label-tip {
+  display: flex;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1.6px;
   line-height: 1;
   color: rgba($twilight-blue, 0.3);
+  margin-bottom: 8px;
 
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 0.9;
     letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+    order: 10;
   }
 }
 
@@ -241,7 +321,12 @@
 
   @media (min-width: $tablet) {
     font-size: 20px;
-    padding: 25px 14px 22px 30px;
+    padding: 25px 14px 23px 30px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 181px;
+    margin-right: 36px;
   }
 }
 
@@ -280,6 +365,12 @@
       background-size: 12px 12px;
     }
   }
+
+  @media (min-width: $desktop) {
+    &::before {
+      left: 3px;
+    }
+  }
 }
 
 .plan-step__input-wrapper--checkbox input:checked + .plan-step__custom-checkbox::before {
@@ -292,6 +383,10 @@
   @media (min-width: $tablet) {
     margin-bottom: 46px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 57px;
+  }
 }
 
 .plan-step__selects {
@@ -303,6 +398,11 @@
     padding-top: 42px;
     margin-bottom: 50px;
     border-top: 1px solid $inputs-grey;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 63px;
+    margin-bottom: 57px;
   }
 }
 
@@ -335,6 +435,11 @@
     border: none;
     width: auto;
     padding-left: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 0;
+    padding-right: 7px;
   }
 }
 
@@ -380,8 +485,14 @@
 
   @media (min-width: $tablet) {
     padding-top: 27px;
-    padding-right: 35px;
+    padding-right: 31px;
     border-top: 1px solid $inputs-grey;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 71px;
+    padding-right: 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -409,6 +520,11 @@
   @media (min-width: $tablet) {
     padding: 0;
     margin-bottom: 29px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 29px;
+    padding-right: 115px;
   }
 }
 
@@ -445,5 +561,10 @@
     padding: 18px 19px 18px 19px;
     font-size: 20px;
     line-height: 1.2;
+  }
+
+  @media (min-width: $desktop) {
+    width: 730px;
+    padding: 24px 10px 24px 23px;
   }
 }

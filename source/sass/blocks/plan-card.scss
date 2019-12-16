@@ -17,6 +17,17 @@
       background-color: $border-grey;
     }
   }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 34px 23px 44px;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .plan-card__title {
@@ -37,6 +48,13 @@
     letter-spacing: normal;
     margin-bottom: 42px;
   }
+
+  @media (min-width: $desktop) {
+    width: 617px;
+    flex-direction: row;
+    margin-bottom: 0;
+    justify-content: flex-start;
+  }
 }
 
 .plan-card__number {
@@ -50,6 +68,10 @@
     line-height: 0.9;
     letter-spacing: 2px;
   }
+
+  @media (min-width: $desktop) {
+    margin-right: 30px;
+  }
 }
 
 .plan-card__details-wrapper {
@@ -58,6 +80,10 @@
     justify-content: flex-start;
     align-items: center;
     padding-right: 5px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 630px;
   }
 }
 
@@ -84,6 +110,10 @@
       margin-bottom: 0;
       margin-right: 34px;
     }
+
+    @media (min-width: $desktop) {
+      margin-right: 25px;
+    }
   }
 
   &--dates {
@@ -91,6 +121,10 @@
 
     @media (min-width: $tablet) {
       margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop) {
+      margin-right: auto;
     }
   }
 }

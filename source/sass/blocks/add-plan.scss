@@ -10,11 +10,22 @@
     padding-top: 45px;
     padding-bottom: 71px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 48px;
+    padding-bottom: 86px;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
+  }
 }
 
 .add-plan__common-wrapper {
   @media (min-width: $tablet) {
     padding: 0 35px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
   }
 }
 
@@ -26,6 +37,10 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 49px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 70px;
   }
 }
 
@@ -80,10 +95,18 @@
   @media (min-width: $tablet) {
     margin-bottom: 40px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 44px;
+  }
 }
 
 .add-plan__step.plan-step--small-padding {
   @media (min-width: $tablet) {
     margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 45px;
   }
 }

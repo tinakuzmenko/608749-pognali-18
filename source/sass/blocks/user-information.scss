@@ -3,6 +3,11 @@
 
   @media (min-width: $tablet) {
     padding-top: 65px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 65px;
   }
 }
 
@@ -12,7 +17,6 @@
     flex-direction: column;
     align-items: center;
     padding: 0 35px;
-    margin-bottom: 60px;
   }
 
   @media (min-width: $desktop) {
@@ -21,6 +25,7 @@
     justify-content: space-between;
     padding-left: 64px;
     padding-right: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -153,6 +158,7 @@
   align-items: center;
   cursor: pointer;
   height: 40px;
+  color: $twilight-blue;
 
   @media (min-width: $tablet) {
     height: 60px;
@@ -172,6 +178,8 @@
 }
 
 .user-information__button-hidden-text {
+  color: $twilight-blue;
+
   @media (min-width: $desktop) {
     display: none;
   }
@@ -236,6 +244,14 @@
     letter-spacing: 2px;
     top: auto;
     bottom: -10px;
+  }
+
+  @media (min-width: $desktop) {
+    &--tags {
+      bottom: -11px;
+      left: 18px;
+      transform: none;
+    }
   }
 }
 

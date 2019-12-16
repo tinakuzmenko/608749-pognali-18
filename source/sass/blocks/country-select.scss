@@ -33,4 +33,8 @@
     line-height: 0.9;
     letter-spacing: 2;
   }
+
+  @media (min-width: $desktop) {
+    width: 730px;
+  }
 }
