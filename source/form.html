@@ -341,53 +341,55 @@
                       </p>
                     </li>
                   </ul>
-                  <div class="plan-step__input-wrapper">
-                    <div class="plan-step__label-wrapper">
-                      <label class="plan-step__label" for="teammates-quantity"
-                        >Ищу попутчиков:</label
-                      >
-                      <span class="plan-step__label-tip">Чел.</span>
+                  <div class="plan-step__form">
+                    <div class="plan-step__input-wrapper">
+                      <div class="plan-step__label-wrapper">
+                        <label class="plan-step__label" for="teammates-quantity"
+                          >Ищу попутчиков:</label
+                        >
+                        <span class="plan-step__label-tip">Чел.</span>
+                      </div>
+                      <input
+                        class="plan-step__number-input"
+                        type="number"
+                        id="teammates-quantity"
+                        name="teammates-quantity"
+                        value="2"
+                        min="0"
+                      />
                     </div>
-                    <input
-                      class="plan-step__number-input"
-                      type="number"
-                      id="teammates-quantity"
-                      name="teammates-quantity"
-                      value="2"
-                      min="0"
-                    />
-                  </div>
-                  <div
-                    class="plan-step__input-wrapper plan-step__input-wrapper--term"
-                  >
-                    <div class="plan-step__label-wrapper">
-                      <label class="plan-step__label" for="travel-term"
-                        >Длительность:</label
-                      >
-                      <span class="plan-step__label-tip">дн.</span>
-                    </div>
-                    <input
-                      class="plan-step__number-input"
-                      type="number"
-                      id="travel-term"
-                      name="travel-term"
-                      value="2"
-                      min="1"
-                    />
-                  </div>
-                  <div
-                    class="plan-step__input-wrapper plan-step__input-wrapper--checkbox"
-                  >
-                    <input
-                      class="visually-hidden"
-                      type="checkbox"
-                      name="with-kids"
-                      id="with-kids"
-                      checked
-                    />
-                    <label class="plan-step__custom-checkbox" for="with-kids"
-                      >Можно с детьми</label
+                    <div
+                      class="plan-step__input-wrapper plan-step__input-wrapper--term"
                     >
+                      <div class="plan-step__label-wrapper">
+                        <label class="plan-step__label" for="travel-term"
+                          >Длительность:</label
+                        >
+                        <span class="plan-step__label-tip">дн.</span>
+                      </div>
+                      <input
+                        class="plan-step__number-input"
+                        type="number"
+                        id="travel-term"
+                        name="travel-term"
+                        value="2"
+                        min="1"
+                      />
+                    </div>
+                    <div
+                      class="plan-step__input-wrapper plan-step__input-wrapper--checkbox"
+                    >
+                      <input
+                        class="visually-hidden"
+                        type="checkbox"
+                        name="with-kids"
+                        id="with-kids"
+                        checked
+                      />
+                      <label class="plan-step__custom-checkbox" for="with-kids"
+                        >Можно с детьми</label
+                      >
+                    </div>
                   </div>
                   <div class="calendar plan-step__calendar">
                     <div class="calendar__title-wrapper">
@@ -408,20 +410,30 @@
                     <table class="calendar__table">
                       <thead>
                         <tr>
-                          <th class="calendar__day-of-week">П</th>
-                          <th class="calendar__day-of-week">В</th>
-                          <th class="calendar__day-of-week">С</th>
-                          <th class="calendar__day-of-week">Ч</th>
-                          <th class="calendar__day-of-week">П</th>
-                          <th
-                            class="calendar__day-of-week calendar__day-of-week--weekend"
-                          >
-                            С
+                          <th class="calendar__day-of-week">
+                            П<span class="calendar__day-second-letter">н</span>
+                          </th>
+                          <th class="calendar__day-of-week">
+                            В<span class="calendar__day-second-letter">т</span>
+                          </th>
+                          <th class="calendar__day-of-week">
+                            С<span class="calendar__day-second-letter">р</span>
+                          </th>
+                          <th class="calendar__day-of-week">
+                            Ч<span class="calendar__day-second-letter">т</span>
+                          </th>
+                          <th class="calendar__day-of-week">
+                            П<span class="calendar__day-second-letter">т</span>
                           </th>
                           <th
                             class="calendar__day-of-week calendar__day-of-week--weekend"
                           >
-                            В
+                            С<span class="calendar__day-second-letter">б</span>
+                          </th>
+                          <th
+                            class="calendar__day-of-week calendar__day-of-week--weekend"
+                          >
+                            В<span class="calendar__day-second-letter">с</span>
                           </th>
                         </tr>
                       </thead>
@@ -973,9 +985,11 @@
                     Шаг 2.<br />
                     Маршрут
                   </legend>
-                  <p class="plan-step__description">
-                    Укажите страны, которые вы хотели по посетить. Это может
-                    быть одна или сразу несколько.
+                  <p
+                    class="plan-step__description plan-step__description--countries"
+                  >
+                    Укажите страны, которые вы хотели посетить. Это может быть
+                    одна или сразу несколько.
                   </p>
                   <ul class="markers-list">
                     <li class="markers-list__item">
@@ -999,54 +1013,58 @@
                       </p>
                     </li>
                   </ul>
-                  <div class="plan-step__select-wrapper">
-                    <button class="country-select" type="button">
-                      Босния и Герцеговина
-                    </button>
-                    <div
-                      class="plan-step__flag-wrapper plan-step__flag-wrapper--active"
-                    >
-                      <span class="country-flag country-flag--ba"
-                        >Флаг Боснии и Герцеговины</span
+                  <div class="plan-step__selects">
+                    <div class="plan-step__select-wrapper">
+                      <button class="country-select" type="button">
+                        Босния и Герцеговина
+                      </button>
+                      <div
+                        class="plan-step__flag-wrapper plan-step__flag-wrapper--active"
                       >
+                        <span
+                          class="country-flag country-flag--big country-flag--ba"
+                          >Флаг Боснии и Герцеговины</span
+                        >
+                      </div>
+                      <button class="plan-step__delete-country" type="button">
+                        <span class="visually-hidden">Удалить страну</span>
+                      </button>
                     </div>
-                    <button class="plan-step__delete-country" type="button">
-                      <span class="visually-hidden">Удалить страну</span>
-                    </button>
-                  </div>
-                  <div class="plan-step__select-wrapper">
-                    <button class="country-select" type="button">
-                      Чехия
-                    </button>
-                    <div
-                      class="plan-step__flag-wrapper plan-step__flag-wrapper--active"
-                    >
-                      <span class="country-flag country-flag--cz"
-                        >Флаг Чехии</span
+                    <div class="plan-step__select-wrapper">
+                      <button class="country-select" type="button">
+                        Чехия
+                      </button>
+                      <div
+                        class="plan-step__flag-wrapper plan-step__flag-wrapper--active"
                       >
+                        <span
+                          class="country-flag country-flag--big country-flag--cz"
+                          >Флаг Чехии</span
+                        >
+                      </div>
+                      <button class="plan-step__delete-country" type="button">
+                        <span class="visually-hidden">Удалить страну</span>
+                      </button>
                     </div>
-                    <button class="plan-step__delete-country" type="button">
-                      <span class="visually-hidden">Удалить страну</span>
-                    </button>
-                  </div>
-                  <div class="plan-step__select-wrapper">
-                    <button
-                      class="country-select country-select--choose"
-                      type="button"
-                    >
-                      Выберите страну
-                    </button>
-                    <button class="plan-step__delete-country" type="button">
-                      <span class="visually-hidden">Удалить страну</span>
-                    </button>
-                  </div>
-                  <div class="plan-step__country-add">
-                    <button
-                      class="country-select country-select--add"
-                      type="button"
-                    >
-                      Добавить страну
-                    </button>
+                    <div class="plan-step__select-wrapper">
+                      <button
+                        class="country-select country-select--choose"
+                        type="button"
+                      >
+                        Выберите страну
+                      </button>
+                      <button class="plan-step__delete-country" type="button">
+                        <span class="visually-hidden">Удалить страну</span>
+                      </button>
+                    </div>
+                    <div class="plan-step__country-add">
+                      <button
+                        class="country-select country-select--add"
+                        type="button"
+                      >
+                        Добавить страну
+                      </button>
+                    </div>
                   </div>
                 </fieldset>
                 <div class="plan-step__button-wrapper">
@@ -1108,7 +1126,7 @@
                           for="ba-plans"
                           >Босния и Герцеговина</label
                         >
-                        <span class="country-flag country-flag--ba"
+                        <span class="country-flag country-flag--big country-flag--ba"
                           >Флаг Боснии и Герцеговины</span
                         >
                       </div>
@@ -1125,7 +1143,7 @@
                           for="cz-plans"
                           >Чехия</label
                         >
-                        <span class="country-flag country-flag--cz"
+                        <span class="country-flag country-flag--big country-flag--cz"
                           >Флаг Чехии</span
                         >
                       </div>

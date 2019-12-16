@@ -8,11 +8,14 @@
 
   @media (min-width: $tablet) {
     padding-top: 45px;
+    padding-bottom: 71px;
   }
 }
 
 .add-plan__common-wrapper {
-  padding: 0 35px;
+  @media (min-width: $tablet) {
+    padding: 0 35px;
+  }
 }
 
 .add-plan__heading-wrapper {
@@ -73,4 +76,14 @@
 
 .add-plan__step {
   margin-bottom: 10px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
+}
+
+.add-plan__step.plan-step--small-padding {
+  @media (min-width: $tablet) {
+    margin-bottom: 50px;
+  }
 }
