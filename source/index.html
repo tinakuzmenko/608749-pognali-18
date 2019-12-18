@@ -116,7 +116,7 @@
       <section
         class="promo page-header__content-wrapper page-header__content-wrapper--main page-header__content-wrapper--no-js"
       >
-        <div class="container">
+        <div class="container container--promo">
           <div class="promo__main-content-wrapper">
             <div
               class="page-header__title-wrapper page-header__title-wrapper--main"
@@ -188,7 +188,7 @@
 
     <main>
       <section class="about-us">
-        <div class="container">
+        <div class="container container--about-us">
           <div class="about-us__content-wrapper">
             <h2 class="heading heading--h2">О сервисе</h2>
             <p class="text text--white">
@@ -216,8 +216,8 @@
                 Направления
               </h2>
               <p class="text">
-                Мы не продаем туры и&nbsp;ничего не рекламируем. Люди сами пишут
-                о странах, куда хотели бы отправиться и чем можно там заняться.
+                Мы не продаем туры и ничего не рекламируем. Люди сами пишут о
+                странах, куда хотели бы отправиться и чем можно там заняться.
               </p>
             </div>
             <div class="directions__item-wrapper">
@@ -615,8 +615,11 @@
               Регистрация
             </button>
           </form>
-          <p class="text text--white registration__text registration__text--bottom">
-            Остались вопросы? <br class="registration__text-br" />Мы с радостью на них ответим!
+          <p
+            class="text text--white registration__text registration__text--bottom"
+          >
+            Остались вопросы? <br class="registration__text-br" />Мы с радостью
+            на них ответим!
           </p>
           <ul class="contacts registration__contacts">
             <li class="contacts__item contacts__item--bottom">
@@ -630,7 +633,7 @@
               <a
                 class="contact-url contact-url--email contact-url--yellow-text"
                 href="mailto:mail@htmlacademy.ru"
-                ><span class="contact-url__text"></span>mail@htmlacademy.ru</a></a
+                ><span class="contact-url__text"></span>mail@htmlacademy.ru</a
               >
             </li>
           </ul>
@@ -640,18 +643,20 @@
         <div class="container">
           <h2 class="visually-hidden">Наш адрес</h2>
           <div class="location__content-wrapper">
-          <address class="our-address location__address">
-            ул. Большая<br> Конюшенная, 19/8
-          </address>
-          <a
-            class="button button--squared button--bordered location__button"
-            href=""
-            >Проложить маршрут</a
-          >
-        </div>
+            <address class="our-address location__address">
+              ул. Большая<br />
+              Конюшенная, 19/8
+            </address>
+            <a
+              class="button button--squared button--bordered location__button"
+              href=""
+              >Проложить маршрут</a
+            >
+          </div>
         </div>
       </section>
       <section class="map map--upped">
+        <h2 class="visually-hidden">Карта офиса "Погнали"</h2>
         <!-- Здесь будет карта -->
       </section>
     </main>
@@ -659,61 +664,67 @@
     <footer class="page-footer">
       <div class="container">
         <div class="page-footer__content-wrapper">
-        <a class="logo page-footer__logo">
+          <a class="logo page-footer__logo">
             <picture>
-                <source
-                  media="(min-width: 1440px)"
-                  srcset="img/logo-desktop-blue@1x.png 1x"
-                />
-                <source
-                  media="(min-width: 768px)"
-                  srcset="img/logo-tablet-blue@1x.png 1x"
-                />
-                <img
-                  class="logo__picture"
-                  src="img/logo-mobile-blue@1x.png"
-                  alt="Логотип приложения Погнали"
-                />
-              </picture>
-        </a>
-        <ul class="social page-footer__social-list">
-          <li class="page-footer__social-item">
+              <source
+                media="(min-width: 1440px)"
+                srcset="img/logo-desktop-blue@1x.png 1x"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/logo-tablet-blue@1x.png 1x"
+              />
+              <img
+                class="logo__picture"
+                src="img/logo-mobile-blue@1x.png"
+                alt="Логотип приложения Погнали"
+              />
+            </picture>
+          </a>
+          <ul class="social page-footer__social-list">
+            <li class="page-footer__social-item">
+              <a
+                class="social-button social-button--yellow social-button--fb"
+                href=""
+                target="_blank"
+                ><span class="visually-hidden">Facebook</span></a
+              >
+            </li>
+            <li class="page-footer__social-item">
+              <a
+                class="social-button social-button--yellow social-button--vk"
+                href=""
+                target="_blank"
+                ><span class="visually-hidden">VKontakte</span></a
+              >
+            </li>
+            <li class="page-footer__social-item">
+              <a
+                class="social-button social-button--yellow social-button--instagram"
+                href=""
+                target="_blank"
+                ><span class="visually-hidden">Instagram</span></a
+              >
+            </li>
+          </ul>
+          <div class="page-footer__bottom-wrapper">
+            <p class="page-footer__paragraph">Разработано</p>
             <a
-              class="social-button social-button--yellow social-button--fb"
-              href=""
+              class="academy-logo page-footer__academy-logo"
+              href="https://htmlacademy.ru/intensive/adaptive"
               target="_blank"
-              ><span class="visually-hidden">Facebook</span></a
+              ><span class="visually-hidden">HTML Academy</span></a
             >
-          </li>
-          <li class="page-footer__social-item">
-            <a
-              class="social-button social-button--yellow social-button--vk"
-              href=""
-              target="_blank"
-              ><span class="visually-hidden">VKontakte</span></a
-            >
-          </li>
-          <li class="page-footer__social-item">
-            <a
-              class="social-button social-button--yellow social-button--instagram"
-              href=""
-              target="_blank"
-              ><span class="visually-hidden">Instagram</span></a
-            >
-          </li>
-        </ul>
-        <div class="page-footer__bottom-wrapper">
-          <p class="page-footer__paragraph">Разработано</p>
-          <a
-            class="academy-logo page-footer__academy-logo"
-            href="https://htmlacademy.ru/intensive/adaptive"
-            target="_blank"
-            ><span class="visually-hidden">HTML Academy</span></a
-          >
+          </div>
         </div>
       </div>
-      </div>
     </footer>
-    <script src="js/script.js"></script>
+
+    <script>
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.js" async></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/business-tariffs.js"></script>
   </body>
 </html>

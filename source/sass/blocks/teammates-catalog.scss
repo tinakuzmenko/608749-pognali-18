@@ -1,9 +1,44 @@
 .teammates-catalog {
-  padding: 28px 0 46px;
+  padding: 28px 0 76px;
+
+  @media (min-width: $tablet) {
+    padding-top: 41px;
+    padding-bottom: 123px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 151px;
+    padding-right: 90px;
+    padding-bottom: 136px;
+  }
+}
+
+.teammates-catalog__item-wrapper {
+  margin-bottom: 18px;
 }
 
 .teammates-catalog__item {
   margin-bottom: 10px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 30px;
+  }
+
+  &:last-child {
+    margin-bottom: 16px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 43px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 65px;
+    }
+  }
 }
 
 .teammates-catalog__button-show-all {
@@ -15,42 +50,97 @@
   line-height: 1.76;
   color: $twilight-blue;
   text-transform: uppercase;
-  margin-top: 16px;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 63px;
+  }
 }
 
 .teammates-catalog__button-text {
-  padding-left: 33px;
+  padding-left: 35px;
   position: relative;
+
+  @media (min-width: $tablet) {
+    padding-left: 45px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 70px;
+  }
 
   &::before {
     content: "";
     position: absolute;
-    top: 3px;
+    top: 5px;
     left: 0;
     width: 18px;
     height: 18px;
     background-color: $twilight-blue;
+
+    @media (min-width: $tablet) {
+      width: 27px;
+      height: 27px;
+      top: 2px;
+      left: -7px;
+    }
+  }
+}
+
+.teammates-catalog__pagination {
+  width: 100%;
+  background-color: $white;
+  border-radius: 20px;
+  display: flex;
+  padding: 25px 28px;
+
+  @media (min-width: $desktop) {
+    margin-right: 85px;
+  }
+}
+
+.teammates-catalog__pages-list {
+  display: none;
+
+  @media (min-width: $tablet) {
+    @include list-style-reset();
+
+    display: flex;
+    margin: 0;
+    align-items: center;
+  }
+}
+
+.teammates-catalog__pages-item {
+  @media (min-width: $tablet) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.teammates-catalog__page-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: $deep-dark-blue;
+
+  &--active {
+    background-color: $accent-yellow;
+    border-radius: 50%;
   }
 }
 
 .teammates-catalog__controls-wrapper {
   display: flex;
-}
-
-.teammates-catalog__control-button {
-  width: 50%;
-  height: 50px;
-  background-color: $white;
-
-  &--prev {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-right: 1px solid $light-violet;
-  }
-
-  &--next {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
 }

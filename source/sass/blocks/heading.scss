@@ -43,6 +43,10 @@
     position: relative;
     display: inline-flex;
     margin-bottom: 0;
+
+    @media (min-width: $tablet) {
+      padding-bottom: 63px;
+    }
   }
 
   &--underline::after {
@@ -54,6 +58,12 @@
     height: 5px;
     border-radius: 2.4px;
     background-color: $orange;
+
+    @media (min-width: $tablet) {
+      height: 8px;
+      border-radius: 4px;
+      bottom: -4px;
+    }
   }
 
   &--blue {

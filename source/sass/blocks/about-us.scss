@@ -5,6 +5,7 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   position: relative;
+  z-index: 10;
 
   @media (min-width: $tablet) {
     padding-top: 98px;
@@ -14,57 +15,35 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 130px;
+    padding-top: 190px;
     padding-bottom: 163px;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -19px;
-    z-index: 5;
-    width: 132px;
-    height: 132px;
-    border-radius: 20px;
-    background-color: $rectangle-blue;
-
-    @media (min-width: $tablet) {
-      width: auto;
-      height: 213px;
-      top: 55px;
-      left: 40px;
-      right: 40px;
-    }
-
-    @media (min-width: $desktop) {
-      top: 70px;
-      left: 62px;
-      width: 213px;
-      height: 213px;
-    }
+    margin-top: -60px;
   }
 
   &::after {
+    width: 320px;
+    height: 100%;
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
     background-repeat: no-repeat;
-    background-position: right 10px center;
+    background-position: left 15px center;
     background-size: contain;
     background-image: url("../../img/about-mobile@1x.png");
 
     @media (min-width: $tablet) {
-      background-image: url("../../img/about-tablet@1x.png");
+      width: 768px;
+      background-repeat: no-repeat;
       background-size: auto;
+      background-image: url("../../img/about-tablet@1x.png");
       background-position: right 10px bottom 88px;
     }
 
     @media (min-width: $desktop) {
+      width: 1440px;
       background-image: url("../../img/about-desktop@1x.png");
       background-position: right 60px bottom;
     }

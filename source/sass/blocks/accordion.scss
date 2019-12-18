@@ -1,15 +1,74 @@
 .accordion {
-  border-top: 1px solid #f3c72b;
-  padding: 10px 0;
+  @media (min-width: $tablet) {
+    padding: 33px 0 35px;
+    border-top: 1px solid $accordion-yellow;
+    border-bottom: 1px solid $accordion-yellow;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    border: none;
+  }
 }
 
-.accordion__title-wrapper {
+.accordion__item-wrapper {
+  @media (min-width: $tablet) {
+    display: flex;
+
+    &--transport {
+      margin-bottom: 12px;
+    }
+
+    &--level {
+      align-items: center;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
+  }
+}
+
+.accordion__item {
+  background: transparent;
+  border: none;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  border-top: 1px solid $accordion-yellow;
+  padding: 10px 0 11px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet) {
+    max-width: 125px;
+    padding: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: auto;
+
+    &--transport {
+      margin-bottom: 0;
+    }
+
+    &--level {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 100%;
+    margin-bottom: 12px;
+    cursor: pointer;
+  }
 }
 
 .accordion__title {
+  display: flex;
+  width: 100%;
   margin: 0;
   font-size: 16px;
   font-weight: bold;
@@ -18,36 +77,222 @@
   text-align: left;
   color: $twilight-blue;
   text-transform: uppercase;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 8px;
+    height: 4px;
+    border: 4px solid transparent;
+    border-top-color: $twilight-blue;
+    top: 8px;
+  }
+
+  &--collapse::after {
+    border: 4px solid transparent;
+    border-bottom-color: $twilight-blue;
+    top: 4px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &::after {
+      display: flex;
+      top: 11px;
+      right: 7px;
+    }
+
+    &--collapse::after {
+      border: 4px solid transparent;
+      border-bottom-color: $twilight-blue;
+      top: 7px;
+    }
+  }
 }
 
-.accordion__control {
-  background: transparent;
-  padding: 0;
-  border: 4px solid transparent;
-  border-bottom-color: $twilight-blue;
+.accordion__title-dots {
+  display: none;
 
-  &--collapse {
-    transform: rotate(180deg);
+  @media (min-width: $tablet) {
+    display: inline;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
   }
 }
 
 .accordion__list {
   @include list-style-reset();
+  margin-top: 6px;
+  margin-bottom: 17px;
+
+  &--transport {
+    display: flex;
+    margin-top: 4px;
+    margin-bottom: 20px;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    width: 100%;
+
+    &--transport {
+      margin: 0;
+      margin-left: -5px;
+    }
+
+    &--hidden {
+      display: flex;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
+    margin-top: 11px;
+    margin-bottom: 27px;
+
+    &--transport {
+      flex-direction: row;
+      margin-top: 2px;
+      margin-left: 1px;
+      margin-bottom: 18px;
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
 }
 
-.accordion__transport-wrapper {
-  @include list-style-reset();
+.accordion__list-item {
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet) {
+    width: 33.33%;
+    margin-bottom: 0;
+    padding-top: 5px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.accordion__checkbox {
   display: flex;
+  padding-left: 27px;
+  position: relative;
+  min-height: 18px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1;
+  color: $greyish-brown;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: $white;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    font-size: 20px;
+    padding-left: 35px;
+
+    &::before {
+      top: -4px;
+      left: 0;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.accordion__list-item input:checked + .accordion__checkbox {
+  &::before {
+    background-repeat: no-repeat;
+    background-size: 9px 9px;
+    background-position: center;
+    background-image: url("../../img/tick.svg");
+  }
+
+  @media (min-width: $tablet) {
+    &::before {
+      background-size: 12px 12px;
+    }
+  }
+}
+
+.accordion__transport-checkbox {
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
 }
 
 .accordion__level-wrapper {
+  @media (min-width: $tablet) {
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop) {
+    /* Временно, пока нет ренджа */
+    margin-bottom: 45px;
+  }
+}
+
+.accordion__inputs-wrapper {
   display: flex;
   justify-content: center;
-  padding-top: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 53px;
+  margin-top: 1px;
+
+  @media (min-width: $tablet) {
+    justify-content: flex-end;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-right: 20px;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 5px;
+  }
 }
 
 .accordion__level-input {
+  display: flex;
   max-width: 111px;
   font-size: 15px;
   padding: 10px 5px 8px 5px;
@@ -68,5 +313,16 @@
     margin-left: -1px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 75px;
+    padding: 15px 15px 10px 15px;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 96px;
   }
 }

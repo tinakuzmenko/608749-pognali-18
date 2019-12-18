@@ -1,14 +1,70 @@
 .plan-step {
   background-color: $white;
-  padding: 24px;
+  padding: 24px 24px 21px;
   border-radius: 10px;
+
+  &--small-padding {
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: $tablet) {
+    border-radius: 30px;
+    padding: 49px 43px 55px 43px;
+
+    &--small-padding {
+      padding-bottom: 53px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    border-radius: 60px;
+    padding: 93px 160px 104px;
+  }
 }
 
-.plan-step__fiedset {
-  display: block;
-  border: none;
-  width: 100%;
-  padding: 0;
+.plan-step__top {
+  margin-bottom: 21px;
+
+  &--final {
+    margin-bottom: 19px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 65px;
+
+    &--countries {
+      max-width: 406px;
+      margin-bottom: 33px;
+    }
+
+    &--final {
+      margin-bottom: 35px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 54px;
+
+    &--countries {
+      max-width: 100%;
+      margin-bottom: 52px;
+    }
+  }
+}
+
+.plan-step__top--countries .plan-step__about {
+  @media (min-width: $desktop) {
+    max-width: 406px;
+  }
+}
+
+.plan-step__top--final .plan-step__about {
+  @media (min-width: $desktop) {
+    max-width: 480px;
+  }
 }
 
 .plan-step__title {
@@ -16,42 +72,194 @@
   font-weight: bold;
   line-height: 1;
   color: $twilight-blue;
-  margin-bottom: 18px;
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    letter-spacing: normal;
+    line-height: 1.39;
+    margin-bottom: 27px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .plan-step__description {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 0;
   font-weight: normal;
   line-height: 1.38;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 1.2;
+    max-width: 500px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 570px;
+  }
+}
+
+.plan-step__form {
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 30px;
+    margin-bottom: 17px;
+    border-top: 1px solid $inputs-grey;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .plan-step__input-wrapper {
   display: flex;
   flex-direction: column;
   margin-bottom: 21px;
+  position: relative;
+
+  &--term {
+    margin-bottom: 25px;
+  }
+
+  &--checkbox {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 35px;
+
+    &--term {
+      order: 2;
+      margin-bottom: 59px;
+    }
+
+    &--checkbox {
+      order: 1;
+      margin-bottom: 61px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: -26px;
+      left: 0;
+      background-color: $inputs-grey;
+    }
+
+    &--checkbox::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 0;
+
+    &--checkbox {
+      justify-content: flex-end;
+      margin-bottom: 14px;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
-.plan-step__label-wrapper {
+.plan-step__label-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 9px;
+
+  @media (min-width: $desktop) {
+    min-width: 50%;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+}
+
+.plan-step__button-wrapper {
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .plan-step__button-next {
-  display: block;
+  display: flex;
   width: 100%;
   border: none;
-  padding: 10px 0 7px;
-  margin-bottom: 10px;
+  padding: 5px 0 5px;
+
+  @media (min-width: $tablet) {
+    width: 285px;
+    min-height: 81px;
+    text-align: left;
+    font-weight: bold;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    font-size: 24px;
+    line-height: 1;
+    text-transform: none;
+    padding: 20px 35px 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 33px;
+      right: 29px;
+      border: 8px solid transparent;
+      border-left: 10px solid $twilight-blue;
+    }
+  }
 }
 
 .plan-step__button-prev {
-  display: block;
+  display: flex;
   width: 100%;
   border: none;
-  padding: 10px 0 7px;
+  padding: 12px 0 0 0;
+
+  @media (min-width: $tablet) {
+    width: 181px;
+    padding: 0;
+    text-transform: none;
+    font-size: 24px;
+    justify-content: flex-end;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: -8px;
+      border: 8px solid transparent;
+      border-right: 10px solid $twilight-blue;
+    }
+  }
 }
 
 .plan-step__label {
@@ -60,14 +268,41 @@
   letter-spacing: 1.6px;
   line-height: 1;
   color: $twilight-blue;
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 220px;
+    margin-bottom: 0;
+  }
 }
 
 .plan-step__label-tip {
+  display: flex;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1.6px;
   line-height: 1;
   color: rgba($twilight-blue, 0.3);
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+    order: 10;
+  }
 }
 
 .plan-step__number-input {
@@ -82,7 +317,17 @@
   color: $twilight-blue;
   border: 1px solid $light-grey;
   border-radius: 4px;
-  padding: 12px 14px;
+  padding: 15px 14px 11px 30px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    padding: 25px 14px 23px 30px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 181px;
+    margin-right: 36px;
+  }
 }
 
 .plan-step__custom-checkbox {
@@ -95,23 +340,107 @@
     top: -4px;
     left: 0;
     display: block;
-    width: 25px;
+    width: 26px;
     height: 25px;
     border: 1px solid $light-grey;
     border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 9px 9px;
   }
+
+  @media (min-width: $tablet) {
+    padding-left: 60px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $twilight-blue;
+
+    &::before {
+      top: -10px;
+      width: 36px;
+      height: 36px;
+      background-size: 12px 12px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &::before {
+      left: 3px;
+    }
+  }
+}
+
+.plan-step__input-wrapper--checkbox input:checked + .plan-step__custom-checkbox::before {
+  background-image: url("../../img/tick.svg");
 }
 
 .plan-step__calendar {
   margin-bottom: 23px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 57px;
+  }
+}
+
+.plan-step__selects {
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 42px;
+    margin-bottom: 50px;
+    border-top: 1px solid $inputs-grey;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 63px;
+    margin-bottom: 57px;
+  }
 }
 
 .plan-step__select-wrapper {
   display: flex;
+  margin-bottom: 22px;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
 }
 
-.plan-step__country-select {
-  margin-bottom: 22px;
+.plan-step__flag-wrapper {
+  display: flex;
+  flex-shrink: 0;
+  flex-grow: 0;
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+  border: 1px solid $light-grey;
+  border-radius: 4px;
+  height: auto;
+  background-color: transparent;
+  margin-left: -1px;
+
+  @media (min-width: $tablet) {
+    border: none;
+    width: auto;
+    padding-left: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 0;
+    padding-right: 7px;
+  }
 }
 
 .plan-step__delete-country {
@@ -125,25 +454,93 @@
   background-repeat: no-repeat;
   background-size: 9px 9px;
   background-image: url("../../img/menu-close.svg");
+  position: absolute;
+  right: -10px;
+  top: -10px;
+
+  @media (min-width: $tablet) {
+    position: static;
+    right: auto;
+    top: auto;
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+    background-size: contain;
+    opacity: 0.2;
+    margin-bottom: 3px;
+  }
+}
+
+.plan-step__country-add {
+  margin-bottom: 26px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .plan-step__description-wrapper {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet) {
+    padding-top: 27px;
+    padding-right: 31px;
+    border-top: 1px solid $inputs-grey;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 71px;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
 }
 
 .plan-step__country-description {
   display: flex;
   flex-direction: column;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 43px;
+
+    &:last-child {
+      margin-bottom: 47px;
+    }
+  }
+}
+
+.plan-step__description-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 13px;
+  padding-left: 13px;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 29px;
+    padding-right: 115px;
+  }
 }
 
 .plan-step__description-label {
+  display: flex;
   font-size: 18px;
   font-weight: 500;
   line-height: 1;
   color: $twilight-blue;
-  margin-bottom: 16px;
+
+  @media (min-width: $tablet) {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 0.6;
+    letter-spacing: normal;
+  }
 }
 
 .plan-step__plan-description {
@@ -152,9 +549,22 @@
   border-radius: 4px;
   border: 1px solid $light-grey;
   background-color: transparent;
-  padding: 13px;
+  padding: 9px 13px 9px 13px;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.38;
   color: $greyish-brown;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    min-height: 142px;
+    padding: 18px 19px 18px 19px;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  @media (min-width: $desktop) {
+    width: 730px;
+    padding: 24px 10px 24px 23px;
+  }
 }

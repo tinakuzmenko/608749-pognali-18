@@ -1,0 +1,14 @@
+.transport-type {
+  display: flex;
+  flex-shrink: 0;
+  font-size: 0;
+  width: 33px;
+  height: 33px;
+  background-color: $white;
+  border-radius: 50%;
+
+  @media (min-width: $tablet) {
+    width: 43px;
+    height: 43px;
+  }
+}
