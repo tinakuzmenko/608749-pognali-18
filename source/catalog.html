@@ -132,12 +132,13 @@
         </div>
       </div>
     </header>
-
     <main>
       <section class="filter">
         <div class="container">
           <div class="filter__wrapper">
-            <h2 class="filter__title">Фильтрация по странам<span class="filter__title-dots">:</span></h2>
+            <h2 class="filter__title">
+              Фильтрация по странам<span class="filter__title-dots">:</span>
+            </h2>
             <ul class="filter__region-list">
               <li class="filter__region-list-item">
                 <a
@@ -158,16 +159,252 @@
             </ul>
             <div class="filter__toggler-wrapper">
               <button
-                class="filter__toggler"
+                class="filter__toggler filter__toggler--open"
                 type="button"
-                aria-label="Показать все"
+                aria-label="Показать все или свернуть"
               >
-                <span class="filter__toggler-text">Показать все</span>
+                <span class="filter__toggler-text filter__toggler-text--open"
+                  >Показать все</span
+                >
+                <span class="filter__toggler-text filter__toggler-text--close"
+                  >Свернуть</span
+                >
               </button>
             </div>
           </div>
+          <div class="filter__inner">
+            <div class="filter__inner-content-wrapper">
+              <ul class="filter__letters-list">
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-1"
+                    id="letter-1"
+                  />
+                  <label class="filter__letter-link" for="letter-1">А</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-2"
+                    id="letter-2"
+                  />
+                  <label class="filter__letter-link" for="letter-2">Б</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-3"
+                    id="letter-3"
+                  />
+                  <label class="filter__letter-link" for="letter-3">В</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-4"
+                    id="letter-4"
+                  />
+                  <label class="filter__letter-link" for="letter-4">Г</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-5"
+                    id="letter-5"
+                  />
+                  <label class="filter__letter-link" for="letter-5">Д</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-6"
+                    id="letter-6"
+                  />
+                  <label class="filter__letter-link" for="letter-6">Е</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-7"
+                    id="letter-7"
+                  />
+                  <label class="filter__letter-link" for="letter-7">З</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-8"
+                    id="letter-8"
+                  />
+                  <label class="filter__letter-link" for="letter-8">И</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-9"
+                    id="letter-9"
+                  />
+                  <label class="filter__letter-link" for="letter-9">К</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-10"
+                    id="letter-10"
+                  />
+                  <label class="filter__letter-link" for="letter-10">Л</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-11"
+                    id="letter-11"
+                  />
+                  <label class="filter__letter-link" for="letter-11">М</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-12"
+                    id="letter-12"
+                  />
+                  <label class="filter__letter-link" for="letter-12">Н</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-13"
+                    id="letter-13"
+                  />
+                  <label class="filter__letter-link" for="letter-13">О</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-14"
+                    id="letter-14"
+                  />
+                  <label class="filter__letter-link" for="letter-14">П</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-15"
+                    id="letter-15"
+                  />
+                  <label class="filter__letter-link" for="letter-15">Р</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-16"
+                    id="letter-16"
+                  />
+                  <label class="filter__letter-link" for="letter-16">С</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-17"
+                    id="letter-17"
+                  />
+                  <label class="filter__letter-link" for="letter-17">Т</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-18"
+                    id="letter-18"
+                  />
+                  <label class="filter__letter-link" for="18">У</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-19"
+                    id="letter-19"
+                  />
+                  <label class="filter__letter-link" for="letter-19">Ф</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-20"
+                    id="letter-20"
+                  />
+                  <label class="filter__letter-link" for="letter-20">Х</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-21"
+                    id="letter-21"
+                  />
+                  <label class="filter__letter-link" for="letter-21">Ч</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-22"
+                    id="letter-22"
+                  />
+                  <label class="filter__letter-link" for="letter-22">Ш</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-23"
+                    id="letter-23"
+                  />
+                  <label class="filter__letter-link" for="letter-23">Э</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-24"
+                    id="letter-24"
+                  />
+                  <label class="filter__letter-link" for="letter-24">Ю</label>
+                </li>
+                <li class="filter__letters-list-item">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="letter-25"
+                    id="letter-25"
+                  />
+                  <label class="filter__letter-link" for="letter-25">Я</label>
+                </li>
+              </ul>
+            </div>
+            <div class="button button--rounded button--violet filter__inner-button-close">Свернуть</div>
+          </div>
         </div>
-        <!-- Здесь будет поп-ап с фильтром по странам -->
       </section>
 
       <div class="container">
@@ -1013,6 +1250,7 @@
     </script>
     <script src="js/picturefill.js" async></script>
     <script src="js/navigation.js"></script>
+    <script src="js/filter.js"></script>
     <script src="js/accordion.js"></script>
   </body>
 </html>
