@@ -2,7 +2,6 @@
   background-color: $deep-dark-blue;
   color: $white;
   position: relative;
-  z-index: 1000;
 
   &--main {
     min-height: 225px;
@@ -26,10 +25,10 @@
       border-bottom-left-radius: 60px;
       border-bottom-right-radius: 60px;
     }
+  }
 
-    @media (min-width: $desktop) {
-      z-index: 900;
-    }
+  &--catalog {
+    z-index: 200;
   }
 }
 
@@ -68,6 +67,7 @@
 
 .page-header__content-wrapper {
   padding-top: 93px;
+  z-index: 900;
 
   @media (min-width: $tablet) {
     padding-top: 162px;
@@ -104,7 +104,7 @@
   padding: 0 10px;
 
   &--main {
-    margin-bottom: 245px;
+    margin-bottom: 247px;
 
     @media (min-width: $tablet) {
       margin-bottom: 85px;

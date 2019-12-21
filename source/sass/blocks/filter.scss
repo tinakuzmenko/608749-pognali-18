@@ -163,7 +163,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-left: auto;
+    margin-left: unset;
     padding-right: 65px;
   }
 }
