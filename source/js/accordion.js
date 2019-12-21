@@ -8,5 +8,7 @@ for (var i = 0; i < accordionButtons.length; i++) {
 
     var accordionList = this.nextElementSibling;
     accordionList.classList.toggle("accordion__list--hidden");
+
+    console.log(this)
   });
 }

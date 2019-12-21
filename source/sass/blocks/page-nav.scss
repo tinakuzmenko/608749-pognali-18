@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1100;
 
   @media (min-width: $tablet) {
     padding-top: 47px;
@@ -43,7 +43,7 @@
   }
 
   &--inner {
-    padding-top: 19px;
+    padding-top: 16px;
 
     @media (min-width: $tablet) {
       padding-top: 47px;
