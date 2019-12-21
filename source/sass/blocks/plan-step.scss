@@ -210,7 +210,7 @@
   display: flex;
   width: 100%;
   border: none;
-  padding: 5px 0 5px;
+  padding: 7px 0 3px;
 
   @media (min-width: $tablet) {
     width: 285px;
@@ -443,6 +443,12 @@
   }
 }
 
+.plan-step__chose-country {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
 .plan-step__delete-country {
   width: 21px;
   height: 21px;
@@ -457,6 +463,10 @@
   position: absolute;
   right: -10px;
   top: -10px;
+
+  &--inactive {
+    display: none;
+  }
 
   @media (min-width: $tablet) {
     position: static;
