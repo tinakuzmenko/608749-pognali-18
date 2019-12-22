@@ -263,7 +263,7 @@
 
 .accordion__level-wrapper {
   @media (min-width: $tablet) {
-    margin-left: auto;
+    margin-left: unset;
   }
 
   @media (min-width: $desktop) {
@@ -283,7 +283,7 @@
     margin-bottom: 0;
     padding-top: 0;
     padding-right: 20px;
-    margin-left: auto;
+    margin-left: unset;
   }
 
   @media (min-width: $desktop) {

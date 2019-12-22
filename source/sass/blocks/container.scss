@@ -28,36 +28,6 @@
     }
   }
 
-  &--about-us {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 132px;
-      height: 132px;
-      border-radius: 20px;
-      background-color: $rectangle-blue;
-
-      @media (min-width: $tablet) {
-        width: auto;
-        height: 213px;
-        top: -40px;
-        left: 40px;
-        right: 40px;
-      }
-
-      @media (min-width: $desktop) {
-        top: -57px;
-        left: 60px;
-        width: 213px;
-        height: 213px;
-      }
-    }
-  }
-
   &--filter {
     @media (min-width: $desktop) {
       max-width: 285px;

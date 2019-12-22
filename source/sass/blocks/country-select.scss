@@ -26,6 +26,12 @@
     padding: 12px 12px 11px;
   }
 
+  &--blue {
+    background-color: $twilight-blue;
+    color: $white;
+    border-color: $twilight-blue;
+  }
+
   @media (min-width: $tablet) {
     width: 369px;
     padding: 27px 27px 23px;

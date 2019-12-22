@@ -130,6 +130,7 @@
   @media (min-width: $desktop) {
     width: 143px;
     height: 71px;
+    position: relative;
   }
 }
 
@@ -185,9 +186,35 @@
       z-index: 1000;
     }
 
-    @media (min-width: $tablet) {
+    @media (min-width: $desktop) {
       width: 146px;
       height: 74px;
+    }
+  }
+
+  &--arrival::before,
+  &--departure::before {
+    @media (min-width: $desktop) {
+      color: $white;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 1.67;
+      letter-spacing: 1.8px;
+      position: absolute;
+      top: 33px;
+      left: 15px;
+    }
+  }
+
+  &--arrival::before {
+    @media (min-width: $desktop) {
+      content: "Заезд";
+    }
+  }
+
+  &--departure::before {
+    @media (min-width: $desktop) {
+      content: "Выезд";
     }
   }
 }

@@ -8,6 +8,7 @@
 @import "global.scss";
 
 /* Блоки */
+@import "blocks/page.scss";
 @import "blocks/visually-hidden.scss";
 @import "blocks/container.scss";
 @import "blocks/button.scss";
@@ -38,6 +39,7 @@
 @import "blocks/social-button.scss";
 @import "blocks/academy-logo.scss";
 @import "blocks/business-popup.scss";
+@import "blocks/page-main.scss";
 @import "blocks/filter.scss";
 @import "blocks/catalog-wrapper.scss";
 @import "blocks/find-teammate.scss";
@@ -54,3 +56,4 @@
 @import "blocks/plan-step.scss";
 @import "blocks/calendar.scss";
 @import "blocks/country-select.scss";
+@import "blocks/chose-country.scss";

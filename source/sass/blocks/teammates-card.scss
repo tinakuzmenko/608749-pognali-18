@@ -365,8 +365,8 @@
   @media (min-width: $tablet) {
     margin: 0;
     position: static;
-    top: auto;
-    left: auto;
+    top: unset;
+    left: unset;
   }
 }
 
