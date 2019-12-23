@@ -190,8 +190,8 @@
       content: "";
       position: absolute;
       top: 0;
-      right: -20px;
-      width: 20px;
+      right: -19px;
+      width: 21px;
       height: 100%;
       background-color: $orange;
     }
@@ -209,8 +209,8 @@
       content: "";
       position: absolute;
       top: 0;
-      right: -20px;
-      width: 20px;
+      right: -19px;
+      width: 21px;
       height: 100%;
       background-color: $orange-yellow;
     }
@@ -223,7 +223,7 @@
     }
 
     &::before {
-      top: unset;
+      top: auto;
       left: 30px;
       bottom: 19px;
       font-size: 30px;
@@ -238,7 +238,7 @@
     flex-shrink: 1;
 
     &::before {
-      left: unset;
+      left: auto;
       top: 30px;
       font-size: 24px;
     }
@@ -270,8 +270,8 @@
       content: "";
       position: absolute;
       top: 0;
-      right: -30px;
-      width: 30px;
+      right: -29px;
+      width: 31px;
       height: 100%;
       background-color: $orange-lighter;
     }

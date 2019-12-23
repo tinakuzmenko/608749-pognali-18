@@ -214,7 +214,7 @@
 
   @media (min-width: $tablet) {
     width: 285px;
-    min-height: 81px;
+    height: 81px;
     text-align: left;
     font-weight: bold;
     justify-content: flex-start;
@@ -471,8 +471,8 @@
 
   @media (min-width: $tablet) {
     position: static;
-    right: unset;
-    top: unset;
+    right: auto;
+    top: auto;
     width: 22px;
     height: 22px;
     background-color: transparent;
