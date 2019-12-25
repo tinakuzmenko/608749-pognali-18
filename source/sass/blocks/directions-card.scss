@@ -6,6 +6,16 @@
 .directions-card__link-wrapper {
   display: block;
 
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+
+    img {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: row-reverse;

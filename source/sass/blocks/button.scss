@@ -17,6 +17,15 @@
     font-size: 17px;
     line-height: 1.76;
 
+    &:hover,
+    &:focus {
+      background-color: $orange-yellow;
+    }
+
+    &:active {
+      color: rgba($twilight-blue, 0.3);
+    }
+
     @media (min-width: $tablet) {
       font-size: 20px;
     }
@@ -36,6 +45,19 @@
       right: 15px;
       border: 8px solid transparent;
       border-left: 10px solid $twilight-blue;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $orange-yellow;
+    }
+
+    &:active {
+      color: rgba($twilight-blue, 0.3);
+    }
+
+    &:active::after {
+      opacity: 0.3;
     }
 
     @media (min-width: $tablet) {
@@ -77,6 +99,19 @@
       right: 15px;
       border: 8px solid transparent;
       border-left: 10px solid $twilight-blue;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $orange-yellow;
+    }
+
+    &:active {
+      color: rgba($twilight-blue, 0.3);
+    }
+
+    &:active::after {
+      border-left-color: rgba($twilight-blue, 0.3);
     }
 
     @media (min-width: $tablet) {

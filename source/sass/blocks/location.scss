@@ -58,7 +58,7 @@
   @media (min-width: $desktop) {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     padding: 0 73px 0 223px;
   }
 }
@@ -77,10 +77,30 @@
 
 .location__button {
   padding: 20px 20px 18px 20px;
+  color: $dark-blue;
 
   &::after {
     top: 20px;
     right: 13px;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    border-left-color: $white;
+  }
+
+  &:active::after {
+    border-left-color: rgba($white, 0.3);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $dark-blue;
+    color: $white;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
   }
 
   @media (min-width: $tablet) {

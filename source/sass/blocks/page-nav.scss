@@ -134,6 +134,15 @@
 }
 
 .page-nav__auth-button {
+  &:hover,
+  &:focus {
+    background-color: $orange-yellow;
+  }
+
+  &:active {
+    color: rgba($deep-dark-blue, 0.3);
+  }
+
   @media (min-width: $tablet) {
     width: 189px;
   }
@@ -285,7 +294,7 @@
   }
 
   @media (min-width: $tablet) {
-    max-height: 50px;
+    min-height: 50px;
   }
 }
 

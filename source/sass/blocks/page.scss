@@ -5,10 +5,6 @@
   font-weight: 300;
   line-height: 1.18;
 
-  &--no-scroll {
-    overflow: hidden;
-  }
-
   @media (min-width: $tablet) {
     font-size: 28px;
   }

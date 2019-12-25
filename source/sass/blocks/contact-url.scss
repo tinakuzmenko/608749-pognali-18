@@ -7,6 +7,23 @@
   color: $dark-blue;
   text-transform: uppercase;
 
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+
+    @media (min-width: $desktop) {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    @media (min-width: $desktop) {
+      opacity: 1;
+    }
+  }
+
   @media (min-width: $tablet) {
     font-size: 28px;
     line-height: 1;
@@ -75,10 +92,24 @@
   }
 }
 
+.contact-url--header.contact-url--telephone:hover::before,
+.contact-url--header.contact-url--telephone:focus::before {
+  @media (min-width: $desktop) {
+    background-color: $orange-intense;
+  }
+}
+
 .contact-url--header.contact-url--email::before {
   @media (min-width: $desktop) {
     background-color: $orange-yellow;
     background-image: url("../img/topmenu-mail.svg");
+  }
+}
+
+.contact-url--header.contact-url--email:hover::before,
+.contact-url--header.contact-url--email:focus::before {
+  @media (min-width: $desktop) {
+    background-color: $orange;
   }
 }
 
