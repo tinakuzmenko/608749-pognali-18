@@ -21,7 +21,8 @@ function init() {
     ))
   );
 
-  myMap.controls.add("geolocationControl", {
+  var geolocationControl = new ymaps.control.GeolocationControl();
+  myMap.controls.add(geolocationControl, {
     float: "none",
     position: {
       top: "70px",
@@ -29,7 +30,8 @@ function init() {
     }
   });
 
-  myMap.controls.add("typeSelector", {
+  var typeSelector = new ymaps.control.TypeSelector();
+  myMap.controls.add(typeSelector, {
     float: "none",
     position: {
       top: "71px",
@@ -37,7 +39,8 @@ function init() {
     }
   });
 
-  myMap.controls.add("zoomControl", {
+  var zoomControl = new ymaps.control.ZoomControl();
+  myMap.controls.add(zoomControl, {
     size: "small",
     float: "none",
     position: {
@@ -45,6 +48,32 @@ function init() {
       right: "30px"
     }
   });
+
+  if (document.documentElement.clientWidth < 768) {
+    myPlacemark.options.set("iconImageSize", [41, 41]);
+
+    geolocationControl.options.set("position", {
+      top: 40,
+      left: 30
+    });
+
+    typeSelector.options.set("position", {
+      top: 40,
+      left: 70
+    });
+
+    zoomControl.options.set("position", {
+      bottom: 50,
+      right: 30
+    });
+  }
+
+  if (
+    document.documentElement.clientWidth >= 768 &&
+    document.documentElement.clientWidth < 1440
+  ) {
+    myPlacemark.options.set("iconImageSize", [57, 57]);
+  }
 
   myMap.geoObjects.add(myPlacemark);
 }
