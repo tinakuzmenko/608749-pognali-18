@@ -38,6 +38,15 @@
 
   @media (min-width: $desktop) {
     color: $white;
+
+    &:hover[href],
+    &:focus[href] {
+      color: $accent-yellow;
+    }
+
+    &:active[href] {
+      color: rgba($accent-yellow, 0.3);
+    }
   }
 }
 

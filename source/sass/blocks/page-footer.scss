@@ -5,6 +5,8 @@
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   margin-top: -30px;
+  position: relative;
+  z-index: 1000;
 
   @media (min-width: $tablet) {
     padding: 49px 0 46px 0;

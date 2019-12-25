@@ -12,7 +12,8 @@
   }
 
   @media (min-width: $desktop) {
-    width: 1035px;
+    width: 948px;
+    min-width: 948px;
     padding: 0 44px 0 0;
     align-items: flex-start;
   }
@@ -60,7 +61,7 @@
 .teammates-card__info-wrapper {
   @media (min-width: $desktop) {
     padding-top: 47px;
-    margin-right: 97px;
+    margin-right: 31px;
   }
 }
 
@@ -88,7 +89,6 @@
   color: $greyish-brown;
   padding-left: 5px;
   width: 175px;
-  padding-top: 12px;
   margin-bottom: 12px;
 
   @media (min-width: $tablet) {
