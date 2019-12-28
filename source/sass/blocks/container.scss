@@ -2,7 +2,8 @@
   width: 320px;
   padding: 0 25px;
   margin: 0 auto;
-  z-index: 100;
+  position: relative;
+  z-index: 110;
 
   @media (min-width: $tablet) {
     width: 768px;

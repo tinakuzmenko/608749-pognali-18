@@ -20,7 +20,7 @@
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 28px 43px;
+    background-size: 14px 22px;
     background-image: url("../../img/contacts-location.svg");
   }
 
@@ -31,6 +31,7 @@
       width: 67px;
       height: 67px;
       top: -17px;
+      background-size: 21px 31px;
     }
 
     br {
@@ -46,6 +47,7 @@
       height: 90px;
       top: -2px;
       z-index: 500;
+      background-size: 28px 43px;
     }
   }
 }

@@ -240,7 +240,8 @@
                   </div>
                   <div class="directions-card__content-wrapper">
                     <div
-                      class="country-flag country-flag--th country-flag--big directions-card__flag" data-tooltip="Таиланд"
+                      class="country-flag country-flag--th country-flag--big directions-card__flag"
+                      data-tooltip="Таиланд"
                     >
                       Флаг Таиланда
                     </div>
@@ -275,7 +276,8 @@
                   </div>
                   <div class="directions-card__content-wrapper">
                     <div
-                      class="country-flag country-flag--fr country-flag--big directions-card__flag" data-tooltip="Франция"
+                      class="country-flag country-flag--fr country-flag--big directions-card__flag"
+                      data-tooltip="Франция"
                     >
                       Флаг Франции
                     </div>
@@ -310,7 +312,8 @@
                   </div>
                   <div class="directions-card__content-wrapper">
                     <div
-                      class="country-flag country-flag--cz country-flag--big directions-card__flag" data-tooltip="Чехия"
+                      class="country-flag country-flag--cz country-flag--big directions-card__flag"
+                      data-tooltip="Чехия"
                     >
                       Флаг Чехии
                     </div>
@@ -369,6 +372,21 @@
                   </picture>
                 </div>
                 <div class="teammates-preview__level">
+                  <svg
+                    class="teammates-preview__level-percent"
+                    width="60"
+                    height="60"
+                  >
+                    <circle
+                      r="28"
+                      cx="30"
+                      cy="30"
+                      fill="transparent"
+                      stroke="#ff8d30"
+                      stroke-width="3"
+                      stroke-dasharray="99px 5px"
+                    />
+                  </svg>
                   <span class="teammates-preview__level-number">99</span
                   ><span class="teammates-preview__level-description"
                     >level</span
@@ -377,17 +395,20 @@
                 <div class="teammates-preview__content">
                   <div class="teammates-preview__flags-wrapper">
                     <div
-                      class="country-flag country-flag--lk teammates-preview__flag" data-tooltip="Шри-Ланка"
+                      class="country-flag country-flag--lk teammates-preview__flag"
+                      data-tooltip="Шри-Ланка"
                     >
                       Флаг Шри-Ланки
                     </div>
                     <div
-                      class="country-flag country-flag--th teammates-preview__flag" data-tooltip="Таиланд"
+                      class="country-flag country-flag--th teammates-preview__flag"
+                      data-tooltip="Таиланд"
                     >
                       Флаг Таиланда
                     </div>
                     <div
-                      class="country-flag country-flag--sc teammates-preview__flag" data-tooltip="Сейшелы"
+                      class="country-flag country-flag--sc teammates-preview__flag"
+                      data-tooltip="Сейшелы"
                     >
                       Флаг Сейшел
                     </div>
@@ -451,6 +472,21 @@
                   </picture>
                 </div>
                 <div class="teammates-preview__level">
+                  <svg
+                    class="teammates-preview__level-percent"
+                    width="60"
+                    height="60"
+                  >
+                    <circle
+                      r="28"
+                      cx="30"
+                      cy="30"
+                      fill="transparent"
+                      stroke="#ff8d30"
+                      stroke-width="3"
+                      stroke-dasharray="80px 20px"
+                    />
+                  </svg>
                   <span class="teammates-preview__level-number">80</span
                   ><span class="teammates-preview__level-description"
                     >level</span
@@ -459,12 +495,14 @@
                 <div class="teammates-preview__content">
                   <div class="teammates-preview__flags-wrapper">
                     <div
-                      class="country-flag country-flag--be teammates-preview__flag" data-tooltip="Бельгия"
+                      class="country-flag country-flag--be teammates-preview__flag"
+                      data-tooltip="Бельгия"
                     >
                       Флаг Бельгии
                     </div>
                     <div
-                      class="country-flag country-flag--cz teammates-preview__flag" data-tooltip="Чехия"
+                      class="country-flag country-flag--cz teammates-preview__flag"
+                      data-tooltip="Чехия"
                     >
                       Флаг Чехии
                     </div>
@@ -649,7 +687,8 @@
             </address>
             <a
               class="button button--squared button--bordered location__button"
-              href=""
+              href="http://tiny.cc/l081hz"
+              target="_blank"
               >Проложить маршрут</a
             >
           </div>
@@ -657,6 +696,26 @@
       </section>
       <section class="map map--upped">
         <h2 class="visually-hidden">Карта офиса "Погнали"</h2>
+        <div class="map__bg-wrapper">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x"
+            />
+            <img
+              class="map__bg-picture"
+              src="img/map-mobile@1x.jpg"
+              srcset="img/map-mobile@1x.jpg 1x, img/map-mobile@2x.jpg 2x"
+              alt="Карта c адресом офиса Погнали"
+              width="320"
+              height="546"
+            />
+          </picture>
+        </div>
         <div class="map__iframe" id="map"></div>
       </section>
     </main>
@@ -683,18 +742,12 @@
           </a>
           <ul class="social page-footer__social-list">
             <li class="page-footer__social-item">
-              <a
-                class="social-button social-button--fb"
-                href=""
-                target="_blank"
+              <a class="social-button social-button--fb" href="" target="_blank"
                 ><span class="visually-hidden">Facebook</span></a
               >
             </li>
             <li class="page-footer__social-item">
-              <a
-                class="social-button social-button--vk"
-                href=""
-                target="_blank"
+              <a class="social-button social-button--vk" href="" target="_blank"
                 ><span class="visually-hidden">VKontakte</span></a
               >
             </li>
@@ -726,7 +779,10 @@
     <script src="js/picturefill.js" async></script>
     <script src="js/navigation.js"></script>
     <script src="js/business-tariffs.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=616ca13e-763d-46bc-ae25-21cd60a9f310&lang=ru_RU" type="text/javascript"></script>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=616ca13e-763d-46bc-ae25-21cd60a9f310&lang=ru_RU"
+      type="text/javascript"
+    ></script>
     <script src="js/map.js"></script>
   </body>
 </html>
