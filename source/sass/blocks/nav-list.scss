@@ -26,6 +26,7 @@
 .nav-list__item {
   @media (min-width: $desktop) {
     margin-right: 37px;
+    overflow: hidden;
 
     &:last-child {
       margin-right: 0;
@@ -38,16 +39,32 @@
 
   @media (min-width: $desktop) {
     color: $white;
+  }
+}
 
-    &:hover[href],
-    &:focus[href] {
-      color: $accent-yellow;
-    }
+.nav-list__link-transition-text {
+  @media (min-width: $desktop) {
+    position: relative;
+    display: flex;
+    transition: transform 0.3s;
 
-    &:active[href] {
-      color: rgba($accent-yellow, 0.3);
+    &::before {
+      position: absolute;
+      top: 100%;
+      content: attr(data-hover);
+      transform: translate3d(0, 0, 0);
     }
   }
+}
+
+.nav-list__link:hover[href] .nav-list__link-transition-text,
+.nav-list__link:focus[href] .nav-list__link-transition-text {
+  transform: translateY(-100%);
+  color: $accent-yellow;
+}
+
+.nav-list__link:active[href] .nav-list__link-transition-text {
+  color: rgba($accent-yellow, 0.3);
 }
 
 .page-nav--white .nav-list__link {
