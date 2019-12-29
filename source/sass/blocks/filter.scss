@@ -60,10 +60,20 @@
     left: 0;
     width: 15px;
     height: 10px;
-    background-color: $dark-blue;
+    background-repeat: no-repeat;
+    background-size: 15px 10px;
+    background-position: center;
+    background-image: url("../../img/filter.svg");
 
     @media (min-width: $tablet) {
       display: none;
+    }
+
+    @media (min-width: $desktop) {
+      display: block;
+      width: 23px;
+      height: 15px;
+      background-size: contain;
     }
   }
 
@@ -148,6 +158,15 @@
   letter-spacing: normal;
   text-transform: uppercase;
 
+  &:hover:not(&--active),
+  &:focus:not(&--active) {
+    color: rgba($dark-blue, 0.6);
+  }
+
+  &:active {
+    color: $dark-blue;
+  }
+
   &--active {
     color: $dark-blue;
   }
@@ -176,7 +195,29 @@
   width: 23px;
   height: 23px;
   padding: 0;
-  outline: 1px solid red;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--open {
+    background-size: 17px 3px;
+    background-image: url("../../img/dots.svg");
+    background-position: center;
+  }
+
+  &--close {
+    background-size: 12px 12px;
+    background-image: url("../../img/filter-close.svg");
+    background-position: center top 3px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet) {
     width: 175px;
@@ -184,6 +225,9 @@
     align-items: center;
 
     &--open {
+      background-position: right center;
+      background-size: 27px 5px;
+
       .filter__toggler-text--open {
         display: inline;
       }
@@ -194,6 +238,9 @@
     }
 
     &--close {
+      background-position: right center;
+      background-size: 19px 19px;
+
       .filter__toggler-text--open {
         display: none;
       }
@@ -224,6 +271,7 @@
 
   &--active {
     display: flex;
+    z-index: 800;
   }
 }
 

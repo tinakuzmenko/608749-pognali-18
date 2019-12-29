@@ -136,6 +136,15 @@
 
   &--violet {
     background-color: $violet;
+
+    &:hover,
+    &:focus {
+      background-color: $filter-button-hover;
+    }
+
+    &:active {
+      color: rgba($twilight-blue, 0.3);
+    }
   }
 
   &--no-bg {

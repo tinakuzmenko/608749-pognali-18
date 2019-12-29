@@ -53,13 +53,31 @@
             <div class="page-nav__menu-wrapper">
               <ul class="nav-list">
                 <li class="nav-list__item">
-                  <a class="nav-list__link" href="index.html"><span class="nav-list__link-transition-text" data-hover="О сервисе">О сервисе</span></a>
+                  <a class="nav-list__link" href="index.html"
+                    ><span
+                      class="nav-list__link-transition-text"
+                      data-hover="О сервисе"
+                      >О сервисе</span
+                    ></a
+                  >
                 </li>
                 <li class="nav-list__item">
-                  <a class="nav-list__link" href="form.html"><span class="nav-list__link-transition-text" data-hover="Направления">Направления</span></a>
+                  <a class="nav-list__link" href="form.html"
+                    ><span
+                      class="nav-list__link-transition-text"
+                      data-hover="Направления"
+                      >Направления</span
+                    ></a
+                  >
                 </li>
                 <li class="nav-list__item">
-                  <a class="nav-list__link"><span class="nav-list__link-transition-text" data-hover="Попутчики">Попутчики</span></a>
+                  <a class="nav-list__link"
+                    ><span
+                      class="nav-list__link-transition-text"
+                      data-hover="Попутчики"
+                      >Попутчики</span
+                    ></a
+                  >
                 </li>
               </ul>
             </div>
@@ -1511,7 +1529,7 @@
         </div>
       </section>
 
-      <div class="container">
+      <div class="container container--catalog">
         <div class="catalog-wrapper">
           <section class="find-teammate">
             <form
@@ -1750,7 +1768,26 @@
                           aria-label="Максимальный уровень"
                         />
                       </div>
-                      <!-- Здесь будет кастомный range -->
+                      <div class="accordion__range-wrapper">
+                        <div class="accordion__range-controls">
+                          <div class="accordion__range-scale">
+                            <div
+                              style="width: 70%"
+                              class="accordion__range-bar"
+                            ></div>
+                          </div>
+                          <button
+                            class="accordion__range-toggle accordion__range-toggle--min"
+                            type="button"
+                            aria-label="Указатель минимальной цены"
+                          ></button>
+                          <button
+                            class="accordion__range-toggle accordion__range-toggle--max"
+                            type="button"
+                            aria-label="Указатель максимальной цены"
+                          ></button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1790,11 +1827,13 @@
                   </picture>
                 </div>
                 <div class="teammates-card__info-wrapper">
-                  <h3
-                    class="teammates-card__name teammates-card__name--offline"
-                  >
-                    Таня Фирсова
-                  </h3>
+                  <a class="teammates-card__name-link" href="">
+                    <h3
+                      class="teammates-card__name teammates-card__name--offline"
+                    >
+                      Таня Фирсова
+                    </h3>
+                  </a>
                   <p class="teammates-card__hashtags">
                     #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
                   </p>
@@ -1809,6 +1848,7 @@
                     <div class="teammates-card__wishlist-wrapper">
                       <span
                         class="country-flag country-flag--lk teammates-card__flag"
+                        data-tooltip="Шри-ланка"
                         >Флаг Шри-Ланки</span
                       >
                       <p class="teammates-card__wishlist-description">
@@ -1818,6 +1858,7 @@
                     <div class="teammates-card__wishlist-wrapper">
                       <span
                         class="country-flag country-flag--th teammates-card__flag"
+                        data-tooltip="Таиланд"
                         >Флаг Таиланда</span
                       >
                       <p class="teammates-card__wishlist-description">
@@ -1827,6 +1868,7 @@
                     <div class="teammates-card__wishlist-wrapper">
                       <span
                         class="country-flag country-flag--sc teammates-card__flag"
+                        data-tooltip="Сейшелы"
                         >Флаг Сейшел</span
                       >
                       <p class="teammates-card__wishlist-description">
@@ -1868,7 +1910,28 @@
                       Пешком
                     </li>
                   </ul>
-                  <div class="teammates-card__level">99</div>
+                  <div class="teammates-card__level">
+                    <svg
+                      class="teammates-card__level-percent"
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                    >
+                      <circle
+                        r="20"
+                        cx="22"
+                        cy="22"
+                        fill="transparent"
+                        stroke="#ff8d30"
+                        stroke-width="2"
+                        stroke-dasharray="120px 5px"
+                      />
+                    </svg>
+                    <span class="teammates-card__level-number">99</span
+                    ><span class="teammates-card__level-description"
+                      >level</span
+                    >
+                  </div>
                 </div>
                 <div class="teammates-card__button-and-like">
                   <div class="teammates-card__button-wrapper">
@@ -1913,11 +1976,13 @@
                   </picture>
                 </div>
                 <div class="teammates-card__info-wrapper">
-                  <h3
-                    class="teammates-card__name teammates-card__name--offline"
-                  >
-                    Петя Демин
-                  </h3>
+                  <a class="teammates-card__name-link" href="">
+                    <h3
+                      class="teammates-card__name teammates-card__name--offline"
+                    >
+                      Петя Демин
+                    </h3>
+                  </a>
                   <p class="teammates-card__hashtags">
                     #бургер #бар #футбол #концерт #крафт
                   </p>
@@ -1932,6 +1997,7 @@
                     <div class="teammates-card__wishlist-wrapper">
                       <span
                         class="country-flag country-flag--be teammates-card__flag"
+                        data-tooltip="Бельгия"
                         >Флаг Бельгии</span
                       >
                       <p class="teammates-card__wishlist-description">
@@ -1941,6 +2007,7 @@
                     <div class="teammates-card__wishlist-wrapper">
                       <span
                         class="country-flag country-flag--cz teammates-card__flag"
+                        data-tooltip="Чехия"
                         >Флаг Чехии</span
                       >
                       <p class="teammates-card__wishlist-description">
@@ -1982,7 +2049,28 @@
                       Пешком
                     </li>
                   </ul>
-                  <div class="teammates-card__level">80</div>
+                  <div class="teammates-card__level">
+                    <svg
+                      class="teammates-card__level-percent"
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                    >
+                      <circle
+                        r="20"
+                        cx="22"
+                        cy="22"
+                        fill="transparent"
+                        stroke="#ff8d30"
+                        stroke-width="2"
+                        stroke-dasharray="105px 20px"
+                      />
+                    </svg>
+                    <span class="teammates-card__level-number">80</span
+                    ><span class="teammates-card__level-description"
+                      >level</span
+                    >
+                  </div>
                 </div>
                 <div class="teammates-card__button-and-like">
                   <div class="teammates-card__button-wrapper">
@@ -1993,10 +2081,7 @@
                     >
                   </div>
                   <div class="teammates-card__like-wrapper">
-                    <button
-                      class="teammates-card__like teammates-card__like--active"
-                      type="button"
-                    >
+                    <button class="teammates-card__like" type="button">
                       Добавить / Убрать лайк
                     </button>
                     <p class="teammates-card__likes-number">
@@ -2027,11 +2112,13 @@
                   </picture>
                 </div>
                 <div class="teammates-card__info-wrapper">
-                  <h3
-                    class="teammates-card__name teammates-card__name--offline"
+                  <a class="teammates-card__name-link" href="">
+                    <h3
+                      class="teammates-card__name teammates-card__name--offline"
+                    >
+                      Марк Смолов
+                    </h3></a
                   >
-                    Марк Смолов
-                  </h3>
                   <p class="teammates-card__hashtags">
                     #рэп #тату #хайпбист #кроссовки #суприм
                   </p>
@@ -2046,6 +2133,7 @@
                     <div class="teammates-card__wishlist-wrapper">
                       <span
                         class="country-flag country-flag--usa teammates-card__flag"
+                        data-tooltip="США"
                         >Флаг США</span
                       >
                       <p class="teammates-card__wishlist-description">
@@ -2055,6 +2143,7 @@
                     <div class="teammates-card__wishlist-wrapper">
                       <span
                         class="country-flag country-flag--au teammates-card__flag"
+                        data-tooltip="Австралия"
                         >Флаг Австралии</span
                       >
                       <p class="teammates-card__wishlist-description">
@@ -2064,6 +2153,7 @@
                     <div class="teammates-card__wishlist-wrapper">
                       <span
                         class="country-flag country-flag--do teammates-card__flag"
+                        data-tooltip="Доминикана"
                         >Флаг Доминиканы</span
                       >
                       <p class="teammates-card__wishlist-description">
@@ -2105,7 +2195,28 @@
                       Пешком
                     </li>
                   </ul>
-                  <div class="teammates-card__level">25</div>
+                  <div class="teammates-card__level">
+                    <svg
+                      class="teammates-card__level-percent"
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                    >
+                      <circle
+                        r="20"
+                        cx="22"
+                        cy="22"
+                        fill="transparent"
+                        stroke="#ff8d30"
+                        stroke-width="2"
+                        stroke-dasharray="31px 94px"
+                      />
+                    </svg>
+                    <span class="teammates-card__level-number">25</span
+                    ><span class="teammates-card__level-description"
+                      >level</span
+                    >
+                  </div>
                 </div>
                 <div class="teammates-card__button-and-like">
                   <div class="teammates-card__button-wrapper">
@@ -2116,10 +2227,7 @@
                     >
                   </div>
                   <div class="teammates-card__like-wrapper">
-                    <button
-                      class="teammates-card__like teammates-card__like--active"
-                      type="button"
-                    >
+                    <button class="teammates-card__like" type="button">
                       Добавить / Убрать лайк
                     </button>
                     <p class="teammates-card__likes-number">
@@ -2150,11 +2258,13 @@
                   </picture>
                 </div>
                 <div class="teammates-card__info-wrapper">
-                  <h3
-                    class="teammates-card__name teammates-card__name--offline"
-                  >
-                    Лариса Роговая
-                  </h3>
+                  <a class="teammates-card__name-link" href="">
+                    <h3
+                      class="teammates-card__name teammates-card__name--online"
+                    >
+                      Лариса Роговая
+                    </h3>
+                  </a>
                   <p class="teammates-card__hashtags">
                     #образование #карьера #учеба #линкедин
                   </p>
@@ -2169,6 +2279,7 @@
                     <div class="teammates-card__wishlist-wrapper">
                       <span
                         class="country-flag country-flag--uk teammates-card__flag"
+                        data-tooltip="Великобритания"
                         >Флаг Великобритании</span
                       >
                       <p class="teammates-card__wishlist-description">
@@ -2178,6 +2289,7 @@
                     <div class="teammates-card__wishlist-wrapper">
                       <span
                         class="country-flag country-flag--de teammates-card__flag"
+                        data-tooltip="Германия"
                         >Флаг Германии</span
                       >
                       <p class="teammates-card__wishlist-description">
@@ -2219,7 +2331,28 @@
                       Пешком
                     </li>
                   </ul>
-                  <div class="teammates-card__level">50</div>
+                  <div class="teammates-card__level">
+                    <svg
+                      class="teammates-card__level-percent"
+                      width="45"
+                      height="45"
+                      viewBox="0 0 45 45"
+                    >
+                      <circle
+                        r="20"
+                        cx="22"
+                        cy="22"
+                        fill="transparent"
+                        stroke="#ff8d30"
+                        stroke-width="2"
+                        stroke-dasharray="63px 62px"
+                      />
+                    </svg>
+                    <span class="teammates-card__level-number">50</span
+                    ><span class="teammates-card__level-description"
+                      >level</span
+                    >
+                  </div>
                 </div>
                 <div class="teammates-card__button-and-like">
                   <div class="teammates-card__button-wrapper">
@@ -2230,10 +2363,7 @@
                     >
                   </div>
                   <div class="teammates-card__like-wrapper">
-                    <button
-                      class="teammates-card__like teammates-card__like--active"
-                      type="button"
-                    >
+                    <button class="teammates-card__like" type="button">
                       Добавить / Убрать лайк
                     </button>
                     <p class="teammates-card__likes-number">
@@ -2312,18 +2442,12 @@
           </a>
           <ul class="social page-footer__social-list">
             <li class="page-footer__social-item">
-              <a
-                class="social-button social-button--fb"
-                href=""
-                target="_blank"
+              <a class="social-button social-button--fb" href="" target="_blank"
                 ><span class="visually-hidden">Facebook</span></a
               >
             </li>
             <li class="page-footer__social-item">
-              <a
-                class="social-button social-button--vk"
-                href=""
-                target="_blank"
+              <a class="social-button social-button--vk" href="" target="_blank"
                 ><span class="visually-hidden">VKontakte</span></a
               >
             </li>

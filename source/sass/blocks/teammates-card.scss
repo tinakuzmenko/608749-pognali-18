@@ -2,8 +2,12 @@
   background-color: $white;
   border-radius: 20px;
   padding: 15px 18px 22px 20px;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
+
+  &:hover {
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+  }
 
   @media (min-width: $tablet) {
     padding: 33px 25px 24px 35px;
@@ -46,6 +50,7 @@
 
 .teammates-card__picture {
   display: block;
+  transition: transform 0.3s ease-out;
 
   @media (min-width: $tablet) {
     width: 190px;
@@ -58,6 +63,11 @@
   }
 }
 
+.teammates-card:hover .teammates-card__picture {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-out;
+}
+
 .teammates-card__info-wrapper {
   @media (min-width: $desktop) {
     padding-top: 47px;
@@ -65,19 +75,70 @@
   }
 }
 
+.teammates-card__name-link {
+  display: flex;
+  width: 90px;
+
+  @media (min-width: $tablet) {
+    width: 300px;
+  }
+}
+
 .teammates-card__name {
+  display: inline-flex;
   color: $twilight-blue;
   line-height: 1.05;
   margin-top: -70px;
   margin-left: 85px;
   margin-bottom: 45px;
-  width: 90px;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    color: rgba($twilight-blue, 0.6);
+  }
+
+  &:active {
+    color: rgba($twilight-blue, 0.3);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: -53px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  &--offline::after {
+    background-color: $offline-red;
+  }
+
+  &--online::after {
+    background-color: $online-green;
+  }
 
   @media (min-width: $tablet) {
     font-size: 30px;
-    width: 300px;
     margin: 0;
     margin-bottom: 15px;
+
+    &::after {
+      width: 7px;
+      height: 7px;
+      top: 11px;
+      right: -28px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &::after {
+      top: 11px;
+      right: auto;
+      left: -28px;
+    }
   }
 }
 
@@ -143,56 +204,91 @@
 
   &--wishlist {
     margin-bottom: 14px;
-    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      height: 1px;
+      background-color: $light-violet;
+    }
+
+    &::before {
+      width: 14px;
+      left: -27px;
+    }
+
+    &::after {
+      width: 138px;
+      right: -27px;
+    }
 
     @media (min-width: $tablet) {
       padding-left: 47px;
       margin-bottom: 16px;
-    }
 
-    @media (min-width: $desktop) {
-      display: none;
-    }
-  }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 111px;
+        height: 1px;
+        background-color: $light-violet;
+        top: 8px;
+        left: -75px;
+      }
 
-  &--wishlist::before {
-    @media (min-width: $tablet) {
-      content: "";
-      position: absolute;
-      width: 111px;
-      height: 1px;
-      background-color: $light-violet;
-      top: 8px;
-      left: -75px;
-    }
-
-    @media (min-width: $desktop) {
-      display: none;
-    }
-  }
-
-  &--wishlist::after {
-    @media (min-width: $tablet) {
-      content: "";
-      position: absolute;
-      width: 510px;
-      height: 1px;
-      background-color: $light-violet;
-      top: 8px;
-      right: -35px;
-    }
-
-    @media (min-width: $desktop) {
-      display: none;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 510px;
+        height: 1px;
+        background-color: $light-violet;
+        top: 8px;
+        right: -35px;
+      }
     }
   }
 
-  &--transport {
-    margin-left: 5px;
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+&--transport {
+  margin-left: 5px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    height: 1px;
+    background-color: $light-violet;
   }
 
-  &--level {
-    margin-right: 5px;
+  &::before {
+    width: 14px;
+    left: -27px;
+  }
+
+  &::after {
+    width: 91px;
+    right: -103px;
+  }
+}
+
+&--level {
+  margin-right: 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    height: 1px;
+    background-color: $light-violet;
+    width: 14px;
+    right: -23px;
   }
 }
 
@@ -210,6 +306,19 @@
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+  position: relative;
+
+  &:nth-child(1n) {
+    z-index: 10;
+  }
+
+  &:nth-child(2n) {
+    z-index: 5;
+  }
+
+  &:nth-child(3n) {
+    z-index: 1;
+  }
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
@@ -299,7 +408,7 @@
     flex-direction: column;
     margin-left: 0;
     margin-right: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 
   @media (min-width: $desktop) {
@@ -327,14 +436,52 @@
   margin-right: 10px;
   margin-top: 5px;
   color: $twilight-blue;
+  position: relative;
 
   @media (min-width: $tablet) {
     margin-top: 0;
+    padding-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   @media (min-width: $desktop) {
     margin-right: 0;
     margin-bottom: 9px;
+  }
+}
+
+.teammates-card__level-percent {
+  transform: rotate(-90deg);
+  position: absolute;
+  top: -16px;
+  left: -10px;
+
+  @media (min-width: $tablet) {
+    width: 65px;
+    height: 65px;
+    left: -18px;
+    top: -20px;
+    stroke-width: 3px;
+  }
+}
+
+.teammates-card__level-number {
+  margin-bottom: 2px;
+}
+
+.teammates-card__level-description {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    color: rgba($greyish-brown, 0.4);
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    padding-top: 2px;
+    border-top: 1px solid rgba($black, 0.1);
   }
 }
 
@@ -382,6 +529,10 @@
   font-size: 0;
   border: none;
   margin-right: 7px;
+
+  &--active {
+    background-color: $like-pink;
+  }
 
   @media (min-width: $tablet) {
     width: 50px;

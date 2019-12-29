@@ -58,10 +58,38 @@
     font-size: 20px;
     font-weight: bold;
     line-height: 1.2;
+    position: relative;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 32px;
+      height: 16px;
+      right: 35px;
+      top: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../../img/return.svg");
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: $desktop) {
     padding-right: 125px;
+
+    &::after {
+      right: 65px;
+    }
   }
 }
 
