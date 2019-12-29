@@ -15,6 +15,24 @@
   padding: 12px 12px 10px;
   background-color: transparent;
 
+  &--chosen {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 100%;
+      right: 0;
+      top: 0;
+      background: linear-gradient(to left, white 60%, transparent 100%);
+
+      @media (min-width: $tablet) {
+        display: none;
+      }
+    }
+  }
+
   &--choose {
     width: 100%;
   }

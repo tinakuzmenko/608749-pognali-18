@@ -40,6 +40,15 @@
     background-image: url("../../img/month-arrow-right.svg");
   }
 
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
   @media (min-width: $tablet) {
     width: 19px;
     height: 34px;
@@ -168,6 +177,11 @@
     }
   }
 
+  &:hover {
+    background-color: $twilight-blue;
+    color: $white;
+  }
+
   &:hover::after {
     content: "";
     position: absolute;
@@ -230,7 +244,7 @@
 }
 
 .calendar__table-cell input:checked + .calendar__day-number {
-  background-color: $twilight-blue;
+  background-color: $tooltip-blue;
   color: $white;
   position: relative;
 

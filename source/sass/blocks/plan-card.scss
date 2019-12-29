@@ -140,6 +140,15 @@
   letter-spacing: 1.4px;
   text-transform: uppercase;
 
+  &:hover,
+  &:focus {
+    color: rgba($black, 0.6);
+  }
+
+  &:active {
+    color: rgba($black, 0.1);
+  }
+
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 0.9;

@@ -93,11 +93,11 @@
     height: 70px;
     margin-right: 15px;
     margin-bottom: 15px;
-    border: 1px solid $light-grey;
+    border: none;
+
 
     &:nth-child(5n) {
       margin-right: 0;
-      border: 1px solid $light-grey;
     }
   }
 }
@@ -120,6 +120,15 @@
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 0.9;
+  }
+
+  @media (min-width: $desktop) {
+    border: 1px solid $light-grey;
+    border-radius: 4px;
+
+    &:hover {
+      border-color: $step-hover-violet;
+    }
   }
 }
 
@@ -168,6 +177,15 @@
   line-height: 1.38;
   color: $greyish-brown;
 
+  &:hover,
+  &:focus {
+    color: $twilight-blue;
+  }
+
+  &:active {
+    color: rgba($twilight-blue, 0.3);
+  }
+
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 1.5;
@@ -203,6 +221,7 @@
 
   @media (min-width: $tablet) {
     background-color: $twilight-blue;
+    border-color: $twilight-blue;
     color: $white;
   }
 }

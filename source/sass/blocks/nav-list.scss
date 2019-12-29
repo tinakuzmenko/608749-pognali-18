@@ -70,12 +70,12 @@
 .page-nav--white .nav-list__link {
   color: $dark-blue;
 
-  &:hover[href],
-  &:focus[href] {
+  &:hover[href] > .nav-list__link-transition-text,
+  &:focus[href] > .nav-list__link-transition-text {
     color: rgba($dark-blue, 0.7);
   }
 
-  &:active[href] {
+  &:active[href] > .nav-list__link-transition-text {
     color: rgba($dark-blue, 0.3);
   }
 }
