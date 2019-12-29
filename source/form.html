@@ -219,7 +219,10 @@
                 >
                   Тэги
                 </p>
-                <textarea class="user-information__textfield" placeholder="Коротко о себе в виде 5-8 хештэгов">
+                <textarea
+                  class="user-information__textfield"
+                  placeholder="Коротко о себе в виде 5-8 хештэгов"
+                >
 #бургер #бар #футбол #концерт #крафт</textarea
                 >
               </div>
@@ -1042,7 +1045,10 @@
                 </div>
                 <div class="plan-step__selects">
                   <div class="plan-step__select-wrapper">
-                    <button class="country-select country-select--chosen" type="button">
+                    <button
+                      class="country-select country-select--chosen"
+                      type="button"
+                    >
                       Босния и Герцеговина
                     </button>
                     <div
@@ -1050,6 +1056,7 @@
                     >
                       <span
                         class="country-flag country-flag--big country-flag--ba"
+                        data-tooltip="Босния и Герцеговина"
                         >Флаг Боснии и Герцеговины</span
                       >
                     </div>
@@ -1058,7 +1065,10 @@
                     </button>
                   </div>
                   <div class="plan-step__select-wrapper">
-                    <button class="country-select country-select--chosen" type="button">
+                    <button
+                      class="country-select country-select--chosen"
+                      type="button"
+                    >
                       Чехия
                     </button>
                     <div
@@ -1066,6 +1076,7 @@
                     >
                       <span
                         class="country-flag country-flag--big country-flag--cz"
+                        data-tooltip="Чехия"
                         >Флаг Чехии</span
                       >
                     </div>
@@ -2780,14 +2791,19 @@
                       >
                       <span
                         class="country-flag country-flag--big country-flag--ba"
+                        data-tooltip="Босния и Герцеговина"
                         >Флаг Боснии и Герцеговины</span
                       >
                     </div>
-                    <textarea
-                      class="plan-step__plan-description"
-                      id="ba-plans"
-                      placeholder="План действий"
-                    ></textarea>
+                    <div class="plan-step__plan-description-wrapper">
+                      <textarea
+                        class="plan-step__plan-description"
+                        id="ba-plans"
+                        placeholder="План действий"
+                        required
+                      ></textarea>
+                      <div class="plan-step__plan-description-invalid">Это поле должно быть заполнено</div>
+                    </div>
                   </div>
                   <div class="plan-step__country-description">
                     <div class="plan-step__description-title">
@@ -2796,12 +2812,20 @@
                       >
                       <span
                         class="country-flag country-flag--big country-flag--cz"
+                        data-tooltip="Чехия"
                         >Флаг Чехии</span
                       >
                     </div>
-                    <textarea class="plan-step__plan-description" id="cz-plans">
+                    <div class="plan-step__plan-description-wrapper">
+                      <textarea
+                        class="plan-step__plan-description"
+                        id="cz-plans"
+                        required
+                      >
 Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea
-                    >
+                      >
+                      <div class="plan-step__plan-description-invalid">Это поле должно быть заполнено</div>
+                    </div>
                   </div>
                 </div>
                 <div class="plan-step__button-wrapper">

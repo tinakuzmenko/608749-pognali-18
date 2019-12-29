@@ -439,7 +439,7 @@
   }
 }
 
-.plan-step__input-wrapper--checkbox input:checked + .plan-step__custom-checkbox::after {
+.plan-step__input-wrapper--checkbox input:checked .plan-step__custom-checkbox::after {
   display: block;
 }
 
@@ -456,19 +456,39 @@
 }
 
 .plan-step__selects {
-  margin-bottom: 26px;
+  padding-bottom: 26px;
 
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: column;
     padding-top: 42px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     border-top: 1px solid $inputs-grey;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 137px;
+      width: 1px;
+      height: 100%;
+      background-color: $inputs-grey;
+      background-repeat: no-repeat;
+      background-position: right 0 bottom 0;
+      background-size: 100% 50px;
+      background-image: linear-gradient(to top, white 40%, transparent);
+    }
   }
 
   @media (min-width: $desktop) {
     padding-top: 63px;
-    margin-bottom: 57px;
+    padding-bottom: 57px;
+
+    &::after {
+      right: 226px;
+      height: 525px;
+    }
   }
 }
 
@@ -476,11 +496,41 @@
   display: flex;
   margin-bottom: 22px;
   position: relative;
+  z-index: 10;
+
+  &:nth-child(1n) {
+    z-index: 100;
+  }
+
+  &:nth-child(2n) {
+    z-index: 90;
+  }
+
+  &:nth-child(3n) {
+    z-index: 80;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    bottom: -15px;
+    right: 52px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url("../../img/small-arrow.svg");
+  }
 
   @media (min-width: $tablet) {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -496,16 +546,41 @@
   height: auto;
   background-color: transparent;
   margin-left: -1px;
+  position: relative;
+  z-index: 10;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: 17px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $twilight-blue;
+    z-index: 50;
+  }
 
   @media (min-width: $tablet) {
     border: none;
     width: auto;
     padding-left: 32px;
+
+    &::before {
+      top: 15px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+    }
   }
 
   @media (min-width: $desktop) {
     padding-left: 0;
     padding-right: 7px;
+
+    &::before {
+      left: -49px;
+    }
   }
 }
 
@@ -529,6 +604,7 @@
   position: absolute;
   right: -10px;
   top: -10px;
+  z-index: 100;
 
   &--inactive {
     display: none;
@@ -542,8 +618,17 @@
     height: 22px;
     background-color: transparent;
     background-size: contain;
-    opacity: 0.2;
+    opacity: 0.1;
     margin-bottom: 3px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.3;
+    }
+
+    &:active {
+      opacity: 0.05;
+    }
   }
 }
 
@@ -586,21 +671,86 @@
   }
 }
 
+.plan-step__country-description + .plan-step__country-description {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -269px;
+    left: -13px;
+    width: 2px;
+    height: 281px;
+    background-color: $twilight-blue;
+
+    @media (min-width: $tablet) {
+      left: auto;
+      right: -29px;
+      top: -240px;
+      height: 266px;
+      width: 3px;
+    }
+
+    @media (min-width: $desktop) {
+      right: 224px;
+    }
+  }
+}
+
 .plan-step__description-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 13px;
   padding-left: 13px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 9px;
+    left: -2px;
+    background-color: $twilight-blue;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 2px;
+    top: 11px;
+    left: -13px;
+    border-radius: 1px;
+    background-color: $twilight-blue;
+  }
 
   @media (min-width: $tablet) {
     padding: 0;
     margin-bottom: 29px;
+
+    &::before {
+      width: 15px;
+      height: 15px;
+      top: 17px;
+      left: auto;
+      right: -35px;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop) {
     margin-bottom: 29px;
     padding-right: 115px;
+
+    &::before {
+      right: 218px;
+    }
   }
 }
 
@@ -610,6 +760,18 @@
   font-weight: 500;
   line-height: 1;
   color: $twilight-blue;
+  position: relative;
+  flex-grow: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(to left, white 60%, transparent);
+  }
 
   @media (min-width: $tablet) {
     font-size: 30px;
@@ -617,10 +779,26 @@
     line-height: 0.6;
     letter-spacing: normal;
   }
+
+  @media (min-width: $desktop) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.plan-step__plan-description-wrapper {
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: $desktop) {
+    width: 730px;
+  }
 }
 
 .plan-step__plan-description {
   min-height: 220px;
+  width: 100%;
   resize: none;
   border-radius: 4px;
   border: 1px solid $light-grey;
@@ -630,9 +808,26 @@
   font-weight: normal;
   line-height: 1.38;
   color: $greyish-brown;
+  position: relative;
+  z-index: 90;
+
+  &::placeholder {
+    color: rgba($greyish-brown, 0.3);
+  }
+
+  &:hover {
+    border-color: $step-hover-violet;
+  }
+
+  &:focus {
+    border-color: $deep-dark-blue;
+  }
+
+  &:invalid {
+    border-color: $error-input-textarea;
+  }
 
   @media (min-width: $tablet) {
-    width: 100%;
     min-height: 142px;
     padding: 18px 19px 18px 19px;
     font-size: 20px;
@@ -643,4 +838,25 @@
     width: 730px;
     padding: 24px 10px 24px 23px;
   }
+}
+
+.plan-step__plan-description-invalid {
+  display: none;
+  position: absolute;
+  width: 100%;
+  min-height: 57px;
+  padding: 19px 24px 20px;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  background-color: $error-input-bg;
+  color: $error-input-text;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.2;
+  border-radius: 4px;
+}
+
+.plan-step__plan-description:invalid ~ .plan-step__plan-description-invalid {
+  display: block;
 }

@@ -11,7 +11,7 @@
   @media (min-width: $desktop) {
     border-top-right-radius: 60px;
     border-top-left-radius: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 123px;
   }
 }
 
@@ -51,6 +51,7 @@
 
   @media (min-width: $desktop) {
     margin-top: 0;
+    margin-bottom: 0;
   }
 }
 

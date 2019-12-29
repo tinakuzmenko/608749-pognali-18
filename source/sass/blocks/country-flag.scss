@@ -4,6 +4,8 @@
   border-radius: 6.4px;
   background-color: $coral-red;
   font-size: 0;
+  z-index: 10;
+  position: relative;
 
   &--big {
     @media (min-width: $tablet) {
@@ -12,13 +14,18 @@
     }
   }
 
-  &::before {
+  &::before,
+  &::after {
     content: attr(data-tooltip);
     display: none;
     position: absolute;
-    bottom: -72px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1000;
+  }
+
+  &::before {
+    bottom: -72px;
     border-radius: 4px;
     background-color: $tooltip-blue;
     padding: 19px 28px 18px 24px;
@@ -30,12 +37,7 @@
   }
 
   &::after {
-    content: attr(data-tooltip);
-    display: none;
-    position: absolute;
     bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
     border: 8px solid transparent;
     border-bottom-color: $tooltip-blue;
   }
