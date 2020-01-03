@@ -74,6 +74,10 @@
   background-image: url("../../img/rates@1x.png");
   margin-left: auto;
 
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../../img/rates@2x.png");
+  }
+
   @media (min-width: $tablet) {
     order: 10;
     z-index: 1000;

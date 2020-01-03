@@ -19,6 +19,10 @@
     z-index: 5;
     background: url("../../img/smolov-back-desktop@1x.png") no-repeat right 25px top 69px, url("../../img/rectangle-bg-blue.svg") no-repeat left -30px top 69px, url("../../img/rogovaya-back-mobile@1x.png") no-repeat left -10px top 340px;
     background-size: 143px 143px, 143px 143px, 71px 71px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/smolov-back-desktop@2x.png"), url("../../img/rectangle-bg-blue.svg"), url("../../img/rogovaya-back-mobile@2x.png");
+    }
   }
 
   &--upped {
@@ -44,6 +48,10 @@
       width: 768px;
       background: url("../../img/rogovaya-back-desktop@1x.png") no-repeat right 77px top 140px, url("../../img/rectangle-bg-blue.svg") no-repeat left 40px top 140px, url("../../img/smolov-back-desktop@1x.png") no-repeat left 40px top 486px;
       background-size: 285px 285px, 213px 213px, 143px 143px;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("./../img/rogovaya-back-desktop@2x.png"), url("../../img/rectangle-bg-blue.svg"), url("../../img/smolov-back-desktop@2x.png");
+      }
     }
   }
 
@@ -53,6 +61,11 @@
     &::before {
       width: 1440px;
       background: url("../../img/rogovaya-back-desktop@1x.png") no-repeat left 191px bottom 80px, url("../../img/rectangle-bg-blue.svg") no-repeat left 60px top 128px, url("../../img/smolov-back-desktop@1x.png") no-repeat left 547px top 194px;
+      background-size: 285px 285px, 213px 213px, 143px 143px;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("./../img/rogovaya-back-desktop@2x.png"), url("../../img/rectangle-bg-blue.svg"), url("../../img/smolov-back-desktop@2x.png");
+      }
     }
   }
 }

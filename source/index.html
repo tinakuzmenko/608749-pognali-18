@@ -17,15 +17,25 @@
                 <picture>
                   <source
                     media="(min-width: 1440px)"
-                    srcset="img/logo-desktop-white@1x.png 1x"
+                    srcset="
+                      img/logo-desktop-white@1x.png 1x,
+                      img/logo-desktop-white@2x.png 2x
+                    "
                   />
                   <source
                     media="(min-width: 768px)"
-                    srcset="img/logo-tablet-white@1x.png 1x"
+                    srcset="
+                      img/logo-tablet-white@1x.png 1x,
+                      img/logo-tablet-white@2x.png 2x
+                    "
                   />
                   <img
                     class="logo__picture"
                     src="img/logo-mobile-white@1x.png"
+                    srcset="
+                      img/logo-mobile-white@1x.png 1x,
+                      img/logo-mobile-white@2x.png 2x
+                    "
                     alt="Логотип приложения Погнали"
                   />
                 </picture>
@@ -245,11 +255,17 @@
                     <picture>
                       <source
                         media="(min-width: 768px)"
-                        srcset="img/thailand-desktop@1x.jpg 1x"
+                        srcset="
+                          img/thailand-desktop@1x.jpg 1x,
+                          img/thailand-desktop@2x.jpg 2x
+                        "
                       />
                       <img
                         class="directions-card__picture"
                         src="img/thailand-mobile@1x.jpg"
+                        srcset="img/thailand-mobile@1x.jpg"
+                        1x,
+                        src="img/thailand-mobile@2x.jpg 2x"
                         alt="Путешествие в Таиланд"
                         width="270"
                         height="110"
@@ -281,11 +297,18 @@
                     <picture>
                       <source
                         media="(min-width: 768px)"
-                        srcset="img/france-desktop@1x.jpg 1x"
+                        srcset="
+                          img/france-desktop@1x.jpg 1x,
+                          img/france-desktop@2x.jpg 2x
+                        "
                       />
                       <img
                         class="directions-card__picture"
                         src="img/france-mobile@1x.jpg"
+                        srcset="
+                          img/france-mobile@1x.jpg 1x,
+                          img/france-mobile@2x.jpg 2x
+                        "
                         alt="Путешествие во Францию"
                         width="270"
                         height="110"
@@ -317,11 +340,18 @@
                     <picture>
                       <source
                         media="(min-width: 768px)"
-                        srcset="img/czech-desktop@1x.jpg 1x"
+                        srcset="
+                          img/czech-desktop@1x.jpg 1x,
+                          img/czech-desktop@2x.jpg 2x
+                        "
                       />
                       <img
                         class="directions-card__picture"
                         src="img/czech-mobile@1x.jpg"
+                        srcset="
+                          img/czech-mobile@1x.jpg 1x,
+                          img/czech-mobile@2x.jpg 2x
+                        "
                         alt="Путешествие в Чехию"
                         width="270"
                         height="110"
@@ -378,11 +408,16 @@
                   <picture>
                     <source
                       media="(min-width: 1440px)"
-                      srcset="img/firsova-desktop@1x.jpg 1x"
+                      srcset="img/firsova-desktop@1x.jpg 1x,
+                      img/firsova-destop@2x.jpg 2x"
                     />
                     <img
                       class="teammates-preview__picture"
                       src="img/firsova-tablet@1x.jpg"
+                      srcset="
+                        img/firsova-tablet@1x.jpg 1x,
+                        img/firsova-tablet@2x.jpg 2x
+                      "
                       alt="Таня Фирсова"
                       width="270"
                       height="270"
@@ -479,11 +514,12 @@
                   <picture>
                     <source
                       media="(min-width: 1440px)"
-                      srcset="img/demin-desktop@1x.jpg 1x"
+                      srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x"
                     />
                     <img
                       class="teammates-preview__picture"
                       src="img/demin-tablet@1x.jpg"
+                      srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x"
                       alt="Петя Демин"
                       width="270"
                       height="270"
@@ -799,9 +835,7 @@
     <script src="js/picturefill.js" async></script>
     <script src="js/navigation.js"></script>
     <script src="js/business-tariffs.js"></script>
-    <script
-      src="https://api-maps.yandex.ru/2.1/?apikey=616ca13e-763d-46bc-ae25-21cd60a9f310&lang=ru_RU"
-    ></script>
-    <script src="js/map.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=616ca13e-763d-46bc-ae25-21cd60a9f310&lang=ru_RU"></script>
+    <!-- <script src="js/map.js"></script> -->
   </body>
 </html>
