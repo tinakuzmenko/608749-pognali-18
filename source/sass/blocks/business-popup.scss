@@ -1,15 +1,16 @@
 .business-popup {
   display: none;
   padding-top: 33px;
+  margin: 0 auto;
   background-color: white;
   width: 270px;
-  margin: 0 auto;
   border-radius: 20px;
   box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
   overflow: hidden;
 
   &--active {
     display: block;
+    animation: modal-appearance 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
   @media (min-width: $tablet) {
@@ -116,6 +117,15 @@
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: $light-violet;
+  }
+
+  &:active {
+    color: rgba($twilight-blue, 0.3);
+  }
 
   @media (min-width: $tablet) {
     font-size: 24px;

@@ -1,7 +1,6 @@
 /* Размеры экрана */
 $mobile: 320px;
 $tablet: 768px;
-$desktop-small: 960px;
 $desktop: 1440px;
 
 /* Цвета */
@@ -18,14 +17,20 @@ $intense-violet: #e2e5f2;
 $violet: #dfe3f0;
 $dark-violet: #d4d9eb;
 $intense-dark-violet: #d6daed;
+$upload-photo-hover: #d1d7e9;
+$hover-violet: #aeb4cb;
+$filter-button-hover: #c8cee8;
+$step-hover-violet: #959bb2;
 $black-blue: #121936;
 $deep-dark-blue: #161c36;
 $dark-blue: #192144;
 $space-blue: #182044;
+$tooltip-blue: #101d41;
 $rectangle-blue: #141b3b;
 $twilight-blue: #1d2e5b;
 $business-blue: #132576;
 $orange: #ff8d30;
+$orange-intense: #f26926;
 $orange-lighter: #ffa530;
 $orange-yellow: #ffbd30;
 $accent-yellow: #ffd74b;
@@ -33,5 +38,9 @@ $border-yellow: #a88f48;
 $accordion-yellow: #f3c72b;
 $greyish-brown: #444444;
 $coral-red: #ff5c23;
+$error-input-bg: #ffefef;
+$like-pink: #f9eaea;
+$error-input-textarea: #f47e7e;
+$error-input-text: #ff0000;
 $offline-red: #f97676;
 $online-green: #81e31e;

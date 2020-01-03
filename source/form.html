@@ -53,13 +53,31 @@
             <div class="page-nav__menu-wrapper">
               <ul class="nav-list">
                 <li class="nav-list__item">
-                  <a class="nav-list__link" href="index.html">О сервисе</a>
+                  <a class="nav-list__link" href="index.html"
+                    ><span
+                      class="nav-list__link-transition-text"
+                      data-hover="О сервисе"
+                      >О сервисе</span
+                    ></a
+                  >
                 </li>
                 <li class="nav-list__item">
-                  <a class="nav-list__link">Направления</a>
+                  <a class="nav-list__link"
+                    ><span
+                      class="nav-list__link-transition-text"
+                      data-hover="Направления"
+                      >Направления</span
+                    ></a
+                  >
                 </li>
                 <li class="nav-list__item">
-                  <a class="nav-list__link" href="catalog.html">Попутчики</a>
+                  <a class="nav-list__link" href="catalog.html"
+                    ><span
+                      class="nav-list__link-transition-text"
+                      data-hover="Попутчики"
+                      >Попутчики</span
+                    ></a
+                  >
                 </li>
               </ul>
             </div>
@@ -144,6 +162,22 @@
             <div class="user-information__common-wrapper">
               <div class="user-information__top">
                 <div class="user-information__level">
+                  <svg
+                    class="user-information__level-percent"
+                    width="100"
+                    height="100"
+                    viewBox="0 0 100 100"
+                  >
+                    <circle
+                      r="47"
+                      cx="50"
+                      cy="50"
+                      fill="transparent"
+                      stroke="#ff8d30"
+                      stroke-width="3"
+                      stroke-dasharray="251px 63px"
+                    />
+                  </svg>
                   <span class="user-information__level-number">80</span>
                   <span class="user-information__level-description">level</span>
                 </div>
@@ -185,7 +219,10 @@
                 >
                   Тэги
                 </p>
-                <textarea class="user-information__textfield">
+                <textarea
+                  class="user-information__textfield"
+                  placeholder="Коротко о себе в виде 5-8 хештэгов"
+                >
 #бургер #бар #футбол #концерт #крафт</textarea
                 >
               </div>
@@ -198,7 +235,7 @@
                     <input
                       class="visually-hidden"
                       type="checkbox"
-                      name="transport-type"
+                      name="plane"
                       id="plane"
                       checked
                     />
@@ -212,7 +249,7 @@
                     <input
                       class="visually-hidden"
                       type="checkbox"
-                      name="transport-type"
+                      name="bus"
                       id="bus"
                       checked
                     />
@@ -226,7 +263,7 @@
                     <input
                       class="visually-hidden"
                       type="checkbox"
-                      name="transport-type"
+                      name="bike"
                       id="bike"
                     />
                     <label
@@ -239,7 +276,7 @@
                     <input
                       class="visually-hidden"
                       type="checkbox"
-                      name="transport-type"
+                      name="feet"
                       id="feet"
                       checked
                     />
@@ -832,7 +869,9 @@
                             id="march-26"
                             checked
                           />
-                          <label class="calendar__day-number calendar__day-number--arrival" for="march-26"
+                          <label
+                            class="calendar__day-number calendar__day-number--arrival"
+                            for="march-26"
                             >26</label
                           >
                         </td>
@@ -844,9 +883,7 @@
                             id="march-27"
                             checked
                           />
-                          <label
-                            class="calendar__day-number"
-                            for="march-27"
+                          <label class="calendar__day-number" for="march-27"
                             >27</label
                           >
                         </td>
@@ -1008,7 +1045,10 @@
                 </div>
                 <div class="plan-step__selects">
                   <div class="plan-step__select-wrapper">
-                    <button class="country-select" type="button">
+                    <button
+                      class="country-select country-select--chosen"
+                      type="button"
+                    >
                       Босния и Герцеговина
                     </button>
                     <div
@@ -1016,6 +1056,7 @@
                     >
                       <span
                         class="country-flag country-flag--big country-flag--ba"
+                        data-tooltip="Босния и Герцеговина"
                         >Флаг Боснии и Герцеговины</span
                       >
                     </div>
@@ -1024,7 +1065,10 @@
                     </button>
                   </div>
                   <div class="plan-step__select-wrapper">
-                    <button class="country-select" type="button">
+                    <button
+                      class="country-select country-select--chosen"
+                      type="button"
+                    >
                       Чехия
                     </button>
                     <div
@@ -1032,6 +1076,7 @@
                     >
                       <span
                         class="country-flag country-flag--big country-flag--cz"
+                        data-tooltip="Чехия"
                         >Флаг Чехии</span
                       >
                     </div>
@@ -1046,12 +1091,13 @@
                     >
                       Выберите страну
                     </button>
-                    <button class="plan-step__delete-country plan-step__delete-country--removable" type="button">
+                    <button
+                      class="plan-step__delete-country plan-step__delete-country--removable"
+                      type="button"
+                    >
                       <span class="visually-hidden">Удалить страну</span>
                     </button>
-                    <div
-                      class="chose-country plan-step__chose-country"
-                    >
+                    <div class="chose-country plan-step__chose-country">
                       <div class="chose-country__inner-content-wrapper">
                         <input
                           class="visually-hidden chose-country__letter-toggler chose-country__letter-toggler--1"
@@ -2745,14 +2791,19 @@
                       >
                       <span
                         class="country-flag country-flag--big country-flag--ba"
+                        data-tooltip="Босния и Герцеговина"
                         >Флаг Боснии и Герцеговины</span
                       >
                     </div>
-                    <textarea
-                      class="plan-step__plan-description"
-                      id="ba-plans"
-                      placeholder="План действий"
-                    ></textarea>
+                    <div class="plan-step__plan-description-wrapper">
+                      <textarea
+                        class="plan-step__plan-description"
+                        id="ba-plans"
+                        placeholder="План действий"
+                        required
+                      ></textarea>
+                      <div class="plan-step__plan-description-invalid">Это поле должно быть заполнено</div>
+                    </div>
                   </div>
                   <div class="plan-step__country-description">
                     <div class="plan-step__description-title">
@@ -2761,12 +2812,20 @@
                       >
                       <span
                         class="country-flag country-flag--big country-flag--cz"
+                        data-tooltip="Чехия"
                         >Флаг Чехии</span
                       >
                     </div>
-                    <textarea class="plan-step__plan-description" id="cz-plans">
+                    <div class="plan-step__plan-description-wrapper">
+                      <textarea
+                        class="plan-step__plan-description"
+                        id="cz-plans"
+                        required
+                      >
 Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea
-                    >
+                      >
+                      <div class="plan-step__plan-description-invalid">Это поле должно быть заполнено</div>
+                    </div>
                   </div>
                 </div>
                 <div class="plan-step__button-wrapper">
@@ -2793,7 +2852,7 @@
     <footer class="page-footer">
       <div class="container">
         <div class="page-footer__content-wrapper">
-          <a class="logo page-footer__logo">
+          <a class="logo page-footer__logo" href="index.html">
             <picture>
               <source
                 media="(min-width: 1440px)"
@@ -2812,24 +2871,18 @@
           </a>
           <ul class="social page-footer__social-list">
             <li class="page-footer__social-item">
-              <a
-                class="social-button social-button--yellow social-button--fb"
-                href=""
-                target="_blank"
+              <a class="social-button social-button--fb" href="" target="_blank"
                 ><span class="visually-hidden">Facebook</span></a
               >
             </li>
             <li class="page-footer__social-item">
-              <a
-                class="social-button social-button--yellow social-button--vk"
-                href=""
-                target="_blank"
+              <a class="social-button social-button--vk" href="" target="_blank"
                 ><span class="visually-hidden">VKontakte</span></a
               >
             </li>
             <li class="page-footer__social-item">
               <a
-                class="social-button social-button--yellow social-button--instagram"
+                class="social-button social-button--instagram"
                 href=""
                 target="_blank"
                 ><span class="visually-hidden">Instagram</span></a

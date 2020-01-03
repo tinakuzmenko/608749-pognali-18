@@ -187,7 +187,7 @@
     padding: 16px 0 16px 0;
 
     &::before {
-      right: unset;
+      right: auto;
       top: -2px;
       left: -92px;
       width: 67px;
@@ -203,7 +203,7 @@
 
   @media (min-width: $tablet) {
     padding: 0;
-    min-height: 67px;
+    height: 67px;
     display: flex;
     align-items: center;
   }
@@ -216,8 +216,19 @@
 .add-profile__business-link {
   font-size: 16px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 100%;
+  align-self: center;
+  align-items: center;
   color: $dark-blue;
+
+  &:hover,
+  &:focus {
+    color: rgba(19, 37, 118, 0.7);
+  }
+
+  &:active {
+    color: rgba(19, 37, 118, 0.3);
+  }
 
   @media (min-width: $tablet) {
     display: flex;
@@ -230,7 +241,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: -24px;
+      top: 0;
       left: 0;
       width: 67px;
       height: 67px;
@@ -245,6 +256,5 @@
   margin: 0 auto;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 1000;
 }

@@ -1,12 +1,14 @@
 .accordion {
   @media (min-width: $tablet) {
-    padding: 33px 0 35px;
+    padding: 33px 0 0 0;
     border-top: 1px solid $accordion-yellow;
     border-bottom: 1px solid $accordion-yellow;
+    margin-bottom: 35px;
   }
 
   @media (min-width: $desktop) {
     padding: 0;
+    margin-bottom: 0;
     border: none;
   }
 }
@@ -21,11 +23,17 @@
 
     &--level {
       align-items: center;
+      padding-bottom: 36px;
     }
   }
 
   @media (min-width: $desktop) {
     flex-direction: column;
+
+    &--level {
+      margin-bottom: 40px;
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -42,7 +50,7 @@
   }
 
   @media (min-width: $tablet) {
-    max-width: 125px;
+    width: 156px;
     padding: 0;
     border: none;
     display: flex;
@@ -56,11 +64,12 @@
 
     &--level {
       margin-bottom: 0;
+      width: 126px;
     }
   }
 
   @media (min-width: $desktop) {
-    max-width: 100%;
+    width: 100%;
     margin-bottom: 12px;
     cursor: pointer;
   }
@@ -78,6 +87,15 @@
   color: $twilight-blue;
   text-transform: uppercase;
   position: relative;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::after {
     content: "";
@@ -101,12 +119,30 @@
     font-weight: 500;
     line-height: 1.5;
 
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+
     &::after {
       display: none;
     }
   }
 
   @media (min-width: $desktop) {
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
     &::after {
       display: flex;
       top: 11px;
@@ -213,6 +249,15 @@
   color: $greyish-brown;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    color: rgba($greyish-brown, 0.6);
+  }
+
+  &:active {
+    color: rgba($greyish-brown, 0.3);
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -222,6 +267,33 @@
     height: 18px;
     border-radius: 4px;
     background-color: $white;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: rgba($white, 0.6);
+  }
+
+  &:active::before {
+    background-color: rgba($white, 0.3);
+  }
+
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    width: 9px;
+    height: 9px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url("../../img/tick.svg");
+  }
+
+  &:active::after {
+    opacity: 0.2;
   }
 
   @media (min-width: $tablet) {
@@ -235,21 +307,19 @@
       width: 24px;
       height: 24px;
     }
+
+    &::after {
+      width: 12px;
+      height: 12px;
+      top: 2px;
+      left: 6px;
+    }
   }
 }
 
 .accordion__list-item input:checked + .accordion__checkbox {
-  &::before {
-    background-repeat: no-repeat;
-    background-size: 9px 9px;
-    background-position: center;
-    background-image: url("../../img/tick.svg");
-  }
-
-  @media (min-width: $tablet) {
-    &::before {
-      background-size: 12px 12px;
-    }
+  &::after {
+    display: block;
   }
 }
 
@@ -263,37 +333,74 @@
 
 .accordion__level-wrapper {
   @media (min-width: $tablet) {
-    margin-left: unset;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
   }
 
   @media (min-width: $desktop) {
-    /* Временно, пока нет ренджа */
-    margin-bottom: 45px;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 0;
+    align-items: flex-start;
   }
 }
 
 .accordion__inputs-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 53px;
   margin-top: 1px;
+  margin-bottom: 24px;
+  position: relative;
+
+  &::after {
+    box-sizing: content-box;
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 101px;
+    width: 16px;
+    height: 1px;
+    background-color: $light-grey;
+    border-top: 5px solid $white;
+    border-bottom: 5px solid $white;
+    z-index: 30;
+  }
 
   @media (min-width: $tablet) {
     justify-content: flex-end;
     margin-bottom: 0;
     padding-top: 0;
     padding-right: 20px;
-    margin-left: unset;
+    margin-left: auto;
+    order: 10;
+
+    &::after {
+      top: 15px;
+      right: 84px;
+      width: 21px;
+      background-color: $light-grey;
+      border-top: 7px solid $white;
+      border-bottom: 7px solid $white;
+    }
   }
 
   @media (min-width: $desktop) {
     padding-right: 5px;
+    order: 0;
+    margin-left: 0;
+    margin-bottom: 36px;
+
+    &::after {
+      right: 90px;
+    }
   }
 }
 
 .accordion__level-input {
   display: flex;
-  max-width: 111px;
+  width: 111px;
   font-size: 15px;
   padding: 10px 5px 8px 5px;
   font-weight: 500;
@@ -303,16 +410,27 @@
   text-align: center;
   color: $twilight-blue;
   border: 1px solid $light-grey;
+  position: relative;
+
+  &:hover {
+    border-color: $step-hover-violet;
+  }
+
+  &:focus {
+    border-color: $deep-dark-blue;
+  }
 
   &:first-child {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    z-index: 10;
   }
 
   &:last-child {
     margin-left: -1px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    z-index: 5;
   }
 
   @media (min-width: $tablet) {
@@ -324,5 +442,88 @@
 
   @media (min-width: $desktop) {
     width: 96px;
+  }
+}
+
+.accordion__range-wrapper {
+  position: relative;
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    width: 277px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 189px;
+  }
+}
+
+.accordion__range-scale {
+  width: 100%;
+  height: 2px;
+  background-color: rgba($twilight-blue, 0.2);
+  border-radius: 0.5px;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    height: 3px;
+    border-radius: 1.5px;
+  }
+}
+
+.accordion__range-bar {
+  position: absolute;
+  background-color: $twilight-blue;
+  border-radius: 0.5px;
+  height: 2px;
+  top: 0;
+  right: 0;
+
+  @media (min-width: $tablet) {
+    height: 3px;
+    border-radius: 1.5px;
+  }
+}
+
+.accordion__range-toggle {
+  padding: 0;
+  border: 0;
+  width: 10px;
+  height: 10px;
+  background-color: $twilight-blue;
+  border-radius: 50%;
+  position: absolute;
+  top: -4px;
+
+  &--min {
+    left: 30%;
+  }
+
+  &--max {
+    left: 99%;
+  }
+
+  @media (min-width: $tablet) {
+    width: 13px;
+    height: 13px;
+    top: -5px;
+
+    &:hover,
+    &:focus {
+      width: 19px;
+      height: 19px;
+      top: -8px;
+    }
+
+    &:active {
+      box-shadow: 0 3px 7px 0 rgba(29, 46, 91, 0.35);
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--max {
+      left: 93%;
+    }
   }
 }

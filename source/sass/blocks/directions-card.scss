@@ -6,6 +6,20 @@
 .directions-card__link-wrapper {
   display: block;
 
+  .directions-card__picture {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+
+    .directions-card__picture {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: row-reverse;
@@ -68,7 +82,7 @@
 
   @media (min-width: $tablet) {
     top: 16px;
-    left: unset;
+    left: auto;
     right: -35px;
   }
 

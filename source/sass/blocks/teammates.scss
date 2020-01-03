@@ -4,6 +4,22 @@
   padding: 29px 0;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  position: relative;
+
+  &::before {
+    width: 320px;
+    height: 100%;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    z-index: 5;
+    background: url("../../img/smolov-back-desktop@1x.png") no-repeat right 25px top 69px, url("../../img/rectangle-bg-blue.svg") no-repeat left -30px top 69px, url("../../img/rogovaya-back-mobile@1x.png") no-repeat left -10px top 340px;
+    background-size: 143px 143px, 143px 143px, 71px 71px;
+  }
 
   &--upped {
     margin-top: -30px;
@@ -23,10 +39,21 @@
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     padding-bottom: 88px;
+
+    &::before {
+      width: 768px;
+      background: url("../../img/rogovaya-back-desktop@1x.png") no-repeat right 77px top 140px, url("../../img/rectangle-bg-blue.svg") no-repeat left 40px top 140px, url("../../img/smolov-back-desktop@1x.png") no-repeat left 40px top 486px;
+      background-size: 285px 285px, 213px 213px, 143px 143px;
+    }
   }
 
   @media (min-width: $desktop) {
     padding-bottom: 130px;
+
+    &::before {
+      width: 1440px;
+      background: url("../../img/rogovaya-back-desktop@1x.png") no-repeat left 191px bottom 80px, url("../../img/rectangle-bg-blue.svg") no-repeat left 60px top 128px, url("../../img/smolov-back-desktop@1x.png") no-repeat left 547px top 194px;
+    }
   }
 }
 
@@ -79,6 +106,8 @@
 
 .teammates__preview-wrapper {
   margin-bottom: 20px;
+  position: relative;
+  z-index: 1000;
 
   @media (min-width: $tablet) {
     display: flex;

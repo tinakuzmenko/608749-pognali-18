@@ -134,11 +134,11 @@
   }
 
   &--checkbox {
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
 
   @media (min-width: $tablet) {
-    margin-bottom: 35px;
+    margin-bottom: 26px;
 
     &--term {
       order: 2;
@@ -147,7 +147,7 @@
 
     &--checkbox {
       order: 1;
-      margin-bottom: 61px;
+      margin-bottom: 51px;
     }
 
     &::before {
@@ -214,7 +214,7 @@
 
   @media (min-width: $tablet) {
     width: 285px;
-    min-height: 81px;
+    height: 81px;
     text-align: left;
     font-weight: bold;
     justify-content: flex-start;
@@ -234,6 +234,10 @@
       border: 8px solid transparent;
       border-left: 10px solid $twilight-blue;
     }
+
+    &:active::after {
+      border-left-color: rgba($twilight-blue, 0.3);
+    }
   }
 }
 
@@ -242,6 +246,16 @@
   width: 100%;
   border: none;
   padding: 12px 0 0 0;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    background-color: transparent;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet) {
     width: 181px;
@@ -320,6 +334,14 @@
   padding: 15px 14px 11px 30px;
   appearance: none;
 
+  &:hover {
+    border-color: $step-hover-violet;
+  }
+
+  &:focus {
+    border-color: $deep-dark-blue;
+  }
+
   @media (min-width: $tablet) {
     font-size: 20px;
     padding: 25px 14px 23px 30px;
@@ -332,12 +354,20 @@
 }
 
 .plan-step__custom-checkbox {
+  display: flex;
   padding-left: 40px;
   position: relative;
+  height: 25px;
+  align-items: center;
+  cursor: pointer;
 
+  &::after,
   &::before {
     content: "";
     position: absolute;
+  }
+
+  &::before {
     top: -4px;
     left: 0;
     display: block;
@@ -345,12 +375,36 @@
     height: 25px;
     border: 1px solid $light-grey;
     border-radius: 4px;
+  }
+
+  &::after {
+    display: none;
+    width: 9px;
+    height: 9px;
+    top: 4px;
+    left: 10px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 9px 9px;
+    background-size: contain;
+    background-image: url("../../img/tick.svg");
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border: 1px solid $step-hover-violet;
+  }
+
+  &:active::before {
+    border-color: $intense-violet;
+    background-color: $intense-violet;
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet) {
+    height: 36px;
     padding-left: 60px;
     font-size: 20px;
     font-weight: 500;
@@ -360,10 +414,17 @@
     color: $twilight-blue;
 
     &::before {
-      top: -10px;
+      top: 0;
       width: 36px;
       height: 36px;
       background-size: 12px 12px;
+    }
+
+    &::after {
+      width: 12px;
+      height: 12px;
+      left: 12px;
+      top: 12px;
     }
   }
 
@@ -371,11 +432,15 @@
     &::before {
       left: 3px;
     }
+
+    &::after {
+      left: 15px;
+    }
   }
 }
 
-.plan-step__input-wrapper--checkbox input:checked + .plan-step__custom-checkbox::before {
-  background-image: url("../../img/tick.svg");
+.plan-step__input-wrapper--checkbox input:checked + .plan-step__custom-checkbox::after {
+  display: block;
 }
 
 .plan-step__calendar {
@@ -391,19 +456,39 @@
 }
 
 .plan-step__selects {
-  margin-bottom: 26px;
+  padding-bottom: 26px;
 
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: column;
     padding-top: 42px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     border-top: 1px solid $inputs-grey;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 137px;
+      width: 1px;
+      height: 100%;
+      background-color: $inputs-grey;
+      background-repeat: no-repeat;
+      background-position: right 0 bottom 0;
+      background-size: 100% 50px;
+      background-image: linear-gradient(to top, white 40%, transparent);
+    }
   }
 
   @media (min-width: $desktop) {
     padding-top: 63px;
-    margin-bottom: 57px;
+    padding-bottom: 57px;
+
+    &::after {
+      right: 226px;
+      height: 525px;
+    }
   }
 }
 
@@ -411,11 +496,41 @@
   display: flex;
   margin-bottom: 22px;
   position: relative;
+  z-index: 10;
+
+  &:nth-child(1n) {
+    z-index: 100;
+  }
+
+  &:nth-child(2n) {
+    z-index: 90;
+  }
+
+  &:nth-child(3n) {
+    z-index: 80;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    bottom: -15px;
+    right: 52px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url("../../img/small-arrow.svg");
+  }
 
   @media (min-width: $tablet) {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -431,16 +546,41 @@
   height: auto;
   background-color: transparent;
   margin-left: -1px;
+  position: relative;
+  z-index: 10;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: 17px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $twilight-blue;
+    z-index: 50;
+  }
 
   @media (min-width: $tablet) {
     border: none;
     width: auto;
     padding-left: 32px;
+
+    &::before {
+      top: 15px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+    }
   }
 
   @media (min-width: $desktop) {
     padding-left: 0;
     padding-right: 7px;
+
+    &::before {
+      left: -49px;
+    }
   }
 }
 
@@ -464,6 +604,7 @@
   position: absolute;
   right: -10px;
   top: -10px;
+  z-index: 100;
 
   &--inactive {
     display: none;
@@ -471,14 +612,23 @@
 
   @media (min-width: $tablet) {
     position: static;
-    right: unset;
-    top: unset;
+    right: auto;
+    top: auto;
     width: 22px;
     height: 22px;
     background-color: transparent;
     background-size: contain;
-    opacity: 0.2;
+    opacity: 0.1;
     margin-bottom: 3px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.3;
+    }
+
+    &:active {
+      opacity: 0.05;
+    }
   }
 }
 
@@ -521,21 +671,86 @@
   }
 }
 
+.plan-step__country-description + .plan-step__country-description {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -269px;
+    left: -13px;
+    width: 2px;
+    height: 281px;
+    background-color: $twilight-blue;
+
+    @media (min-width: $tablet) {
+      left: auto;
+      right: -29px;
+      top: -240px;
+      height: 266px;
+      width: 3px;
+    }
+
+    @media (min-width: $desktop) {
+      right: 224px;
+    }
+  }
+}
+
 .plan-step__description-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 13px;
   padding-left: 13px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 9px;
+    left: -2px;
+    background-color: $twilight-blue;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 2px;
+    top: 11px;
+    left: -13px;
+    border-radius: 1px;
+    background-color: $twilight-blue;
+  }
 
   @media (min-width: $tablet) {
     padding: 0;
     margin-bottom: 29px;
+
+    &::before {
+      width: 15px;
+      height: 15px;
+      top: 17px;
+      left: auto;
+      right: -35px;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop) {
     margin-bottom: 29px;
     padding-right: 115px;
+
+    &::before {
+      right: 218px;
+    }
   }
 }
 
@@ -545,6 +760,18 @@
   font-weight: 500;
   line-height: 1;
   color: $twilight-blue;
+  position: relative;
+  flex-grow: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(to left, white 60%, transparent);
+  }
 
   @media (min-width: $tablet) {
     font-size: 30px;
@@ -552,10 +779,32 @@
     line-height: 0.6;
     letter-spacing: normal;
   }
+
+  @media (min-width: $desktop) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.plan-step__plan-description-wrapper {
+  position: relative;
+  height: 220px;
+  z-index: 1;
+
+  @media (min-width: $tablet) {
+    height: 142px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 730px;
+  }
 }
 
 .plan-step__plan-description {
-  min-height: 220px;
+  box-sizing: border-box;
+  height: 220px;
+  width: 100%;
   resize: none;
   border-radius: 4px;
   border: 1px solid $light-grey;
@@ -565,10 +814,27 @@
   font-weight: normal;
   line-height: 1.38;
   color: $greyish-brown;
+  position: relative;
+  z-index: 90;
+
+  &::placeholder {
+    color: rgba($greyish-brown, 0.3);
+  }
+
+  &:hover {
+    border-color: $step-hover-violet;
+  }
+
+  &:focus {
+    border-color: $deep-dark-blue;
+  }
+
+  &:invalid {
+    border-color: $error-input-textarea;
+  }
 
   @media (min-width: $tablet) {
-    width: 100%;
-    min-height: 142px;
+    height: 142px;
     padding: 18px 19px 18px 19px;
     font-size: 20px;
     line-height: 1.2;
@@ -578,4 +844,29 @@
     width: 730px;
     padding: 24px 10px 24px 23px;
   }
+}
+
+.plan-step__plan-description-invalid {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 82px;
+  padding: 19px 24px 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $error-input-bg;
+  color: $error-input-text;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.2;
+  border-radius: 4px;
+
+  @media (min-width: $tablet) {
+    height: 57px;
+  }
+}
+
+.plan-step__plan-description:invalid ~ .plan-step__plan-description-invalid {
+  display: block;
 }

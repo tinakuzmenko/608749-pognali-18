@@ -74,6 +74,15 @@
     margin-right: 70px;
   }
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -81,7 +90,10 @@
     left: 0;
     width: 18px;
     height: 18px;
-    background-color: $twilight-blue;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../../img/show-more-plus.svg");
 
     @media (min-width: $tablet) {
       width: 27px;
@@ -134,6 +146,15 @@
   font-weight: bold;
   line-height: 1.5;
   color: $deep-dark-blue;
+
+  &:hover:not(&--active),
+  &:focus:not(&--active) {
+    opacity: 0.6;
+  }
+
+  &:active:not(&--active) {
+    opacity: 0.3;
+  }
 
   &--active {
     background-color: $accent-yellow;

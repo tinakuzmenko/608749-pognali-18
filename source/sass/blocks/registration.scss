@@ -25,7 +25,7 @@
     position: absolute;
     content: "";
     width: 100%;
-    height: 30px;
+    height: 31px;
     z-index: 100;
     background-color: $dark-blue;
     border-bottom-left-radius: 30px;
@@ -40,7 +40,7 @@
     border-bottom-left-radius: 60px;
 
     &::after {
-      height: 60px;
+      height: 61px;
       border-bottom-right-radius: 60px;
       border-bottom-left-radius: 60px;
     }
@@ -85,6 +85,7 @@
 
     &--bottom {
       margin-bottom: 44px;
+      padding-right: 15px;
     }
   }
 }
@@ -99,6 +100,15 @@
   color: $accent-yellow;
   position: relative;
 
+  &:hover,
+  &:focus {
+    color: $orange;
+  }
+
+  &:active {
+    color: rgba($orange, 0.3);
+  }
+
   &::after {
     content: "";
     width: 100%;
@@ -107,6 +117,15 @@
     position: absolute;
     left: 0;
     bottom: 1px;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $orange;
+  }
+
+  &:active::after {
+    background-color: rgba($orange, 0.3);
   }
 }
 
@@ -126,37 +145,67 @@
 }
 
 .registration__email {
-  width: 100%;
+  width: 230px;
   height: 62px;
-  border: none;
   border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: $white;
-  padding: 20px;
-  padding-left: 22px;
-  padding-right: 70px;
+  padding: 18px 70px 20px 22px;
   color: $greyish-brown;
+  font-size: 18px;
+  font-weight: bold;
+  border: 4px solid $white;
+
+  &::placeholder {
+    color: rgba($greyish-brown, 0.3);
+    font-size: 18px;
+    font-weight: bold;
+
+    @media (min-width: $tablet) {
+      font-size: 24px;
+      line-height: 1;
+    }
+  }
+
+  &:hover {
+    background-color: $light-violet;
+    border-color: $light-violet;
+  }
+
+  &:hover::placeholder {
+    color: rgba(68, 68, 68, 0.5);
+  }
+
+  &:focus {
+    background-color: transparent;
+    border: 4px solid $white;
+    color: $white;
+  }
+
+  &:focus::placeholder {
+    color: $white;
+  }
+
+  &:invalid {
+    background-color: $error-input-bg;
+    border-color: $error-input-bg;
+    color: $error-input-text;
+  }
 
   @media (min-width: $tablet) {
+    width: 536px;
     height: 81px;
-    padding: 30px;
-    padding-right: 90px;
+    padding: 25px 35px 23px 35px;
+    font-size: 24px;
     border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   @media (min-width: $desktop) {
-    padding-left: 35px;
-    padding-right: 330px;
-  }
-}
-
-.registration__email::placeholder {
-  color: rgba($greyish-brown, 0.3);
-  font-size: 18px;
-  font-weight: bold;
-
-  @media (min-width: $tablet) {
-    font-size: 24px;
-    line-height: 1;
+    width: 853px;
+    padding: 25px 35px 23px 35px;
   }
 }
 
