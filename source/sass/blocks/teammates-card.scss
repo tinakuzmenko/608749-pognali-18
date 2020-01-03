@@ -202,6 +202,43 @@
   text-transform: lowercase;
   position: relative;
 
+  &--transport {
+    margin-left: 5px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      height: 1px;
+      background-color: $light-violet;
+    }
+
+    &::before {
+      width: 14px;
+      left: -27px;
+    }
+
+    &::after {
+      width: 91px;
+      right: -103px;
+    }
+  }
+
+  &--level {
+    margin-right: 5px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      height: 1px;
+      background-color: $light-violet;
+      width: 14px;
+      right: -23px;
+    }
+  }
+
   &--wishlist {
     margin-bottom: 14px;
 
@@ -252,43 +289,6 @@
 
   @media (min-width: $desktop) {
     display: none;
-  }
-}
-
-&--transport {
-  margin-left: 5px;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 8px;
-    height: 1px;
-    background-color: $light-violet;
-  }
-
-  &::before {
-    width: 14px;
-    left: -27px;
-  }
-
-  &::after {
-    width: 91px;
-    right: -103px;
-  }
-}
-
-&--level {
-  margin-right: 5px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    height: 1px;
-    background-color: $light-violet;
-    width: 14px;
-    right: -23px;
   }
 }
 
