@@ -2,7 +2,7 @@
   width: 35px;
   height: 24px;
   border-radius: 6.4px;
-  background-color: $coral-red;
+  background-color: transparent;
   font-size: 0;
   z-index: 20;
   position: relative;
@@ -50,4 +50,12 @@
   &:hover::after {
     display: block;
   }
+}
+
+.country-flag__picture {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: -1;
 }
