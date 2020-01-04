@@ -121,7 +121,8 @@
 
   @media (min-width: $tablet) {
     @include list-style-reset();
-
+    max-width: 100%;
+    flex-wrap: wrap;
     display: flex;
     margin: 0;
     align-items: center;

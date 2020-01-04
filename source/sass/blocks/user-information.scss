@@ -221,6 +221,7 @@
 
   @media (min-width: $desktop) {
     width: 730px;
+    min-height: 94px;
     height: 94px;
   }
 
@@ -241,6 +242,7 @@
       order: 10;
       margin: 0;
       width: 384px;
+      height: auto;
     }
   }
 }
@@ -314,6 +316,7 @@
 .user-information__transport-wrapper {
   @include list-style-reset();
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0;
 }
