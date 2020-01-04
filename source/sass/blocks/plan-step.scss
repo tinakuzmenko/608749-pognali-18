@@ -386,7 +386,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-image: url("../../img/tick.svg");
+    background-image: url("../img/tick.svg");
   }
 
   &:hover::before,
@@ -520,7 +520,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    background-image: url("../../img/small-arrow.svg");
+    background-image: url("../img/small-arrow.svg");
   }
 
   @media (min-width: $tablet) {
@@ -600,7 +600,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 9px 9px;
-  background-image: url("../../img/menu-close.svg");
+  background-image: url("../img/menu-close.svg");
   position: absolute;
   right: -10px;
   top: -10px;
