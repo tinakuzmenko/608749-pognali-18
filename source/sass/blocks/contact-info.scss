@@ -6,14 +6,23 @@
   font-weight: bold;
   color: $accent-yellow;
   text-transform: uppercase;
+  position: relative;
 
   &:hover,
   &:focus {
     color: $orange-yellow;
+
+    svg {
+      fill: $orange-yellow;
+    }
   }
 
   &:active {
     color: rgba(255, 189, 48, 0.3);
+
+    svg {
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: $tablet) {
@@ -36,6 +45,53 @@
     @media (min-width: $desktop) {
       width: 90px;
       height: 90px;
+    }
+  }
+}
+
+.contact-info__icon {
+  position: absolute;
+  fill: $accent-yellow;
+
+  &--phone {
+    top: 14px;
+    left: 14px;
+  }
+
+  &--mail {
+    top: 16px;
+    left: 14px;
+  }
+
+  @media (min-width: $tablet) {
+    &--phone {
+      width: 27px;
+      height: 27px;
+      top: 19px;
+      left: 20px;
+    }
+
+    &--mail {
+      width: 27px;
+      height: 19px;
+      top: 23px;
+      left: 20px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    &--phone {
+      width: 36px;
+      height: 36px;
+      top: 28px;
+      left: 28px;
+    }
+
+    &--mail {
+      width: 36px;
+      height: 26px;
+      top: 31px;
+      left: 28px;
     }
   }
 }

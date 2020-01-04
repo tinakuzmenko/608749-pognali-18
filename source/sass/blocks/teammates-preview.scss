@@ -215,7 +215,6 @@
   font-size: 0;
   width: 21px;
   height: 21px;
-  background-color: $greyish-brown;
   margin-right: 17px;
   position: relative;
   z-index: 10000;
@@ -254,6 +253,17 @@
   &:hover::before,
   &:hover::after {
     display: block;
+  }
+
+  svg {
+    opacity: 0.15;
+  }
+
+  &--active {
+    svg {
+      opacity: 1;
+      fill: $twilight-blue;
+    }
   }
 }
 
