@@ -148,25 +148,29 @@
               <div class="user-information__wrapper user-information__wrapper--transport">
                 <p class="user-information__title">Транспорт</p>
                 <ul class="user-information__transport-wrapper">
-                  <li class="user-information__transport-item">
+                  <li class="user-information__transport-item" data-tooltip="Авиаперелет">
                     <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked="">
-                    <label class="transport-type" for="plane"><svg class="transport-type__icon transport-type__icon--plane" width="14" height="16">
+                    <label class="transport-type" for="plane">
+                      <svg class="transport-type__icon transport-type__icon--plane" width="14" height="16">
                       <use xlink:href="#icon-plane"></use>
-                    </svg></label>
+                    </svg>
+                  </label>
                   </li>
-                  <li class="user-information__transport-item">
+                  <li class="user-information__transport-item" data-tooltip="Автотранспорт">
                     <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked="">
-                    <label class="transport-type" for="bus"><svg class="transport-type__icon transport-type__icon--bus" width="13" height="16">
+                    <label class="transport-type" for="bus">
+                      <svg class="transport-type__icon transport-type__icon--bus" width="13" height="16">
                       <use xlink:href="#icon-bus"></use>
-                    </svg></label>
+                    </svg>
+                  </label>
                   </li>
-                  <li class="user-information__transport-item">
+                  <li class="user-information__transport-item" data-tooltip="Велосипед">
                     <input class="visually-hidden" type="checkbox" name="bike" id="bike">
                     <label class="transport-type" for="bike"><svg class="transport-type__icon transport-type__icon--bike" width="19" height="17">
                       <use xlink:href="#icon-bike"></use>
                     </svg></label>
                   </li>
-                  <li class="user-information__transport-item">
+                  <li class="user-information__transport-item" data-tooltip="Пешком">
                     <input class="visually-hidden" type="checkbox" name="feet" id="feet" checked="">
                     <label class="transport-type" for="feet"><svg class="transport-type__icon transport-type__icon--run" width="15" height="17">
                       <use xlink:href="#icon-run"></use>
@@ -270,14 +274,22 @@
                     <div class="plan-step__label-row">
                       <label class="plan-step__label" for="teammates-quantity">Ищу попутчиков:</label>
                       <span class="plan-step__label-tip">Чел.</span>
-                      <input class="plan-step__number-input" type="number" id="teammates-quantity" name="teammates-quantity" value="2" min="0">
+                      <div class="plan-step__number-input-wrapper">
+                        <button class="plan-step__number-input-button plan-step__number-input-button--decrease" type="button">Уменьшить на 1</button>
+                        <input class="plan-step__number-input" type="number" id="teammates-quantity" name="teammates-quantity" value="2" min="0">
+                        <button class="plan-step__number-input-button plan-step__number-input-button--increase" type="button">Увеличить на 1</button>
+                      </div>
                     </div>
                   </div>
                   <div class="plan-step__input-wrapper plan-step__input-wrapper--term">
                     <div class="plan-step__label-row">
                       <label class="plan-step__label" for="travel-term">Длительность:</label>
                       <span class="plan-step__label-tip">дн.</span>
-                      <input class="plan-step__number-input" type="number" id="travel-term" name="travel-term" value="2" min="1">
+                      <div class="plan-step__number-input-wrapper">
+                        <button class="plan-step__number-input-button plan-step__number-input-button--decrease" type="button">Уменьшить на 1</button>
+                        <input class="plan-step__number-input" type="number" id="travel-term" name="travel-term" value="2" min="1">
+                        <button class="plan-step__number-input-button plan-step__number-input-button--increase" type="button">Увеличить на 1</button>
+                      </div>
                     </div>
                   </div>
                   <div class="plan-step__input-wrapper plan-step__input-wrapper--checkbox">
@@ -1432,6 +1444,7 @@
       document.createElement("picture");
     </script>
     <script src="js/picturefill.js" async=""></script>
+    <script defer src="node_modules/svgxuse/svgxuse.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/chose-country.js"></script>
   </body>
