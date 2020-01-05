@@ -219,6 +219,10 @@
   position: relative;
   z-index: 10000;
 
+  @media (min-width: $desktop) {
+    margin-right: 12px;
+  }
+
   &:last-child {
     margin-right: 0;
   }

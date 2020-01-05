@@ -109,7 +109,13 @@
   background-color: $white;
   border-radius: 20px;
   display: flex;
-  padding: 25px 28px;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    padding: 25px 0 25px 28px;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   @media (min-width: $desktop) {
     margin-right: 85px;
@@ -121,11 +127,11 @@
 
   @media (min-width: $tablet) {
     @include list-style-reset();
-    max-width: 100%;
     flex-wrap: wrap;
     display: flex;
     margin: 0;
     align-items: center;
+    flex-grow: 1;
   }
 }
 
@@ -165,4 +171,73 @@
 
 .teammates-catalog__controls-wrapper {
   display: flex;
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: $tablet) {
+    width: 124px;
+  }
+}
+
+.teammates-catalog__control-button {
+  display: flex;
+  width: 128px;
+  height: 50px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    border: 10px solid transparent;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet) {
+    width: 62px;
+  }
+
+  &--prev {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 1px solid $light-violet;
+
+    &::before {
+      border-right-color: $dark-blue;
+      left: 65px;
+    }
+
+    @media (min-width: $tablet) {
+      border-right: none;
+
+      &::before {
+        border-right-color: $dark-blue;
+        left: 22px;
+      }
+    }
+  }
+
+  &--next {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    &::before {
+      border-left-color: $dark-blue;
+      right: 65px;
+    }
+
+    @media (min-width: $tablet) {
+      &::before {
+        right: 32px;
+      }
+    }
+  }
 }

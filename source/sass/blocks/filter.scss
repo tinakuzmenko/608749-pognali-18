@@ -455,6 +455,38 @@
   }
 }
 
+.filter__inner-button-cross {
+  padding-left: 24px;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    padding-left: 39px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url("../img/filter-close.svg");
+
+    @media (min-width: $tablet) {
+      width: 19px;
+      height: 19px;
+      top: 6px;
+    }
+  }
+}
+
+.filter__inner-button-close:active .filter__inner-button-cross::before {
+  opacity: 0.3;
+}
+
 .filter__letter-toggler--1:checked ~ .filter__letters-list .filter__letter-button[for="letter-1"],
 .filter__letter-toggler--2:checked ~ .filter__letters-list .filter__letter-button[for="letter-2"],
 .filter__letter-toggler--3:checked ~ .filter__letters-list .filter__letter-button[for="letter-3"],
