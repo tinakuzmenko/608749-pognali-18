@@ -207,9 +207,9 @@
 }
 
 .plan-step__button-next {
+  border: none;
   display: flex;
   width: 100%;
-  border: none;
   padding: 7px 0 3px;
 
   @media (min-width: $tablet) {
@@ -319,6 +319,72 @@
   }
 }
 
+.plan-step__number-input-wrapper {
+  display: flex;
+  width: 100%;
+  position: relative;
+
+  @media (min-width: $desktop) {
+    width: 181px;
+    margin-right: 36px;
+  }
+}
+
+.plan-step__number-input-button {
+  background: transparent;
+  border: none;
+  font-size: 0;
+  padding: 0;
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 0;
+  opacity: 0.3;
+
+  @media (min-width: $tablet) {
+    width: 70px;
+    height: 70px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 60px;
+    height: 70px;
+  }
+
+  &--decrease {
+    background-size: 14px 2px;
+    background-image: url("../img/qty-minus-mobile.svg");
+    left: 0;
+
+    @media (min-width: $tablet) {
+      background-size: 20px 2px;
+      background-image: url("../img/qty-minus.svg");
+    }
+  }
+
+  &--increase {
+    background-size: 14px 14px;
+    background-image: url("../img/qty-plus-mobile.svg");
+    right: 0;
+
+    @media (min-width: $tablet) {
+      background-size: 20px 20px;
+      background-image: url("../img/qty-plus.svg");
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.4;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
 .plan-step__number-input {
   display: flex;
   width: 100%;
@@ -332,7 +398,15 @@
   border: 1px solid $light-grey;
   border-radius: 4px;
   padding: 15px 14px 11px 30px;
-  appearance: none;
+  appearance: textfield;
+
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  &::-webkit-outer-spin-button {
+    appearance: none;
+  }
 
   &:hover {
     border-color: $step-hover-violet;
@@ -349,7 +423,6 @@
 
   @media (min-width: $desktop) {
     width: 181px;
-    margin-right: 36px;
   }
 }
 
@@ -386,7 +459,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-image: url("../../img/tick.svg");
+    background-image: url("../img/tick.svg");
   }
 
   &:hover::before,
@@ -441,6 +514,10 @@
 
 .plan-step__input-wrapper--checkbox input:checked + .plan-step__custom-checkbox::after {
   display: block;
+}
+
+.plan-step__input-wrapper--checkbox input:focus + .plan-step__custom-checkbox::before {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
 }
 
 .plan-step__calendar {
@@ -520,7 +597,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    background-image: url("../../img/small-arrow.svg");
+    background-image: url("../img/small-arrow.svg");
   }
 
   @media (min-width: $tablet) {
@@ -600,7 +677,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 9px 9px;
-  background-image: url("../../img/menu-close.svg");
+  background-image: url("../img/menu-close.svg");
   position: absolute;
   right: -10px;
   top: -10px;
@@ -850,20 +927,22 @@
   display: none;
   position: absolute;
   width: 100%;
-  height: 82px;
-  padding: 19px 24px 20px;
+  height: 60px;
+  padding: 10px 15px;
   bottom: 0;
   left: 0;
   right: 0;
   background-color: $error-input-bg;
   color: $error-input-text;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1.2;
   border-radius: 4px;
 
   @media (min-width: $tablet) {
+    font-size: 20px;
     height: 57px;
+    padding: 17px 24px 20px;
   }
 }
 

@@ -1,31 +1,35 @@
 @font-face {
   font-family: "Blogger Sans";
-  src: url("../fonts/BloggerSans.woff2") format("woff2"),
-    url("../fonts/BloggerSans.woff") format("woff");
+  src: url("../fonts/bloggersans.woff2") format("woff2"),
+    url("../fonts/bloggersans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Blogger Sans";
-  src: url("../fonts/BloggerSans-Bold.woff2") format("woff2"),
-    url("../fonts/BloggerSans-Bold.woff") format("woff");
+  src: url("../fonts/bloggersans-bold.woff2") format("woff2"),
+    url("../fonts/bloggersans-bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Blogger Sans";
-  src: url("../fonts/BloggerSans-Light.woff2") format("woff2"),
-    url("../fonts/BloggerSans-Light.woff") format("woff");
+  src: url("../fonts/bloggersans-light.woff2") format("woff2"),
+    url("../fonts/bloggersans-light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Blogger Sans";
-  src: url("../fonts/BloggerSans-Medium.woff2") format("woff2"),
-    url("../fonts/BloggerSans-Medium.woff") format("woff");
+  src: url("../fonts/bloggersans-medium.woff2") format("woff2"),
+    url("../fonts/bloggersans-medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }

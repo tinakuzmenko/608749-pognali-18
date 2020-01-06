@@ -24,6 +24,7 @@
 }
 
 .teammates-card__image-wrapper {
+  display: block;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -157,6 +158,10 @@
     margin: 0;
     font-size: 20px;
     width: 230px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop) {
     padding-bottom: 50px;
   }
 }
@@ -180,6 +185,8 @@
     margin-top: 0;
     width: auto;
     padding-top: 51px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
 }
 
@@ -241,6 +248,8 @@
 
   &--wishlist {
     margin-bottom: 14px;
+    z-index: 10;
+    position: relative;
 
     &::before,
     &::after {
@@ -295,6 +304,7 @@
 .teammates-card__all-countries {
   @media (min-width: $tablet) {
     display: flex;
+    flex-wrap: wrap;
   }
 
   @media (min-width: $desktop) {
@@ -393,8 +403,11 @@
     order: 100;
     margin-left: auto;
     margin-right: 15px;
+    margin-top: 0;
     justify-content: space-between;
-    margin-top: -86px;
+    position: absolute;
+    bottom: 47px;
+    right: 44px;
   }
 }
 
@@ -403,6 +416,7 @@
   margin: 0;
   margin-left: 5px;
   display: flex;
+  position: relative;
 
   @media (min-width: $tablet) {
     flex-direction: column;
@@ -413,18 +427,121 @@
 
   @media (min-width: $desktop) {
     flex-direction: row;
-    margin-bottom: 0;
     margin-right: 60px;
+    margin-bottom: 0;
   }
 }
 
 .teammates-card__transport {
+  display: flex;
   font-size: 0;
   width: 33px;
   height: 32px;
   border-radius: 50%;
   background-color: $light-violet;
+  position: relative;
+
+  &--active {
+    svg {
+      fill: $twilight-blue;
+      opacity: 1;
+      z-index: 0;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: attr(data-tooltip);
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 110;
+  }
+
+  &::before {
+    bottom: -72px;
+    border-radius: 4px;
+    background-color: $tooltip-blue;
+    padding: 19px 28px 18px 24px;
+    color: $white;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  &::after {
+    bottom: -12px;
+    border: 8px solid transparent;
+    border-bottom-color: $tooltip-blue;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    display: block;
+  }
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+  }
 }
+
+.teammates-card__transport-icon {
+  opacity: 0.15;
+  position: absolute;
+
+  &--plane {
+    top: 8px;
+    left: 8px;
+  }
+
+  &--bus {
+    top: 9px;
+    left: 10px;
+  }
+
+  &--bike {
+    top: 8px;
+    left: 7px;
+  }
+
+  &--run {
+    top: 8px;
+    left: 9px;
+  }
+
+  @media (min-width: $tablet) {
+    &--plane {
+      width: 19px;
+      height: 21px;
+      top: 5px;
+      left: 5px;
+    }
+
+    &--bus {
+      width: 17px;
+      height: 21px;
+      top: 5px;
+      left: 7px;
+    }
+
+    &--bike {
+      width: 24px;
+      height: 21px;
+      top: 5px;
+      left: 5px;
+    }
+
+    &--run {
+      width: 20px;
+      height: 21px;
+      top: 5px;
+      left: 5px;
+    }
+  }
+}
+
 
 .teammates-card__level {
   display: flex;
@@ -496,7 +613,9 @@
 
   @media (min-width: $desktop) {
     margin-left: 342px;
-    margin-top: -96px;
+    margin-top: 0;
+    position: absolute;
+    bottom: 47px;
     order: 50;
   }
 }
@@ -529,9 +648,59 @@
   font-size: 0;
   border: none;
   margin-right: 7px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 11px;
+    top: 10px;
+    left: 9px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../img/heart.svg");
+    opacity: 0.3;
+
+    @media (min-width: $tablet) {
+      width: 20px;
+      height: 17px;
+      top: 16px;
+      left: 15px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $intense-violet;
+  }
+
+  &:hover:not(&--active)::before,
+  &:focus:not(&--active)::before {
+    opacity: 0.5;
+  }
+
+  &:active:not(&--active)::before {
+    opacity: 0.1;
+  }
 
   &--active {
     background-color: $like-pink;
+  }
+
+  &--active:hover,
+  &--active:focus {
+    background-color: $hover-like-pink;
+  }
+
+  &--active::before {
+    background-image: url("../img/heart-active.svg");
+    opacity: 1;
+  }
+
+  &--active:active::before {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet) {

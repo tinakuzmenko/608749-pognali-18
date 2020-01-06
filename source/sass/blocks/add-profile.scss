@@ -71,8 +71,12 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url("../../img/rates@1x.png");
+  background-image: url("../img/rates@1x.png");
   margin-left: auto;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/rates@2x.png");
+  }
 
   @media (min-width: $tablet) {
     order: 10;
@@ -135,7 +139,6 @@
 
     &::after {
       width: 444px;
-      height: 300px;
     }
   }
 }
@@ -247,6 +250,28 @@
       height: 67px;
       background-color: $intense-violet;
       border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 17px;
+      height: 21px;
+      top: 22px;
+      left: 25px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url("../img/business.svg");
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 0.7;
+    }
+
+    &:active::after {
+      opacity: 0.3;
     }
   }
 }

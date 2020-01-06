@@ -221,6 +221,7 @@
 
   @media (min-width: $desktop) {
     width: 730px;
+    min-height: 94px;
     height: 94px;
   }
 
@@ -234,13 +235,14 @@
       order: 1;
       width: 308px;
       margin-bottom: -96px;
-      padding: 25px 56px 24px;
+      padding: 25px 25px 24px;
     }
 
     @media (min-width: $desktop) {
       order: 10;
       margin: 0;
       width: 384px;
+      height: auto;
     }
   }
 }
@@ -314,11 +316,48 @@
 .user-information__transport-wrapper {
   @include list-style-reset();
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0;
 }
 
 .user-information__transport-item {
+  position: relative;
+
+  &::before,
+  &::after {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+  }
+
+  &::before {
+    content: attr(data-tooltip);
+    bottom: -72px;
+    border-radius: 4px;
+    background-color: $tooltip-blue;
+    padding: 19px 28px 18px 24px;
+    color: $white;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  &::after {
+    content: "";
+    bottom: -12px;
+    border: 8px solid transparent;
+    border-bottom-color: $tooltip-blue;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    display: block;
+  }
+
   @media (min-width: $tablet) {
     margin-right: 8px;
 
@@ -326,4 +365,13 @@
       margin-right: 0;
     }
   }
+}
+
+.user-information__transport-item input:checked + .transport-type svg {
+  opacity: 1;
+  fill: $twilight-blue;
+}
+
+.user-information__transport-item input:focus + .transport-type {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
 }
