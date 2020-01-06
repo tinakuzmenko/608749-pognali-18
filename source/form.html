@@ -205,9 +205,9 @@
                     <p class="plan-card__details plan-card__details--dates">
                       26 мар — 29 мар
                     </p>
-                    <button class="plan-card__edit" type="button">
+                    <a class="plan-card__edit" href="edit-plans.html">
                       Изменить
-                    </button>
+                    </a>
                   </div>
                 </li>
                 <li class="plan-card user-plans__item">
@@ -221,9 +221,9 @@
                     <p class="plan-card__details plan-card__details--dates">
                       1 июл — 15 июл
                     </p>
-                    <button class="plan-card__edit" type="button">
+                    <a class="plan-card__edit" href="edit-plans.html">
                       Изменить
-                    </button>
+                    </a>
                   </div>
                 </li>
               </ol>
@@ -243,7 +243,7 @@
                   <span class="add-plan__dot"></span>
                 </div>
               </div>
-              <section class="plan-step add-plan__step">
+              <section class="plan-step add-plan__step" id="step-1">
                 <div class="plan-step__top">
                   <div class="plan-step__about">
                     <h3 class="plan-step__title">
@@ -522,12 +522,12 @@
                   </table>
                 </div>
                 <div class="plan-step__button-wrapper">
-                  <button class="button button--rounded plan-step__button-next" type="button">
+                  <a class="button button--rounded plan-step__button-next" href="#step-2">
                     Следующий шаг
-                  </button>
+                  </a>
                 </div>
               </section>
-              <section class="plan-step plan-step--small-padding add-plan__step">
+              <section class="plan-step plan-step--small-padding add-plan__step" id="step-2">
                 <div class="plan-step__top plan-step__top--countries">
                   <div class="plan-step__about">
                     <h3 class="plan-step__title">
@@ -1310,15 +1310,15 @@
                   </div>
                 </div>
                 <div class="plan-step__button-wrapper">
-                  <button class="button button--rounded plan-step__button-next" type="button">
+                  <a class="button button--rounded plan-step__button-next" href="#step-3">
                     Следующий шаг
-                  </button>
-                  <button class="button button--rounded button--no-bg plan-step__button-prev" type="button">
+                  </a>
+                  <a class="button button--rounded button--no-bg plan-step__button-prev" href="#step-1">
                     На шаг назад
-                  </button>
+                  </a>
                 </div>
               </section>
-              <section class="plan-step add-plan__step plan-step--small-padding">
+              <section class="plan-step add-plan__step plan-step--small-padding" id="step-3">
                 <div class="plan-step__top plan-step__top--final">
                   <div class="plan-step__about">
                     <h3 class="plan-step__title">
@@ -1383,9 +1383,9 @@
                   <button class="button button--rounded plan-step__button-next" type="submit">
                     Отправить
                   </button>
-                  <button class="button button button--rounded button--no-bg plan-step__button-prev" type="button">
+                  <a class="button button button--rounded button--no-bg plan-step__button-prev" href="#step-2">
                     На шаг назад
-                  </button>
+                  </a>
                 </div>
               </section>
             </div>
