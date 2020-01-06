@@ -248,7 +248,34 @@
   color: $white;
   position: relative;
 
-  &:hover::after {
+  &:hover::after,
+  &:focus::after {
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 32px;
+    left: -1px;
+    top: -1px;
+    border: 2px solid $coral-red;
+    z-index: 1000;
+
+    @media (min-width: $tablet) {
+      left: -2px;
+      top: -2px;
+      width: 80px;
+      height: 72px;
+      border: 4px solid $coral-red;
+    }
+
+    @media (min-width: $desktop) {
+      width: 146px;
+      height: 74px;
+    }
+  }
+}
+
+.calendar__table-cell input:focus + .calendar__day-number {
+  &::after {
     content: "";
     position: absolute;
     width: 33px;

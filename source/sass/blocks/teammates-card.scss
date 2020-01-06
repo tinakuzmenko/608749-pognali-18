@@ -158,6 +158,10 @@
     margin: 0;
     font-size: 20px;
     width: 230px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop) {
     padding-bottom: 50px;
   }
 }
@@ -181,6 +185,8 @@
     margin-top: 0;
     width: auto;
     padding-top: 51px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
 }
 
@@ -298,6 +304,7 @@
 .teammates-card__all-countries {
   @media (min-width: $tablet) {
     display: flex;
+    flex-wrap: wrap;
   }
 
   @media (min-width: $desktop) {
@@ -396,8 +403,11 @@
     order: 100;
     margin-left: auto;
     margin-right: 15px;
+    margin-top: 0;
     justify-content: space-between;
-    margin-top: -86px;
+    position: absolute;
+    bottom: 47px;
+    right: 44px;
   }
 }
 
@@ -418,6 +428,7 @@
   @media (min-width: $desktop) {
     flex-direction: row;
     margin-right: 60px;
+    margin-bottom: 0;
   }
 }
 
@@ -602,7 +613,9 @@
 
   @media (min-width: $desktop) {
     margin-left: 342px;
-    margin-top: -96px;
+    margin-top: 0;
+    position: absolute;
+    bottom: 47px;
     order: 50;
   }
 }
