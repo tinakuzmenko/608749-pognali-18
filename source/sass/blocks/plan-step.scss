@@ -116,7 +116,7 @@
 
   @media (min-width: $desktop) {
     padding-top: 30px;
-    margin-bottom: 17px;
+    margin-bottom: 20px;
     border-top: 1px solid $inputs-grey;
     flex-direction: row;
     flex-wrap: wrap;
@@ -130,11 +130,11 @@
   position: relative;
 
   &--term {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 
   &--checkbox {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: $tablet) {
@@ -191,7 +191,7 @@
   @media (min-width: $desktop) {
     min-width: 50%;
     justify-content: space-between;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
 }
 
@@ -245,7 +245,7 @@
   display: flex;
   width: 100%;
   border: none;
-  padding: 12px 0 0 0;
+  padding: 15px 0 0 0;
 
   &:hover,
   &:focus {
@@ -397,7 +397,7 @@
   color: $twilight-blue;
   border: 1px solid $light-grey;
   border-radius: 4px;
-  padding: 15px 14px 11px 30px;
+  padding: 15px 14px 11px 17px;
   appearance: textfield;
 
   &::-webkit-inner-spin-button {
@@ -418,11 +418,12 @@
 
   @media (min-width: $tablet) {
     font-size: 20px;
-    padding: 25px 14px 23px 30px;
+    padding: 25px 14px 23px 17px;
   }
 
   @media (min-width: $desktop) {
     width: 181px;
+    padding-bottom: 22px;
   }
 }
 
@@ -441,7 +442,7 @@
   }
 
   &::before {
-    top: -4px;
+    top: -2px;
     left: 0;
     display: block;
     width: 26px;
@@ -454,7 +455,7 @@
     display: none;
     width: 9px;
     height: 9px;
-    top: 4px;
+    top: 6px;
     left: 10px;
     background-repeat: no-repeat;
     background-position: center;

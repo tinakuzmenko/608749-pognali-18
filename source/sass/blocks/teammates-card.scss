@@ -106,8 +106,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 9px;
-    right: -53px;
+    top: 8px;
+    right: -70px;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -151,7 +151,8 @@
   color: $greyish-brown;
   padding-left: 5px;
   width: 175px;
-  margin-bottom: 12px;
+  margin-top: 0;
+  margin-bottom: 14px;
 
   @media (min-width: $tablet) {
     padding-left: 0;
@@ -427,8 +428,8 @@
 
   @media (min-width: $desktop) {
     flex-direction: row;
-    margin-right: 60px;
-    margin-bottom: 0;
+    margin-right: 56px;
+    margin-bottom: 4px;
   }
 }
 
@@ -565,7 +566,9 @@
 
   @media (min-width: $desktop) {
     margin-right: 0;
-    margin-bottom: 9px;
+    margin-bottom: 0;
+    margin-top: 4px;
+    margin-left: 3px;
   }
 }
 
@@ -578,14 +581,22 @@
   @media (min-width: $tablet) {
     width: 65px;
     height: 65px;
-    left: -18px;
-    top: -20px;
+    left: -20px;
+    top: -18px;
     stroke-width: 3px;
+  }
+
+  @media (min-width: $desktop) {
+    left: -17px;
   }
 }
 
 .teammates-card__level-number {
   margin-bottom: 2px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .teammates-card__level-description {
@@ -612,10 +623,11 @@
   }
 
   @media (min-width: $desktop) {
-    margin-left: 342px;
+    margin-left: 0;
     margin-top: 0;
     position: absolute;
     bottom: 47px;
+    left: 342px;
     order: 50;
   }
 }

@@ -56,15 +56,15 @@
               <a class="button button--rounded page-nav__auth-button" href="authorization.html">Авторизация</a>
             </div>
             <div class="page-nav__menu-wrapper">
-              <ul class="nav-list">
-                <li class="nav-list__item">
-                  <a class="nav-list__link" href="index.html"><span class="nav-list__link-transition-text" data-hover="О сервисе">О сервисе</span></a>
+              <ul class="page-nav__list">
+                <li class="page-nav__list-item">
+                  <a class="page-nav__list-link" href="index.html"><span class="page-nav__list-transition-text" data-hover="О сервисе">О сервисе</span></a>
                 </li>
-                <li class="nav-list__item">
-                  <a class="nav-list__link"><span class="nav-list__link-transition-text" data-hover="Направления">Направления</span></a>
+                <li class="page-nav__list-item">
+                  <a class="page-nav__list-link"><span class="page-nav__list-transition-text" data-hover="Направления">Направления</span></a>
                 </li>
-                <li class="nav-list__item">
-                  <a class="nav-list__link" href="catalog.html"><span class="nav-list__link-transition-text" data-hover="Попутчики">Попутчики</span></a>
+                <li class="page-nav__list-item">
+                  <a class="page-nav__list-link" href="catalog.html"><span class="page-nav__list-transition-text" data-hover="Попутчики">Попутчики</span></a>
                 </li>
               </ul>
             </div>
@@ -154,7 +154,7 @@
                 <ul class="user-information__transport-wrapper">
                   <li class="user-information__transport-item" data-tooltip="Авиаперелет">
                     <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked="">
-                    <label class="transport-type" for="plane">
+                    <label class="transport-type user-information__transport-type" for="plane">
                       <svg class="transport-type__icon transport-type__icon--plane" width="14" height="16">
                         <use xlink:href="#icon-plane"></use>
                       </svg>
@@ -162,7 +162,7 @@
                   </li>
                   <li class="user-information__transport-item" data-tooltip="Автотранспорт">
                     <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked="">
-                    <label class="transport-type" for="bus">
+                    <label class="transport-type user-information__transport-type" for="bus">
                       <svg class="transport-type__icon transport-type__icon--bus" width="13" height="16">
                         <use xlink:href="#icon-bus"></use>
                       </svg>
@@ -170,13 +170,13 @@
                   </li>
                   <li class="user-information__transport-item" data-tooltip="Велосипед">
                     <input class="visually-hidden" type="checkbox" name="bike" id="bike">
-                    <label class="transport-type" for="bike"><svg class="transport-type__icon transport-type__icon--bike" width="19" height="17">
+                    <label class="transport-type user-information__transport-type" for="bike"><svg class="transport-type__icon transport-type__icon--bike" width="19" height="17">
                       <use xlink:href="#icon-bike"></use>
                     </svg></label>
                   </li>
                   <li class="user-information__transport-item" data-tooltip="Пешком">
                     <input class="visually-hidden" type="checkbox" name="feet" id="feet" checked="">
-                    <label class="transport-type" for="feet"><svg class="transport-type__icon transport-type__icon--run" width="15" height="17">
+                    <label class="transport-type user-information__transport-type" for="feet"><svg class="transport-type__icon transport-type__icon--run" width="15" height="17">
                       <use xlink:href="#icon-run"></use>
                     </svg></label>
                   </li>
@@ -365,7 +365,7 @@
                         </td>
                         <td class="calendar__table-cell">
                           <input class="visually-hidden" type="checkbox" name="march-01" id="march-01" disabled="">
-                          <label class="calendar__day-number" for="march-01">1<span class="calendar__day-number--first">&nbsp;мар</span></label>
+                          <label class="calendar__day-number" for="march-01">1<span class="calendar__first-month-day">&nbsp;мар</span></label>
                         </td>
                       </tr>
                       <tr class="calendar__table-row">
@@ -499,7 +499,7 @@
                         </td>
                         <td class="calendar__table-cell">
                           <input class="visually-hidden" type="checkbox" name="april-01" id="april-01">
-                          <label class="calendar__day-number" for="april-01">1<span class="calendar__day-number--first">&nbsp;апр</span></label>
+                          <label class="calendar__day-number" for="april-01">1<span class="calendar__first-month-day">&nbsp;апр</span></label>
                         </td>
                         <td class="calendar__table-cell">
                           <input class="visually-hidden" type="checkbox" name="april-02" id="april-02">
@@ -1448,7 +1448,7 @@
       document.createElement("picture");
     </script>
     <script src="js/picturefill.js" async=""></script>
-    <script defer="" src="node_modules/svgxuse/svgxuse.js"></script>
+    <script src="js/svgxuse.js" defer=""></script>
     <script src="js/navigation.js"></script>
     <script src="js/chose-country.js"></script>
   </body>
