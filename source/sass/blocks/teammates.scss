@@ -117,6 +117,12 @@
   }
 }
 
+.teammates__bold-text {
+  @media (min-width: $tablet) {
+    margin-bottom: 60px;
+  }
+}
+
 .teammates__preview-wrapper {
   margin-bottom: 20px;
   position: relative;
@@ -125,7 +131,7 @@
   @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 83px;
+    margin-bottom: 80px;
   }
 
   @media (min-width: $desktop) {

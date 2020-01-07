@@ -1,6 +1,6 @@
 .filter {
   background-color: $intense-violet;
-  padding: 45px 0 15px;
+  padding: 48px 0 12px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   position: absolute;
@@ -384,7 +384,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 71px;
+    margin-bottom: 73px;
     width: 252px;
 
     &:nth-child(5n) {
@@ -441,6 +441,7 @@
 
   @media (min-width: $desktop) {
     padding: 0;
+    margin-top: -9px;
     margin-bottom: 0;
   }
 }

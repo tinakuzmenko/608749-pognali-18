@@ -31,7 +31,7 @@
     flex-direction: column;
 
     &--level {
-      margin-bottom: 43px;
+      margin-bottom: 37px;
       padding-bottom: 0;
     }
   }
@@ -43,7 +43,7 @@
   display: flex;
   width: 100%;
   border-top: 1px solid $accordion-yellow;
-  padding: 10px 0 11px 0;
+  padding: 11px 0 11px 0;
 
   &:last-child {
     margin-bottom: 0;
@@ -171,12 +171,14 @@
 
 .accordion__level-wrapper {
   display: flex;
+  flex-direction: column;
 
   &--hidden {
     display: none;
   }
 
   @media (min-width: $tablet) {
+    flex-direction: row;
     flex-grow: 1;
     justify-content: space-between;
     align-items: center;
@@ -197,7 +199,7 @@
 
   &--transport {
     display: flex;
-    margin-top: 4px;
+    margin-top: 2px;
     margin-bottom: 20px;
   }
 
@@ -466,7 +468,7 @@
   display: flex;
   width: 111px;
   font-size: 15px;
-  padding: 10px 5px 8px 5px;
+  padding: 10px 5px 6px 5px;
   font-weight: 500;
   font-style: normal;
   line-height: 0.9;
@@ -499,7 +501,7 @@
 
   @media (min-width: $tablet) {
     width: 75px;
-    padding: 15px 15px 10px 15px;
+    padding: 12px 15px 10px 15px;
     font-size: 20px;
     letter-spacing: 2px;
   }
@@ -515,7 +517,7 @@
   margin-bottom: 26px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 0;
+    margin-bottom: 7px;
     width: 277px;
   }
 
@@ -566,13 +568,21 @@
   }
 
   &--max {
-    left: 99%;
+    left: 96%;
   }
 
   @media (min-width: $tablet) {
     width: 13px;
     height: 13px;
     top: -5px;
+
+    &--min {
+      left: 25%;
+    }
+
+    &--max {
+      left: 97%;
+    }
 
     &:hover,
     &:focus {
@@ -587,6 +597,10 @@
   }
 
   @media (min-width: $desktop) {
+    &--min {
+      left: 31%;
+    }
+
     &--max {
       left: 93%;
     }

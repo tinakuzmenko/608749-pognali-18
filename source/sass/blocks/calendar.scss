@@ -169,14 +169,6 @@
     font-weight: normal;
   }
 
-  &--first {
-    display: none;
-
-    @media (min-width: $desktop) {
-      display: flex;
-    }
-  }
-
   &:hover {
     background-color: $twilight-blue;
     color: $white;
@@ -230,6 +222,14 @@
     @media (min-width: $desktop) {
       content: "Выезд";
     }
+  }
+}
+
+.calendar__first-month-day {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: flex;
   }
 }
 
