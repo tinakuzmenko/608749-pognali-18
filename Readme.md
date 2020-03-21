@@ -2,6 +2,9 @@
 
 * Студент: [Kristina Kuzmenko](https://up.htmlacademy.ru/adaptive/18/user/608749).
 * Наставник: [Вадим Новаш](https://htmlacademy.ru/profile/stakeout).
+* Сборка: [Онлайн версия](https://tinakuzmenko.github.io/htmlacademy-pognali/).
+
+---
 
 <a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
 
