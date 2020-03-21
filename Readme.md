@@ -10,7 +10,7 @@
 
 Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS, уровень 2](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
 
-[travis-image]: https://travis-ci.com/htmlacademy-adaptive/608749-pognali-18.svg?branch=master
-[travis-url]: https://travis-ci.com/htmlacademy-adaptive/608749-pognali-18
-[dependency-image]: https://david-dm.org/htmlacademy-adaptive/608749-pognali-18/dev-status.svg?style=flat-square
-[dependency-url]: https://david-dm.org/htmlacademy-adaptive/608749-pognali-18?type=dev
+[travis-image]: https://travis-ci.com/htmlacademy-adaptive/htmlacademy-pognali.svg?branch=master
+[travis-url]: https://travis-ci.com/htmlacademy-adaptive/htmlacademy-pognali
+[dependency-image]: https://david-dm.org/htmlacademy-adaptive/htmlacademy-pognali/dev-status.svg?style=flat-square
+[dependency-url]: https://david-dm.org/htmlacademy-adaptive/htmlacademy-pognali?type=dev
